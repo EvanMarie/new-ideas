@@ -40,7 +40,7 @@ export default function PortfolioProjectDisplay({
                 key={portfolioItem.slug + index}
                 src={portfolioItem.projectInfoImages[index].src}
                 alt={`${portfolioItem.title} image ${index}`}
-                className={`object-cover rounded-md border-900-md shadowNarrowNormal`}
+                className={`rounded-md border-900-md shadowNarrowNormal`}
               />
             )}
           </VStackFull>

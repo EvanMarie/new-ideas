@@ -5,11 +5,14 @@ export default function OrientationImage({
   alt,
   className,
   portraitMaxHeight = "75vh",
-  portraitMaxWidth = "100%",
-  landscapeMaxHeight = "100%",
-  landscapeMaxWidth = "100%",
-  squareMaxHeight = "100%",
+  portraitMaxWidth,
+  landscapeMaxHeight = "60vh",
+  landscapeMaxWidth,
+  squareMaxHeight = "75vh",
   squareMaxWidth = "100%",
+  portraitObjectFit = "contain",
+  landscapeObjectFit = "cover",
+  squareObjectFit = "cover",
 }: {
   src: string;
   alt: string;
@@ -20,6 +23,9 @@ export default function OrientationImage({
   landscapeMaxWidth?: string;
   squareMaxHeight?: string;
   squareMaxWidth?: string;
+  portraitObjectFit?: "contain" | "cover";
+  landscapeObjectFit?: "contain" | "cover";
+  squareObjectFit?: "contain" | "cover";
 }) {
   const [imageStyles, setImageStyles] = useState({});
   const imgRef = useRef<HTMLImageElement>(null);
@@ -31,24 +37,30 @@ export default function OrientationImage({
 
         if (naturalWidth > naturalHeight) {
           setImageStyles({
+            // LANDSCAPE IMAGES
             width: "100%",
             height: "auto",
             maxHeight: landscapeMaxHeight,
             maxWidth: landscapeMaxWidth,
+            objectFit: landscapeObjectFit,
           });
         } else if (naturalWidth < naturalHeight) {
+          // PORTRAIT IMAGES
           setImageStyles({
             width: "auto",
             height: "100%",
             maxHeight: portraitMaxHeight,
             maxWidth: portraitMaxWidth,
+            objectFit: portraitObjectFit,
           });
         } else {
           setImageStyles({
+            // SQUARE IMAGES
             width: "100%",
             height: "100%",
             maxHeight: squareMaxHeight,
             maxWidth: squareMaxWidth,
+            objectFit: squareObjectFit,
           });
         }
       }
