@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-import { NavLink } from "@remix-run/react";
+import { NavLink, Outlet } from "@remix-run/react";
+import { BiSmile } from "react-icons/bi";
+import { BsSmartwatch } from "react-icons/bs";
 import Icon from "~/buildingBlockComponents/icon";
 import {
   FlexFull,
@@ -9,6 +11,7 @@ import {
   Wrap,
 } from "~/buildingBlockComponents/mainContainers";
 import Text from "~/buildingBlockComponents/text";
+import MainNavButton from "~/mainDesignComponents/mainNavButton";
 
 export const meta: MetaFunction = () => {
   return [
@@ -49,27 +52,14 @@ export default function Index() {
     );
   }
   return (
-    <FlexFull>
-      <TransitionFull className="w-full h-full justify-center items-center">
-        <VStackFull className="text-center xxl:w-[60vw]" gap="gap-[4vh]">
-          <Text className="font-cursive boldTextGlow text-col-900 text-stroke-8-900 text-[4.5vh] md:text-[8vh] lg:text-[10vh] text-center animate-slideInRight">
-            Remix, Vite, & Tailwind
-          </Text>
-          <VStackFull className="text-col-100 text-[2vh] sm:text-[2.5vh] md:text-[3vh] textShadow text-center">
-            <Text className="text-col-100 animate-slideInLeft">
-              A Project Launchpad
-            </Text>
-          </VStackFull>
-          <Wrap className="animate-slideInUp50vh gap-[3vh] duration-2200 justify-center">
-            <NavButton text="Design Presets" to="/design" />{" "}
-            <NavButton
-              text="DarkViolet.ai"
-              to="https://darkviolet.ai"
-              className="bg-gradient-to-r from-[#cd36f4] via-[#ab00ff] to-[#9b82ee] text-col-100 text-stroke-5-100 textShadow hover:metallicEdgesSm hover:scale-101 hover:text-col-100 hover:text-stroke-100"
-            />
-          </Wrap>
-        </VStackFull>
-      </TransitionFull>
-    </FlexFull>
+    <TransitionFull className="w-full h-100svh relative justify-center">
+      <Outlet />
+      <FlexFull className="fixed bottom-0 left-0 right-0 bg-slate-900 justify-evenly z-10 rounded-none">
+        <MainNavButton text="portfolio" icon={BiSmile} to />
+        <MainNavButton text="two" icon={BiSmile} />
+        <MainNavButton text="three" icon={BiSmile} />
+        <MainNavButton text="four" icon={BiSmile} />
+      </FlexFull>
+    </TransitionFull>
   );
 }
