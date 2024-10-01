@@ -40,12 +40,12 @@ export default function MainNavButton({
           {inactiveIcon && activeIcon && (
             <Icon
               icon={isActive ? activeIcon : inactiveIcon}
-              iconClassName={`text-lg ${
+              iconClassName={`text-2vh ${
                 !isActive && "group-hover:rotate-20 group-hover:text-cyan-300"
               } transition-300`}
             />
           )}
-          <span className="hidden md:inline text-lg">{text}</span>
+          <span className="hidden md:inline text-2vh xl:text-lg">{text}</span>
         </HStackFull>
       </Tooltip>
     </NavLink>

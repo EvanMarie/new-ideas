@@ -1,4 +1,4 @@
-import { FlexFull } from "~/buildingBlockComponents/mainContainers";
+import { FlexFull, VStack } from "~/buildingBlockComponents/mainContainers";
 import MainNavButton from "./mainNavButton";
 import {
   BsChatText,
@@ -7,8 +7,7 @@ import {
   BsCollectionFill,
 } from "react-icons/bs";
 import { FaRegSmile, FaSmileBeam } from "react-icons/fa";
-import { HiBookOpen, HiOutlineBookOpen } from "react-icons/hi";
-import { IoHome, IoHomeOutline } from "react-icons/io5";
+import { IoBook, IoBookOutline, IoHome, IoHomeOutline } from "react-icons/io5";
 
 export default function MainNavBar() {
   return (
@@ -29,8 +28,8 @@ export default function MainNavBar() {
       />
       <MainNavButton
         text="blog"
-        inactiveIcon={HiOutlineBookOpen}
-        activeIcon={HiBookOpen}
+        inactiveIcon={IoBookOutline}
+        activeIcon={IoBook}
         to="/blog"
         label="blog"
       />
