@@ -5,14 +5,14 @@ export default function OrientationImage({
   alt,
   className,
   portraitMaxHeight = "75vh",
-  portraitMaxWidth,
-  landscapeMaxHeight = "60vh",
-  landscapeMaxWidth,
+  portraitMaxWidth = "75vw",
+  landscapeMaxHeight = "75vh",
+  landscapeMaxWidth = "75vw",
   squareMaxHeight = "75vh",
-  squareMaxWidth = "100%",
+  squareMaxWidth = "75vw",
   portraitObjectFit = "contain",
-  landscapeObjectFit = "cover",
-  squareObjectFit = "cover",
+  landscapeObjectFit = "contain",
+  squareObjectFit = "contain",
 }: {
   src: string;
   alt: string;
@@ -36,8 +36,8 @@ export default function OrientationImage({
         const { naturalWidth, naturalHeight } = imgRef.current;
 
         if (naturalWidth > naturalHeight) {
+          // LANDSCAPE IMAGES
           setImageStyles({
-            // LANDSCAPE IMAGES
             width: "100%",
             height: "auto",
             maxHeight: landscapeMaxHeight,
@@ -54,8 +54,8 @@ export default function OrientationImage({
             objectFit: portraitObjectFit,
           });
         } else {
+          // SQUARE IMAGES
           setImageStyles({
-            // SQUARE IMAGES
             width: "100%",
             height: "100%",
             maxHeight: squareMaxHeight,
@@ -78,15 +78,22 @@ export default function OrientationImage({
     return () => {
       imgRef.current?.removeEventListener("load", handleLoad);
     };
-  }, [src]);
+  }, [
+    src,
+    landscapeMaxHeight,
+    landscapeMaxWidth,
+    portraitMaxHeight,
+    portraitMaxWidth,
+    squareMaxHeight,
+    squareMaxWidth,
+    landscapeObjectFit,
+    portraitObjectFit,
+    squareObjectFit,
+  ]);
 
   return (
-    <img
-      ref={imgRef}
-      src={src}
-      alt={alt}
-      className={className}
-      style={imageStyles}
-    />
+    <div className={className} style={{ display: "inline-block" }}>
+      <img ref={imgRef} src={src} alt={alt} style={imageStyles} />
+    </div>
   );
 }

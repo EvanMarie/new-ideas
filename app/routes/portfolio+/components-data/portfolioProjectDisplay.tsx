@@ -52,7 +52,7 @@ export default function PortfolioProjectDisplay({
           <VStackFull className="h-fit py-1vh" gap="gap-1vh">
             {portfolioItem.projectImages.map((image, index) => (
               <FlexFull className="p-0.5vh sm:p-1vh xl:p-2vh">
-                <img
+                <OrientationImage
                   key={index}
                   src={image.src}
                   alt={portfolioItem.title}
