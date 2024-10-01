@@ -8,6 +8,7 @@ import {
 } from "@remix-run/react";
 import "tailwind.css";
 import { FlexFull } from "./buildingBlockComponents/mainContainers";
+import MainNavBar from "./mainDesignComponents/mainNavBar";
 
 // import { AnimatePresence } from "framer-motion";
 
@@ -38,6 +39,7 @@ export default function App() {
       <body>
         <FlexFull className="bg-col-880 h-[100svh] max-h-[100svh] overflow-hidden rounded-none">
           <Outlet />
+          <MainNavBar />
           <ScrollRestoration />
           <Scripts />
         </FlexFull>

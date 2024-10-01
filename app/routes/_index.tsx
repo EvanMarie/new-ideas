@@ -54,12 +54,6 @@ export default function Index() {
   return (
     <TransitionFull className="w-full h-100svh relative justify-center">
       <Outlet />
-      <FlexFull className="fixed bottom-0 left-0 right-0 bg-slate-900 justify-evenly z-10 rounded-none">
-        <MainNavButton text="portfolio" icon={BiSmile} to="portfolio" />
-        <MainNavButton text="two" icon={BiSmile} />
-        <MainNavButton text="three" icon={BiSmile} />
-        <MainNavButton text="four" icon={BiSmile} />
-      </FlexFull>
     </TransitionFull>
   );
 }

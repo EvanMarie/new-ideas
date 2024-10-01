@@ -18,7 +18,10 @@ export default function MainNavButton({
   return (
     // eslint-disable-next-line react/jsx-no-target-blank
     <NavLink to={to} target={isExternal ? "_blank" : undefined}>
-      <HStack className={`items-center`} gap="gap-1vh">
+      <HStack
+        className={`items-center hover:cursor-pointer text-col-500`}
+        gap="gap-1vh"
+      >
         {icon && <Icon icon={icon} iconClassName="" />}
         <span>{text}</span>
       </HStack>
