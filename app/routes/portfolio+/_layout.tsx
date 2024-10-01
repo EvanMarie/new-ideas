@@ -1,4 +1,4 @@
-import { Outlet } from "@remix-run/react";
+import { Outlet, useParams } from "@remix-run/react";
 import RouteContainer from "~/mainDesignComponents/routeContainer";
 
 export default function PortfolioLayout() {

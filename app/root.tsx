@@ -45,7 +45,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <FlexFull className="bg-col-880 h-[100svh] max-h-[100svh] overflow-hidden rounded-none">
+        <FlexFull className="bg-col-880 h-100svh max-h-100svh first-line:overflow-hidden rounded-none relative">
           <Outlet />
           {!isRoot && (
             <Box className="fixed top-0.5vh left-0.5vh">

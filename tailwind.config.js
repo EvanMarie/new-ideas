@@ -784,6 +784,8 @@ export default {
         lightGlowMd: "0 0 0.2vh #FFF, 0 0 2px #ebd7d5, 0 0 0.6vh #FFF",
         lightGlowLg: "0 0 0.3vh #FFF, 0 0 3px #ebd7d5, 0 0 0.9vh #FFF",
         lightGlowXl: "0 0 0.4vh #FFF, 0 0 4px #ebd7d5, 0 0 1.2vh #FFF",
+        boxGlowXs:
+          "#00FFFF 0px 0px 0.1vh, #00FFFF 0px 0px 0.2vh, #FFF 0px 0px 0.3vh, #d5f5f0 0px 0px 0.4vh, #d5f5f0 0px 0px 0.6vh, 0.8vh 0.1vh 0.6vh rgba(0,0,0,0);",
         boxGlowSm:
           "#00FFFF 0px 0px 0.2vh, #00FFFF 0px 0px 0.4vh, #FFF 0px 0px 0.6vh, #d5f5f0 0px 0px 0.8vh, #d5f5f0 0px 0px 1.2vh, 0.8vh 0.2vh 0.6vh rgba(0,0,0,0);",
         boxGlowMd:
@@ -792,6 +794,8 @@ export default {
           "#00FFFF 0px 0px 0.5vh, #00FFFF 0px 0px 1vh, #FFF 0px 0px 1.5vh, #d5f5f0 0px 0px 2vh, #d5f5f0 0px 0px 3vh, 0.8vh 0.2vh 0.6vh rgba(0,0,0,0);",
         boxGlowXl:
           "#00FFFF 0px 0px 0.7vh, #00FFFF 0px 0px 1.4vh, #FFF 0px 0px 2.1vh, #d5f5f0 0px 0px 2.8vh, #d5f5f0 0px 0px 4.2vh, 0.8vh 0.2vh 0.6vh rgba(0,0,0,0);",
+        metallicEdgesXs:
+          "#000 0.05vh 0.05vh 0.05vh, black 0px 0px 0.1vh, #FFF 0px 0px 0.05vh, #FFF 0px 0px 0.1vh, #FFF 0px 0px 0.15vh, #FFF 0px 0px 0.2vh, #FFF 0px 0px 0.25vh, 0.8vh 0.2vh 0.6vh rgba(0,0,0,0);",
         metallicEdgesSm:
           "#000 0.05vh 0.05vh 0.05vh, black 0px 0px 0.2vh, #FFF 0px 0px 0.1vh, #FFF 0px 0px 0.2vh, #FFF 0px 0px 0.3vh, #FFF 0px 0px 0.4vh, #FFF 0px 0px 0.5vh, 0.8vh 0.2vh 0.6vh rgba(0,0,0,0);",
         metallicEdgesMd:
@@ -808,8 +812,17 @@ export default {
         textShadow: "0.2vh 0.2vh 0.2vh rgba(0, 0, 0, 0.9)",
         subtleTextShadow: "0.1vh 0.1vh 0.2vh rgba(0, 0, 0, 0.9)",
         standoutTextShadow: "0.3vh 0.3vh 0.4vh rgba(0, 0, 0, 0.9)",
+
         textFog:
           "0 0 0.5vh #000, 0 0 1vh #000, 0 0 1.5vh #000, 0 0 1vh #000, 0 0 3vh #000, 0 0 4vh #575757, 0 0 5.5vh #5E5E5E, 0 0 7.5vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogMd:
+          "0 0 0.3vh #000, 0 0 0.8vh #000, 0 0 1.2vh #000, 0 0 0.8vh #000, 0 0 2.5vh #000, 0 0 3vh #575757, 0 0 4vh #5E5E5E, 0 0 5vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogSm:
+          "0 0 0.2vh #000, 0 0 0.6vh #000, 0 0 0.9vh #000, 0 0 0.6vh #000, 0 0 2vh #000, 0 0 2.2vh #575757, 0 0 3vh #5E5E5E, 0 0 4vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogXs:
+          "0 0 0.1vh #000, 0 0 0.4vh #000, 0 0 0.6vh #000, 0 0 0.4vh #000, 0 0 1.5vh #000, 0 0 1.8vh #575757, 0 0 2vh #5E5E5E, 0 0 3vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogXxs:
+          "0 0 0.1vh #000, 0 0 0.4vh #000, 0 0 0.6vh #000, 0 0 0.2vh #000, 0 0 0.6vh #000, 0 0 1vh #575757, 0 0 1vh #5E5E5E, 0 0 1.5vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
         textGlowXs:
           "#00FFFF 0px 0px 0.1vh, #00FFFF 0px 0px 0.2vh, #FFF 0px 0px 0.3vh, rgb(224, 219, 253) 0px 0px 0.2vh, rgb(224, 219, 253) 0px 0px 0.2vh, 0.15vh 0.05vh 0.1vh rgba(0,0,0,0);",
         textGlowSm:
