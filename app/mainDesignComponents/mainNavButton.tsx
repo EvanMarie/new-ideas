@@ -18,15 +18,8 @@ export default function MainNavButton({
   return (
     // eslint-disable-next-line react/jsx-no-target-blank
     <NavLink to={to} target={isExternal ? "_blank" : undefined}>
-      <HStack
-        className={`px-[1.5vh] py-[0.5vh] transition-400 text-center ${className} items-center group hover:cursor-pointer shadowBroadNormal hover:metallicEdgesMd`}
-      >
-        {icon && (
-          <Icon
-            icon={icon}
-            iconClassName="text-col-900 text-[2.5vh] group-hover:text-col-900 group-hover:transition-400 shadowBroadLoose"
-          />
-        )}
+      <HStack className={`items-center`} gap="gap-1vh">
+        {icon && <Icon icon={icon} iconClassName="" />}
         <span>{text}</span>
       </HStack>
     </NavLink>
