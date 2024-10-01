@@ -45,7 +45,7 @@ export default function AnimatedText({
   className = "",
   animationType = "randomLetterAnimation",
   animationMotion = "spring",
-  letterDelay = 0.09,
+  letterDelay = 0.2,
   damping = 12,
   stiffness = 100,
   overallDelay = 0.2,
