@@ -254,7 +254,7 @@ export const Projects = [
       },
     ],
     thumbnail:
-      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/",
+      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/light-path-learning-login.webp?quality=50",
   },
   // DARK VIOLET DIVINATIONS
   {
@@ -437,7 +437,7 @@ export const Projects = [
       },
     ],
     thumbnail:
-      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-2.png",
+      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/spaceweatherlogo.webp",
   },
   // Chatter
   {
@@ -695,7 +695,7 @@ export const Projects = [
       },
     ],
     thumbnail:
-      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/moth-ramen-merch-banner.png",
+      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/mothramenlogo.webp",
   },
   // Do A Thing
   {
