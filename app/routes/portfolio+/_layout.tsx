@@ -1,10 +1,10 @@
 import { Outlet } from "@remix-run/react";
-import { Transition } from "~/buildingBlockComponents/mainContainers";
+import RouteContainer from "~/mainDesignComponents/routeContainer";
 
 export default function PortfolioLayout() {
   return (
-    <Transition className="w-full h-100svh pb-4svh" type="fadeSlideInBottom">
+    <RouteContainer>
       <Outlet />
-    </Transition>
+    </RouteContainer>
   );
 }

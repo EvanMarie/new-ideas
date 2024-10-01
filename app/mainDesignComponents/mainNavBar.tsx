@@ -13,7 +13,7 @@ import { IoHome, IoHomeOutline } from "react-icons/io5";
 
 export default function MainNavBar() {
   return (
-    <FlexFull className="fixed bottom-0 left-0 right-0 bg-slate-900 justify-around z-10 rounded-none h-5svh items-center">
+    <FlexFull className="fixed bottom-0 left-0 right-0 bg-slate-900 justify-around z-10 rounded-none h-4svh items-center">
       <MainNavButton
         text="home"
         inactiveIcon={IoHomeOutline}

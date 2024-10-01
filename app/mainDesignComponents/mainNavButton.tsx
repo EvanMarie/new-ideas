@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "@remix-run/react";
 import Icon from "~/buildingBlockComponents/icon";
-import { HStack } from "~/buildingBlockComponents/mainContainers";
+import { HStack, HStackFull } from "~/buildingBlockComponents/mainContainers";
 import Tooltip, { TooltipPlacement } from "~/buildingBlockComponents/tooltip";
 
 export default function MainNavButton({
@@ -26,23 +26,27 @@ export default function MainNavButton({
     <NavLink
       to={to}
       target={isExternal ? "_blank" : undefined}
-      className="h-full items-center"
+      className="h-full items-center w-20%"
     >
-      <Tooltip label={label} placement={labelPosition}>
-        <HStack
-          className={`hover:cursor-pointer h-5svh group items-center ${
-            isActive ? "text-violet-300" : "text-cyan-300"
-          } hover:text-violet-300 textShadow`}
+      <Tooltip label={label} placement={labelPosition} className="w-full">
+        <HStackFull
+          className={`hover:cursor-pointer h-4svh group items-center justify-center ${
+            isActive
+              ? "text-violet-300 bg-slate-800 shadowNarrowNormal"
+              : "text-cyan-300"
+          } hover:text-violet-300 textShadow transition-300 rounded-none`}
           gap="gap-1vh"
         >
           {inactiveIcon && activeIcon && (
             <Icon
               icon={isActive ? activeIcon : inactiveIcon}
-              iconClassName="text-xl group-hover:rotate-20 transition-300"
+              iconClassName={`text-lg ${
+                !isActive && "group-hover:rotate-20 group-hover:text-violet-300"
+              } transition-300`}
             />
           )}
-          <span className="hidden md:inline">{text}</span>
-        </HStack>
+          <span className="hidden md:inline text-lg">{text}</span>
+        </HStackFull>
       </Tooltip>
     </NavLink>
   );
