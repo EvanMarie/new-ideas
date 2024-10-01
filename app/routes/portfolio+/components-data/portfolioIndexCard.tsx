@@ -1,4 +1,8 @@
-import { Center, Flex } from "~/buildingBlockComponents/mainContainers";
+import {
+  Center,
+  Flex,
+  FlexFull,
+} from "~/buildingBlockComponents/mainContainers";
 import PortfolioIndex from "..";
 import { PortfolioItem } from "./project-data";
 import { ScrollTransition } from "~/mainDesignComponents/scrollTransition";
@@ -11,8 +15,19 @@ export default function PortfolioIndexCard({
   index: number;
 }) {
   return (
-    <ScrollTransition delay={0.3} type="fadeSlideInRightQuarter">
-      <Center className="w-50svh h-50svh">{portfolioItem.title}</Center>
+    <ScrollTransition
+      delay={0.3}
+      type={
+        index === 0 || index % 2 === 0
+          ? "fadeSlideInRightQuarter"
+          : "fadeSlideInLeftQuarter"
+      }
+    >
+      <Center className="w-50svh h-50svh bg-black">
+        <FlexFull className="flex-col items-center md:flex-row">
+          {portfolioItem.title}
+        </FlexFull>
+      </Center>
     </ScrollTransition>
   );
 }
