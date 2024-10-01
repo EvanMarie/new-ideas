@@ -22,7 +22,7 @@ export default function Index() {
       <TimedNavigation
         onScreenTimeComplete={handleNavigation}
         fadeInDuration={1}
-        screenTime={5000}
+        screenTime={3000}
       >
         <DarkVioletIndexAnimation />
       </TimedNavigation>

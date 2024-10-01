@@ -1,13 +1,12 @@
 import { FlexFull } from "~/buildingBlockComponents/mainContainers";
 import MainNavButton from "./mainNavButton";
-import { BiHome, BiSmile } from "react-icons/bi";
 import {
   BsChatText,
   BsChatTextFill,
   BsCollection,
   BsCollectionFill,
 } from "react-icons/bs";
-import { FaRegSmileBeam, FaSmileBeam } from "react-icons/fa";
+import { FaRegSmile, FaSmileBeam } from "react-icons/fa";
 import { HiBookOpen, HiOutlineBookOpen } from "react-icons/hi";
 import { IoHome, IoHomeOutline } from "react-icons/io5";
 
@@ -37,17 +36,17 @@ export default function MainNavBar() {
       />
       <MainNavButton
         text="us"
-        inactiveIcon={FaRegSmileBeam}
+        inactiveIcon={FaRegSmile}
         activeIcon={FaSmileBeam}
         to="/us"
         label="about us"
       />
       <MainNavButton
-        text="contact"
+        text="connect"
         inactiveIcon={BsChatText}
         activeIcon={BsChatTextFill}
         to="/contact"
-        label="contact"
+        label="connect"
       />
     </FlexFull>
   );
