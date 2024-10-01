@@ -24,6 +24,7 @@ export default function RouteContainer({
           containerRef={scrollRef}
           position="fixed bottom-[4svh]"
           height="h-0.5vh"
+          zIndex="z-10"
         />
       )}
       <Transition

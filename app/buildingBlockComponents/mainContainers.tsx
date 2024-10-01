@@ -289,7 +289,7 @@ export const CenterFull = React.forwardRef<HTMLDivElement, FlexProps & any>(
 CenterFull.displayName = "CenterFull";
 
 // -------------------------- TRANSITION VARIANTS -------------------------- //
-const transitionVariants: Record<string, Variants> = {
+export const transitionVariants: Record<string, Variants> = {
   slide: {
     initial: { x: "-100vw" },
     animate: { x: 0 },

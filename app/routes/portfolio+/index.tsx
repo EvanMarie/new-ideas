@@ -1,7 +1,29 @@
+import { Outlet, useParams } from "@remix-run/react";
+import {
+  FlexFull,
+  VStackFull,
+  Wrap,
+} from "~/buildingBlockComponents/mainContainers";
+import { Projects } from "./components-data/project-data";
+import PortfolioIndexCard from "./components-data/portfolioIndexCard";
+
 export default function PortfolioIndex() {
+  const slug = useParams().slug;
   return (
-    <div>
-      <h1>Portfolio Index Page</h1>
-    </div>
+    <>
+      {slug ? (
+        <Outlet />
+      ) : (
+        <Wrap className="w-full justify-evenly min-h-full items-evenly">
+          {Projects.map((project, index) => (
+            <PortfolioIndexCard
+              key={project.slug}
+              portfolioItem={project}
+              index={index}
+            />
+          ))}
+        </Wrap>
+      )}
+    </>
   );
 }
