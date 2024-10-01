@@ -1650,7 +1650,7 @@ export default {
       // Add the utilities to Tailwind
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),
-    // OVERLAYS PLUGIN
+    // OVERLAYS, FONTS, ETC PLUGIN
     plugin(function ({ addBase, theme }) {
       addBase({
         ".defaultOverlay": {
@@ -1675,8 +1675,8 @@ export default {
           backgroundImage:
             "linear-gradient(to right, #D0E2F2, #D9B5AD, #e4edf5,  #D9B5AD, #D0E2F2);",
         },
-        ".butterflyFont": {
-          fontFamily: "'Butterfly Kids', cursive",
+        ".kufam-font": {
+          fontFamily: '"Kufam", sans-serif',
         },
         ".mono-font": {
           fontFamily: '"Roboto", monospace',

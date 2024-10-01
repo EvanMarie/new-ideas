@@ -1,11 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
-import { NavLink, Outlet } from "@remix-run/react";
-import Icon from "~/buildingBlockComponents/icon";
-import {
-  HStack,
-  TransitionFull,
-} from "~/buildingBlockComponents/mainContainers";
-import Text from "~/buildingBlockComponents/text";
+import { useNavigate } from "@remix-run/react";
+import { TransitionFull } from "~/buildingBlockComponents/mainContainers";
+import TimedNavigation from "~/mainDesignComponents/timedNavigation";
+import DarkVioletIndexAnimation from "~/mainDesignComponents/visual-elements/indexAnimation";
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,9 +12,20 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/home"); // Navigate to the next page
+  };
   return (
-    <TransitionFull className="w-full h-100svh relative justify-center">
-      <Outlet />
+    <TransitionFull className="w-full h-100svh relative justify-center bg-slate-90/40">
+      <TimedNavigation
+        onScreenTimeComplete={handleNavigation}
+        fadeInDuration={1}
+        screenTime={5000}
+      >
+        <DarkVioletIndexAnimation />
+      </TimedNavigation>
     </TransitionFull>
   );
 }

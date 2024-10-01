@@ -7,7 +7,7 @@ export default function RouteContainer({
 }) {
   return (
     <Transition
-      className="w-full h-100svh pb-4svh overflow-y-auto overflow-x-hidden"
+      className="w-full h-100svh p-4svh overflow-y-auto overflow-x-hidden"
       type="fadeSlideInBottom"
     >
       {children}

@@ -2,13 +2,19 @@ import { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
 import "tailwind.css";
-import { FlexFull } from "./buildingBlockComponents/mainContainers";
+import {
+  Box,
+  FlexFull,
+  VStack,
+} from "./buildingBlockComponents/mainContainers";
 import MainNavBar from "./mainDesignComponents/mainNavBar";
+import AnimatedText from "./mainDesignComponents/visual-elements/animatedText";
 
 // import { AnimatePresence } from "framer-motion";
 
@@ -40,6 +46,19 @@ export default function App() {
         <FlexFull className="bg-col-880 h-[100svh] max-h-[100svh] overflow-hidden rounded-none">
           <Outlet />
           <MainNavBar />
+          <Box className="fixed top-0.5vh left-0.5vh">
+            <NavLink to="/home">
+              <VStack gap="gap-0" align="items-start">
+                <AnimatedText
+                  text="DarkViolet.ai"
+                  textClassName="text-cyan-300 text-4vh textShadow tracking-wider kufam-font"
+                />
+                <span className="text-1.2vh leading-1.3vh text-col-500">
+                  © 2024 All rights reserved.
+                </span>
+              </VStack>
+            </NavLink>
+          </Box>
           <ScrollRestoration />
           <Scripts />
         </FlexFull>
