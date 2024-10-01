@@ -7,6 +7,7 @@ import { PortfolioItem } from "./project-data";
 import PortfolioAccordion from "./portfolioAccordion";
 import Text from "~/buildingBlockComponents/text";
 import Image from "~/buildingBlockComponents/image";
+import OrientationImage from "~/mainDesignComponents/orientationImage";
 
 export default function PortfolioProjectDisplay({
   portfolioItem,
@@ -32,12 +33,14 @@ export default function PortfolioProjectDisplay({
             <Flex className="bg-slate-900/50 p-1vh border-900-md shadowNarrowNormal">
               <Text key={index}>{info.description}</Text>
             </Flex>
+
+            {/* Conditionally render the image with onLoad and dynamic orientation */}
             {portfolioItem.projectInfoImages[index] && (
-              <Image
+              <OrientationImage
                 key={portfolioItem.slug + index}
                 src={portfolioItem.projectInfoImages[index].src}
                 alt={`${portfolioItem.title} image ${index}`}
-                className="w-full h-full object-contain rounded-md border-900-md shadowNarrowNormal"
+                className={`object-cover rounded-md border-900-md shadowNarrowNormal`}
               />
             )}
           </VStackFull>
