@@ -1197,3 +1197,15 @@ export const Projects = [
   //     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/neuralnetwork.png?t=2024-02-25T01%3A43%3A41.707Z)",
   // },
 ];
+
+export const allProjectImages = Projects.map((project) =>
+  project.projectImages.map((image) => image.src)
+).flat();
+
+export const allImagesWithTitles = Projects.map((project) =>
+  project.projectImages.map((image) => ({
+    src: image.src,
+    project: project.title,
+    title: image.title,
+  }))
+).flat();

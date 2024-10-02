@@ -31,8 +31,9 @@ export default function RouteContainer({
   const scrollRef = useRef<HTMLDivElement>(null);
   const projectSlug = useParams().projectSlug;
   const returnTo = projectSlug ? `/portfolio` : "";
-  const isHome = useLocation().pathname === "/home";
-  const isRoot = useLocation().pathname === "/";
+  const location = useLocation();
+  const isHome = location.pathname === "/home";
+  const isRoot = location.pathname === "/";
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,7 +42,7 @@ export default function RouteContainer({
       if (scrollRef.current) {
         const scrollPosition = scrollRef.current.scrollTop;
         const viewportHeight = window.innerHeight;
-        setIsScrolled(scrollPosition > viewportHeight * 0.15); // 10vh
+        setIsScrolled(scrollPosition > viewportHeight * 0.1);
       }
     };
 
@@ -56,6 +57,13 @@ export default function RouteContainer({
       }
     };
   }, []);
+
+  // New effect to handle scrolling to top on URL change
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
 
   const baseTextClassName =
     "text-violet-950 textGlowXs tracking-wider kufam-font transition-all transition-400";
