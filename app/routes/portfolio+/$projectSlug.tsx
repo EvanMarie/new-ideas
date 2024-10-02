@@ -13,7 +13,7 @@ export default function PortfolioItemIndex() {
   return (
     <>
       <FlexFull className="justify-center md:justify-start pb-4vh">
-        <FlexFull className="justify-center">
+        <FlexFull className="justify-center md:justify-start">
           <PortfolioProjectDisplay portfolioItem={project as PortfolioItem} />
         </FlexFull>
       </FlexFull>

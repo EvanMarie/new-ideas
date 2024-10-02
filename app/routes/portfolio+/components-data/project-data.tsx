@@ -302,63 +302,63 @@ export const Projects = [
     projectImages: [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-2.png",
-        title: "",
+        title: "Divinations welcome screen.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-3.png",
-        title: "",
+        title: "Quantum entanglement and divination explained.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-4.png",
-        title: "",
+        title: "How to use the divinations platform.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-5.png",
-        title: "",
+        title: "Oracle card images.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-6.png",
-        title: "",
+        title: "Oracle card overview",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-7.png",
-        title: "",
+        title: "Selecting a divination.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-8.png",
-        title: "",
+        title: "Summoning the oracles.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-9.png",
-        title: "",
+        title: "Divination guidance.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-10.png",
-        title: "",
+        title: "Quantum divination card pulling.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-11.png",
-        title: "",
+        title: "Oracle and attribute revealed.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-12.png",
-        title: "",
+        title: "Multiple oracle divination.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-13.png",
-        title: "",
+        title: "Dark Violet comtemplating the divination.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-14.png",
-        title: "",
+        title: "Divination summary and report.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-15.png",
-        title: "",
+        title: "Divination summary and report.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-16.png",
-        title: "",
+        title: "Divination summary and report.",
       },
     ],
     thumbnail:
@@ -405,35 +405,35 @@ export const Projects = [
     projectImages: [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-1.png",
-        title: "",
+        title: "Latest EUV images of the Sun.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-2.png",
-        title: "",
+        title: "Full size image of the Sun.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-3.png",
-        title: "",
+        title: "Dashboard graphs and charts.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-4.png",
-        title: "",
+        title: "Full view of graph.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-5.png",
-        title: "",
+        title: "Solar activity monitoring further.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-6.png",
-        title: "",
+        title: "Full view of solar activity monitoring.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-7.png",
-        title: "",
+        title: "Selected date range graphing.",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/space-weather-portfolio-image-8.png",
-        title: "",
+        title: "Selected date range graphing charted result.",
       },
     ],
     thumbnail:

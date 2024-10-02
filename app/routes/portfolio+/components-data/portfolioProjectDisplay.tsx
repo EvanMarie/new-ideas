@@ -7,7 +7,6 @@ import {
 import { PortfolioItem } from "./project-data";
 import PortfolioAccordion from "./portfolioAccordion";
 import Text from "~/buildingBlockComponents/text";
-import Image from "~/buildingBlockComponents/image";
 import OrientationImage from "~/mainDesignComponents/orientationImage";
 
 export default function PortfolioProjectDisplay({
