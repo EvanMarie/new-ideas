@@ -14,7 +14,7 @@ export default function PortfolioSideNav({
       delay={0.3}
       type="zoom"
     >
-      <VStack className="w-8vw lg:w-9vh justify-around bg-indigo-700/50 bg-gradient-to-bl from-slate-900/50 via-indigo-950/50 to-slate-900/50 border-900-md shadowNarrowNormal">
+      <VStack className="w-8vw lg:w-9vh justify-around  bg-indigo-900 bg-gradient-to-b from-indigo-950/60 via-indigo-950/20 to-indigo-960/50 border-900-md shadowNarrowNormal">
         {Projects.map((project) => (
           <NavLink
             key={project.slug}

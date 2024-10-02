@@ -41,10 +41,10 @@ export default function RouteContainer({
         />
       )}
       {returnTo && <ReturnToButton to={returnTo} />}
-      <InsetShadowOverlay position="top" size="sm" />
+      <InsetShadowOverlay position="top" size="md" />
       <InsetShadowOverlay
         position="bottom"
-        size="sm"
+        size="xs"
         bottom="bottom-[4.5svh]"
       />
 

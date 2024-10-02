@@ -1,11 +1,14 @@
 import { useState, ReactNode, useRef, useEffect } from "react";
 
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+import { IoArrowUndo } from "react-icons/io5";
 import Icon from "~/buildingBlockComponents/icon";
 import {
+  Box,
   HStackFull,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
+import ProjectButton from "~/mainDesignComponents/projectButton";
 
 interface AccordionProps {
   title: string;
@@ -34,10 +37,13 @@ export default function PortfolioAccordion({
 
   return (
     <VStackFull
-      className="overflow-hidden shadowNarrowNormal"
+      className="overflow-hidden shadowNarrowNormal relative"
       gap="gap-0"
       align="items-start"
     >
+      <Box className="absolute bottom-0 right-0">
+        <ProjectButton icon={IoArrowUndo} onClick={() => setIsOpen(false)} />
+      </Box>
       <button
         className={`w-full text-left px-1.5vh py-1vh ${titleStyles} transition-300 rounded-none shadowNarrowNormal`}
         onClick={() => setIsOpen(!isOpen)}
@@ -56,10 +62,10 @@ export default function PortfolioAccordion({
         style={{ maxHeight }}
         className={`transition-500 rounded-none ${
           isOpen ? "overflow-visible" : "overflow-hidden"
-        } w-full`}
+        } w-full `}
       >
         <div
-          className={`px-[2vh] py-[1vh] w-full ${contentStyles} rounded-none`}
+          className={`px-[2vh] py-[1vh] w-full ${contentStyles} rounded-none `}
         >
           {children}
         </div>
