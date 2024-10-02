@@ -4,5 +4,11 @@ import ProjectButton from "./projectButton";
 
 export default function ReturnToButton({ to }: { to: string }) {
   const navigate = useNavigate();
-  return <ProjectButton to={to} icon={IoArrowUndo} />;
+  return (
+    <ProjectButton
+      to={to}
+      icon={IoArrowUndo}
+      position="absolute bottom-[6.5vh] md:bottom-[5.5vh] right-[0.7vh] z-20"
+    />
+  );
 }

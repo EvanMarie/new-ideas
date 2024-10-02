@@ -1,9 +1,14 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Flex } from "./mainContainers";
+import { Box, Flex } from "./mainContainers";
 import { motion } from "framer-motion";
 import Icon from "./icon";
-import { PiArrowURightUpBold } from "react-icons/pi";
+import { PiArrowURightUpBold, PiTriangleFill } from "react-icons/pi";
+import ProjectButton from "~/mainDesignComponents/projectButton";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { FaTurnUp } from "react-icons/fa6";
+import { RiTriangleFill } from "react-icons/ri";
+import { VscTriangleUp } from "react-icons/vsc";
 
 interface ScrollToTopProps {
   scrollContainerRef: React.RefObject<HTMLElement>;
@@ -66,16 +71,10 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
           exit="hidden"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-5.5vh left-0.5vh z-20"
+          className="fixed bottom-[6.5vh] md:bottom-[5.5vh] left-[0.7vh] z-20"
         >
-          <Flex className={buttonStyle} onClick={scrollToTop}>
-            <Icon
-              icon={PiArrowURightUpBold}
-              iconClassName={iconStyle}
-              containerClassName="w-full h-full"
-              hoverCursor="cursor-pointer"
-            />
-          </Flex>
+          {" "}
+          <ProjectButton icon={VscTriangleUp} onClick={scrollToTop} />
         </motion.div>
       )}
     </AnimatePresence>

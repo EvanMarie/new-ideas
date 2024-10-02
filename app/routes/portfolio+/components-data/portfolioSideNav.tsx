@@ -8,13 +8,14 @@ export default function PortfolioSideNav({
 }: {
   projectSlug: string;
 }) {
+  const lenProjects = Projects.length;
   return (
     <Transition
-      className="hidden md:flex fixed right-1vh top-1vh h-90svh flex-shrink-0 p-0.5vh z-10 overflow-visible"
+      className="hidden md:flex fixed right-1vh top-1vh h-90svh flex-shrink-0 p-0.5vh z-10 overflow-visible w-7vh lg:w-10vh"
       delay={0.3}
       type="zoom"
     >
-      <VStack className="w-7vh lg:w-10vh justify-around ">
+      <VStack className="w-full justify-around ">
         {Projects.map((project) => (
           <NavLink
             key={project.slug}
@@ -23,7 +24,6 @@ export default function PortfolioSideNav({
             } hover:boxGlowSm transition-300 hover:scale-102 hover:cursor-pointer`}
             to={`/portfolio/${project.slug}`}
           >
-            {" "}
             <Tooltip
               label={project.title}
               className="w-full h-full"
@@ -33,7 +33,7 @@ export default function PortfolioSideNav({
                 src={project.thumbnail}
                 alt={project.title}
                 className="w-full h-full rounded-full"
-              />{" "}
+              />
             </Tooltip>
           </NavLink>
         ))}

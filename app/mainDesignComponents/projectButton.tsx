@@ -8,8 +8,10 @@ export default function ProjectButton({
   to,
   icon,
   onClick,
+  position,
 }: {
   to?: string;
+  position?: string;
   onClick?: () => void;
   icon: React.ComponentType<{
     className?: string;
@@ -20,7 +22,7 @@ export default function ProjectButton({
   const navigate = useNavigate();
   return (
     <motion.button
-      className="absolute bottom-5.2vh right-0.7vh z-20 bg-cyan-300 rounded-full p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300"
+      className={`bg-cyan-300 rounded-full p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300 ${position}`}
       onClick={onClick ? onClick : to ? () => navigate(to) : undefined}
     >
       <Icon

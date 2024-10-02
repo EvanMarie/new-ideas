@@ -2170,6 +2170,7 @@ export default {
         },
         li: {
           listStyleType: "none",
+          paddingLeft: "3vh",
         },
       });
     }),
