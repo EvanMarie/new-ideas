@@ -49,7 +49,7 @@ export default function AnimatedText({
   damping = 12,
   stiffness = 100,
   overallDelay = 0.2,
-  overallDuration,
+  overallDuration = 60,
   letterDuration = 1,
   yDistance = 150,
   xDistance = 150,

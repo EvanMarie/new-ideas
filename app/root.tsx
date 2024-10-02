@@ -52,9 +52,9 @@ export default function App() {
                 <VStack gap="gap-0" align="items-start">
                   <AnimatedText
                     text="DarkViolet.ai"
-                    textClassName="text-cyan-300 text-4vh xl:text-5vh textShadow tracking-wider kufam-font"
+                    textClassName="text-violet-950 text-4vh xl:text-5vh textGlowXs tracking-wider kufam-font"
                   />
-                  <span className="text-1.2vh leading-1.3vh text-col-500">
+                  <span className="text-1vh leading-1.3vh text-col-500 ">
                     © 2024 All rights reserved.
                   </span>
                 </VStack>

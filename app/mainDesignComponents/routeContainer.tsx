@@ -12,6 +12,7 @@ import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
 import PortfolioSideNav from "~/routes/portfolio+/components-data/portfolioSideNav";
 import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 import Image from "~/buildingBlockComponents/image";
+import FloatingUpAndOutImages from "./visual-elements/floatingCircles";
 
 export default function RouteContainer({
   children,
@@ -30,6 +31,8 @@ export default function RouteContainer({
   const isHome = useLocation().pathname === "/home";
   return (
     <>
+      {isHome && <FloatingUpAndOutImages />}
+
       {/* ***************** ON PORTFOLIO PROJECT PAGE ***************** */}
       {projectSlug && <PortfolioSideNav projectSlug={projectSlug} />}
 
