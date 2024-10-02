@@ -30,10 +30,14 @@ export default function PortfolioProjectDisplay({
       {/* ********************** PROJECT INFORMATION ********************** */}
       <VStackFull className="gap-2vh px-2vh">
         {portfolioItem.projectInfo.map((info, index) => (
-          <VStackFull gap="gap-1.5vh">
-            <Flex className="bg-slate-900/50 p-1vh border-900-md shadowNarrowNormal">
-              <Text key={index}>{info.description}</Text>
-            </Flex>
+          <VStackFull gap="gap-1.5vh" key={index}>
+            <VStackFull
+              className="bg-slate-900/50 p-1vh border-900-md shadowNarrowNormal"
+              align="items-start"
+            >
+              <h3 className="text-fuchsia-300">{info.heading}</h3>
+              <Text>{info.description}</Text>
+            </VStackFull>
 
             {portfolioItem.projectInfoImages[index] && (
               <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">
