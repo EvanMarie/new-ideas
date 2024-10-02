@@ -48,15 +48,14 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
   };
 
   const variants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+    hidden: { z: "10vh", opacity: 0 },
+    visible: { z: 0, opacity: 1 },
   };
 
   const buttonStyle =
-    "bg-cyan-300 hover:bg-fuchsia-800 transition-400 hover:metallicEdgesSm z-10 cursor-pointer group p-[0.5vh] md:p-[0.3vh]";
-  const containerStyle = "bg-slate-800/80 p-[1vh] shadowBroadNormal z-10";
+    "bg-cyan-300 hover:bg-slate-950 transition-400 hover:metallicEdgesSm z-10 cursor-pointer group p-0.5vh md:p-0.3vh rounded-full group";
   const iconStyle =
-    "text-slate-900 text-[2.5] md:text-[3vh] group-hover:text-slate-100 transition-400";
+    "text-slate-900 text-2.5vh md:text-3vh transition-300 group-hover:text-cyan-300";
   return (
     <AnimatePresence>
       {isVisible && (
@@ -67,7 +66,7 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
           exit="hidden"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-[4vh] left-0 z-20"
+          className="fixed bottom-5.5vh left-0.5vh z-20"
         >
           <Flex className={buttonStyle} onClick={scrollToTop}>
             <Icon
