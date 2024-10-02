@@ -5,9 +5,9 @@ import {
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import { PortfolioItem } from "./project-data";
-import PortfolioAccordion from "./portfolioAccordion";
 import Text from "~/buildingBlockComponents/text";
 import OrientationImage from "~/mainDesignComponents/orientationImage";
+import DarkFlexFull from "~/mainDesignComponents/darkFlexFull";
 
 export default function PortfolioProjectDisplay({
   portfolioItem,
@@ -15,7 +15,7 @@ export default function PortfolioProjectDisplay({
   portfolioItem: PortfolioItem;
 }) {
   return (
-    <FlexFull className="flex-col items-center gap-1vh md:w-90vw xl:w-80vw lg:px-2vh xl:px-3vh xxl:px-4vh">
+    <FlexFull className="flex-col items-center gap-1vh md:pr-9vh lg:pr-15vh lg:pl-2vh xl:pl-3vh xxl:pl-4vh">
       {/* ********************** PROJECT TITLE ********************** */}
 
       <VStackFull align="items-end text-right px-1vh" gap="gap-0">
@@ -30,13 +30,12 @@ export default function PortfolioProjectDisplay({
       <VStackFull className="gap-2vh px-2vh">
         {portfolioItem.projectInfo.map((info, index) => (
           <VStackFull gap="gap-1.5vh" key={index}>
-            <VStackFull
-              className="bg-slate-900/50 p-1vh border-900-md shadowNarrowNormal"
-              align="items-start"
-            >
-              <h3 className="text-fuchsia-300">{info.heading}</h3>
-              <Text>{info.description}</Text>
-            </VStackFull>
+            <DarkFlexFull>
+              <VStackFull className="p-1vh" align="items-start">
+                <h3 className="text-fuchsia-300">{info.heading}</h3>
+                <Text>{info.description}</Text>
+              </VStackFull>
+            </DarkFlexFull>
 
             {portfolioItem.projectInfoImages[index] && (
               <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">

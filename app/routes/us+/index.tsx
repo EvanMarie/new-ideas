@@ -1,7 +1,12 @@
+import { TeamFrames } from "./components-data/about-us-data";
+import AboutUsSection from "./components-data/aboutUsSection";
+
 export default function AboutUsIndex() {
   return (
-    <div>
-      <h1>About Us Index Page</h1>
-    </div>
+    <>
+      {TeamFrames.map((teamMember) => (
+        <AboutUsSection teamMember={teamMember} />
+      ))}
+    </>
   );
 }

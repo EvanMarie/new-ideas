@@ -1,28 +1,27 @@
 import {
   FlexFull,
   Transition,
-  VStack,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import MainNavBar from "./mainNavBar";
 import { useRef } from "react";
 import ScrollProgressBar from "./visual-elements/scrollProgressBar";
 import ReturnToButton from "./returnToButton";
-import { NavLink, useLocation, useParams } from "@remix-run/react";
-import { Projects } from "~/routes/portfolio+/components-data/project-data";
+import { useParams } from "@remix-run/react";
 import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
 import PortfolioSideNav from "~/routes/portfolio+/components-data/portfolioSideNav";
-import ScrollToTop from "~/buildingBlockComponents/scrollToTopButton";
 import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 
 export default function RouteContainer({
   children,
   showNav = true,
   showScrollProgress = true,
+  bg,
 }: {
   children: React.ReactNode;
   showNav?: boolean;
   showScrollProgress?: boolean;
+  bg?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const projectSlug = useParams().projectSlug;
@@ -51,10 +50,9 @@ export default function RouteContainer({
       />
       <ScrollToTopButton scrollContainerRef={scrollRef} />
       <FlexFull
-        className={`w-full h-100svh overflow-hidden ${
+        className={`w-full h-100svh overflow-hidden ${bg} ${
           showScrollProgress ? "pb-4.5vh" : "pb-4svh"
         } `}
-        type="fadeSlideInBottom"
       >
         <FlexFull
           className="pt-5svh h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative"

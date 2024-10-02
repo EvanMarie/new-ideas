@@ -1,7 +1,10 @@
+import { Center, FlexFull } from "~/buildingBlockComponents/mainContainers";
+import DarkFlexFull from "~/mainDesignComponents/darkFlexFull";
+
 export default function HomeIndex() {
   return (
-    <div>
-      <h1>Home Index Page</h1>
-    </div>
+    <Center className="w-full h-88svh p-1vh">
+      <DarkFlexFull className=" p-1vh">This</DarkFlexFull>
+    </Center>
   );
 }

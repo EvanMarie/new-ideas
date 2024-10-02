@@ -10,15 +10,15 @@ export default function PortfolioSideNav({
 }) {
   return (
     <Transition
-      className="hidden md:flex fixed right-1vw top-4vh h-85svh flex-shrink-0 p-0.5vh z-10 overflow-visible"
+      className="hidden md:flex fixed right-1vh top-1vh h-90svh flex-shrink-0 p-0.5vh z-10 overflow-visible"
       delay={0.3}
       type="zoom"
     >
-      <VStack className="w-8vw lg:w-9vh justify-around  bg-indigo-900 bg-gradient-to-b from-indigo-950/60 via-indigo-950/20 to-indigo-960/50 border-900-md shadowNarrowNormal">
+      <VStack className="w-7vh lg:w-10vh justify-around ">
         {Projects.map((project) => (
           <NavLink
             key={project.slug}
-            className={`w-5vh h-5vh lg:w-6vh lg:h-6vh rounded-full border-900-md ${
+            className={`w-5vh h-5vh lg:w-7vh lg:h-7vh rounded-full border-900-md ${
               projectSlug === project.slug ? "boxGlowSm" : "shadowNarrowNormal"
             } hover:boxGlowSm transition-300 hover:scale-102 hover:cursor-pointer`}
             to={`/portfolio/${project.slug}`}
