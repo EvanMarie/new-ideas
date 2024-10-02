@@ -12,6 +12,8 @@ import { NavLink, useLocation, useParams } from "@remix-run/react";
 import { Projects } from "~/routes/portfolio+/components-data/project-data";
 import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
 import PortfolioSideNav from "~/routes/portfolio+/components-data/portfolioSideNav";
+import ScrollToTop from "~/buildingBlockComponents/scrollToTopButton";
+import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 
 export default function RouteContainer({
   children,
@@ -47,7 +49,7 @@ export default function RouteContainer({
         size="xs"
         bottom="bottom-[4.5svh]"
       />
-
+      <ScrollToTopButton scrollContainerRef={scrollRef} />
       <FlexFull
         className={`w-full h-100svh overflow-hidden ${
           showScrollProgress ? "pb-4.5vh" : "pb-4svh"
