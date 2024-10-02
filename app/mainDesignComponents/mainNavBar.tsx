@@ -11,7 +11,7 @@ import { IoBook, IoBookOutline, IoHome, IoHomeOutline } from "react-icons/io5";
 
 export default function MainNavBar() {
   return (
-    <FlexFull className="fixed bottom-0 left-0 right-0 bg-indigo-900 bg-gradient-to-r from-indigo-950/60 via-indigo-950/20 to-indigo-960/50 justify-around z-10 rounded-none h-4svh items-center">
+    <FlexFull className="fixed bottom-0 left-0 right-0 bg-indigo-900 bg-gradient-to-r from-indigo-950/60 via-indigo-950/20 to-indigo-960/50 justify-around z-10 rounded-none h-5svh md:h-4svh items-center">
       <MainNavButton
         text="home"
         inactiveIcon={IoHomeOutline}

@@ -36,7 +36,7 @@ export default function RouteContainer({
           trackColor="bg-slate-900/80"
           shadow=""
           containerRef={scrollRef}
-          position="fixed bottom-[4svh]"
+          position="fixed bottom-[5svh] md:bottom-[4svh]"
           height="h-0.5vh"
           zIndex="z-10"
           color="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-purple-300"
@@ -47,7 +47,7 @@ export default function RouteContainer({
       <InsetShadowOverlay
         position="bottom"
         size="md"
-        bottom="bottom-[4.5svh]"
+        bottom="bottom-[5.5svh] md:bottom-[4.5svh]"
       />
       <ScrollToTopButton scrollContainerRef={scrollRef} />
       <FlexFull

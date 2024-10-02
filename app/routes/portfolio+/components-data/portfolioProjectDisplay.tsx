@@ -56,16 +56,16 @@ export default function PortfolioProjectDisplay({
         <PortfolioAccordion title="Project Images">
           <VStackFull className="h-fit py-1vh" gap="gap-3vh">
             {portfolioItem.projectImages.map((image, index) => (
-              <VStack>
+              <VStack key={index} className="py-0.5vh">
                 {" "}
-                <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">
+                <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh ">
                   <OrientationImage
                     key={index}
                     src={image.src}
                     alt={portfolioItem.title}
                   />
                 </Flex>{" "}
-                <span className="text-md">
+                <span className="text-md pt-0.5vh">
                   Image {index + 1} - {image.title}
                 </span>
               </VStack>
