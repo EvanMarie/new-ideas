@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import {
   Center,
   Flex,
+  FlexFull,
   transitionVariants,
   VStack,
 } from "~/buildingBlockComponents/mainContainers";
 import SkeletonLoader from "./skeletonLoader";
+import DarkFlexFull from "../darkFlexFull";
 
 interface ShiftingImagesProps {
   imageArray?: string[];
@@ -114,31 +116,34 @@ export default function ShiftingImages({
     <>
       {imagesLoaded ? (
         <Flex className={`relative ${imageDimensions} ${containerClassName}`}>
-          <VStack>
-            <AnimatePresence>
-              <motion.img
-                key={currentImageIndex}
+          <AnimatePresence>
+            <motion.div
+              key={currentImageIndex}
+              variants={transitionVariants[type]}
+              initial={transitionVariants[type].initial as VariantLabels}
+              animate={transitionVariants[type].animate as VariantLabels}
+              exit={transitionVariants[type].exit as VariantLabels}
+              transition={{
+                duration: transitionDuration,
+                type: ease ? "tween" : "spring",
+                ease: ease || undefined,
+              }}
+              style={imageStyle}
+              className={`absolute inset-0 object-cover ${imageDimensions} ${imageClassName}`}
+            >
+              <img
                 src={currentImageSrc}
-                variants={transitionVariants[type]}
-                initial={transitionVariants[type].initial as VariantLabels}
-                animate={transitionVariants[type].animate as VariantLabels}
-                exit={transitionVariants[type].exit as VariantLabels}
-                transition={{
-                  duration: transitionDuration,
-                  type: ease ? "tween" : "spring",
-                  ease: ease || undefined,
-                }}
-                style={imageStyle}
-                className={`absolute inset-0 object-cover ${imageDimensions} ${imageClassName}`}
+                alt={currentImageProject}
+                className={`object-cover ${imageDimensions}`}
               />
-            </AnimatePresence>
-            {imagesAndTitles && (
-              <VStack className="absolute bottom-0 left-0 right-0 z-10">
-                <span>{currentImageProject}</span>
-                <span>{currentImageTitle}</span>
-              </VStack>
-            )}
-          </VStack>
+              {imagesAndTitles && (
+                <FlexFull className="gap-1vh justify-center textShadow text-sm">
+                  <span className="">{currentImageProject} </span> |{" "}
+                  <span className=""> {currentImageTitle}</span>
+                </FlexFull>
+              )}
+            </motion.div>
+          </AnimatePresence>
         </Flex>
       ) : (
         <Center className={`relative ${imageDimensions} ${containerClassName}`}>
