@@ -1,18 +1,21 @@
+import React, { useRef, useState, useEffect } from "react";
 import {
+  Box,
   FlexFull,
   Transition,
+  VStack,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import MainNavBar from "./mainNavBar";
-import { useRef } from "react";
 import ScrollProgressBar from "./visual-elements/scrollProgressBar";
 import ReturnToButton from "./returnToButton";
-import { useLocation, useParams } from "@remix-run/react";
+import { NavLink, useLocation, useParams } from "@remix-run/react";
 import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
 import PortfolioSideNav from "~/routes/portfolio+/components-data/portfolioSideNav";
 import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 import Image from "~/buildingBlockComponents/image";
-import FloatingUpAndOutImages from "./visual-elements/floatingCircles";
+import FloatingUpAndOutImages from "./visual-elements/floatingViolets";
+import AnimatedText from "./visual-elements/animatedText";
 
 export default function RouteContainer({
   children,
@@ -29,10 +32,55 @@ export default function RouteContainer({
   const projectSlug = useParams().projectSlug;
   const returnTo = projectSlug ? `/portfolio` : "";
   const isHome = useLocation().pathname === "/home";
+  const isRoot = useLocation().pathname === "/";
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollRef.current) {
+        const scrollPosition = scrollRef.current.scrollTop;
+        const viewportHeight = window.innerHeight;
+        setIsScrolled(scrollPosition > viewportHeight * 0.15); // 10vh
+      }
+    };
+
+    const scrollElement = scrollRef.current;
+    if (scrollElement) {
+      scrollElement.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (scrollElement) {
+        scrollElement.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
+  const baseTextClassName =
+    "text-violet-950 textGlowXs tracking-wider kufam-font transition-all duration-400";
+  const textClassName = isScrolled
+    ? `${baseTextClassName} text-3vh xl:text-4vh`
+    : `${baseTextClassName} text-5vh xl:text-6vh`;
+
   return (
     <>
       {isHome && <FloatingUpAndOutImages />}
-
+      {!isRoot && (
+        <Box className="fixed top-0.5vh left-0.5vh z-30">
+          <NavLink to="/home">
+            <VStack gap="gap-0" align="items-start">
+              <AnimatedText
+                text="DarkViolet.ai"
+                textClassName={textClassName}
+              />
+              <span className="text-1vh leading-1.3vh text-col-500 ">
+                © 2024 All rights reserved.
+              </span>
+            </VStack>
+          </NavLink>
+        </Box>
+      )}
       {/* ***************** ON PORTFOLIO PROJECT PAGE ***************** */}
       {projectSlug && <PortfolioSideNav projectSlug={projectSlug} />}
 

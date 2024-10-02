@@ -34,7 +34,6 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
-  const isRoot = useLocation().pathname === "/";
   return (
     <html lang="en">
       <head>
@@ -46,21 +45,7 @@ export default function App() {
       <body>
         <FlexFull className="bg-col-880 h-100svh max-h-100svh first-line:overflow-hidden rounded-none relative">
           <Outlet />
-          {!isRoot && (
-            <Box className="fixed top-0.5vh left-0.5vh z-30">
-              <NavLink to="/home">
-                <VStack gap="gap-0" align="items-start">
-                  <AnimatedText
-                    text="DarkViolet.ai"
-                    textClassName="text-violet-950 text-4vh xl:text-5vh textGlowXs tracking-wider kufam-font"
-                  />
-                  <span className="text-1vh leading-1.3vh text-col-500 ">
-                    © 2024 All rights reserved.
-                  </span>
-                </VStack>
-              </NavLink>
-            </Box>
-          )}
+
           <ScrollRestoration />
           <Scripts />
         </FlexFull>
