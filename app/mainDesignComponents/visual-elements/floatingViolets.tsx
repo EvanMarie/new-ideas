@@ -21,13 +21,13 @@ const getRandomValue = (min: number, max: number) =>
 
 export default function FloatingUpAndOutImages({
   imageSrc = "/images/falling-violet.webp",
-  numImages = 53,
+  numImages = 23,
   maxImageSize = 5,
   minImageSize = 1,
   maxImageRotation = 75,
   minImageRotation = -75,
-  maxDuration = 23,
-  minDuration = 8,
+  maxDuration = 8,
+  minDuration = 3,
   maxDelay = 4,
   minDelay = 0,
   landingAreaStart = -50,

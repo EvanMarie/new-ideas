@@ -1,7 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
-import { TransitionFull } from "~/buildingBlockComponents/mainContainers";
+import {
+  Transition,
+  TransitionFull,
+} from "~/buildingBlockComponents/mainContainers";
 import TimedNavigation from "~/mainDesignComponents/timedNavigation";
+import FloatingUpAndOutImages from "~/mainDesignComponents/visual-elements/floatingViolets";
 import DarkVioletIndexAnimation from "~/mainDesignComponents/visual-elements/indexAnimation";
 
 export const meta: MetaFunction = () => {
@@ -24,7 +28,11 @@ export default function Index() {
         fadeInDuration={1}
         screenTime={3000}
       >
-        <DarkVioletIndexAnimation />
+        <Transition type="rotate3D">
+          <h1 className="text-violet-950 textGlowXs">DarkViolet.ai</h1>
+        </Transition>
+        {/* <DarkVioletIndexAnimation /> */}
+        <FloatingUpAndOutImages />
       </TimedNavigation>
     </TransitionFull>
   );

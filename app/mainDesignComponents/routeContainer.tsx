@@ -58,14 +58,13 @@ export default function RouteContainer({
   }, []);
 
   const baseTextClassName =
-    "text-violet-950 textGlowXs tracking-wider kufam-font transition-all duration-400";
+    "text-violet-950 textGlowXs tracking-wider kufam-font transition-all transition-400";
   const textClassName = isScrolled
     ? `${baseTextClassName} text-3vh xl:text-4vh`
     : `${baseTextClassName} text-5vh xl:text-6vh`;
 
   return (
     <>
-      {isHome && <FloatingUpAndOutImages />}
       {!isRoot && (
         <Box className="fixed top-0.5vh left-0.5vh z-30">
           <NavLink to="/home">
