@@ -383,7 +383,7 @@ export const transitionVariants: Record<string, Variants> = {
   fadeSlideInRight: {
     initial: { x: "100vw", opacity: 0 },
     animate: { x: 0, opacity: 1 },
-    exit: { x: "100vw", opacity: 0 },
+    exit: { x: "-100vw", opacity: 0 },
   },
   fadeSlideInRightHalf: {
     initial: { x: "50vw", opacity: 0 },
@@ -393,12 +393,17 @@ export const transitionVariants: Record<string, Variants> = {
   fadeSlideInLeft: {
     initial: { x: "-100vw", opacity: 0 },
     animate: { x: 0, opacity: 1 },
-    exit: { x: "-100vw", opacity: 0 },
+    exit: { x: "100vw", opacity: 0 },
   },
   fadeSlideInLeftHalf: {
     initial: { x: "-50vw", opacity: 0 },
     animate: { x: 0, opacity: 1 },
     exit: { x: "50vw", opacity: 0 },
+  },
+  fadeSlideInElementSize: {
+    initial: { x: "-100%", opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+    exit: { x: "100%", opacity: 0 },
   },
   fadeSlideInTopLeft: {
     initial: { x: "-100vw", y: "-100vh", opacity: 0 },

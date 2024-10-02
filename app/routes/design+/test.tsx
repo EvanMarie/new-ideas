@@ -4,13 +4,11 @@ import ShiftingImages from "~/mainDesignComponents/visual-elements/shiftingImage
 
 export default function Test() {
   return (
-    <Box className="w-100vw px-15vw">
-      <ShiftingImages
-        imagesAndTitles={randomizedImagesWithTitles}
-        imageClassName="border-900-md shadowNarrowNormal"
-        imageDimensions="max-w-70vw"
-        type="fadeSlideInLeftHalf"
-      />
-    </Box>
+    <ShiftingImages
+      imagesAndTitles={randomizedImagesWithTitles}
+      imageClassName="border-900-md shadowNarrowNormal"
+      imageDimensions="h-70vh"
+      type="rotate3D"
+    />
   );
 }

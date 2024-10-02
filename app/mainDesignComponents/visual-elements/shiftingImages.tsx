@@ -1,14 +1,15 @@
 import { motion, AnimatePresence, VariantLabels } from "framer-motion";
 import { useState, useEffect } from "react";
 import {
+  Box,
   Center,
   Flex,
   FlexFull,
   transitionVariants,
   VStack,
+  VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import SkeletonLoader from "./skeletonLoader";
-import DarkFlexFull from "../darkFlexFull";
 
 interface ShiftingImagesProps {
   imageArray?: string[];
@@ -29,16 +30,6 @@ interface ShiftingImagesProps {
   shadow?: string;
   type?: keyof typeof transitionVariants;
 }
-
-const shapeStyles = {
-  rectangle: "",
-  circle: "circle(50%)",
-  triangle: "polygon(50% 0%, 0% 100%, 100% 100%)",
-  invertedTriangle: "polygon(0% 0%, 100% 0%, 50% 100%)",
-  diamond: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-  octagon:
-    "polygon(30% 10%, 70% 10%, 90% 30%, 90% 70%, 70% 90%, 30% 90%, 10% 70%, 10% 30%)",
-};
 
 export default function ShiftingImages({
   imageArray,
@@ -102,10 +93,6 @@ export default function ShiftingImages({
     }
   }, [currentImageIndex, imagesAndTitles]);
 
-  const imageStyle = {
-    ...(shapeStyles[shape] ? { clipPath: shapeStyles[shape] } : {}),
-  };
-
   const currentImageSrc = imageArray
     ? imageArray[currentImageIndex]
     : imagesAndTitles
@@ -115,36 +102,36 @@ export default function ShiftingImages({
   return (
     <>
       {imagesLoaded ? (
-        <Flex className={`relative ${imageDimensions} ${containerClassName}`}>
-          <AnimatePresence>
-            <motion.div
-              key={currentImageIndex}
-              variants={transitionVariants[type]}
-              initial={transitionVariants[type].initial as VariantLabels}
-              animate={transitionVariants[type].animate as VariantLabels}
-              exit={transitionVariants[type].exit as VariantLabels}
-              transition={{
-                duration: transitionDuration,
-                type: ease ? "tween" : "spring",
-                ease: ease || undefined,
-              }}
-              style={imageStyle}
-              className={`absolute inset-0 object-cover ${imageDimensions} ${imageClassName}`}
-            >
-              <img
-                src={currentImageSrc}
-                alt={currentImageProject}
-                className={`object-cover ${imageDimensions}`}
-              />
+        <AnimatePresence>
+          <motion.div
+            key={currentImageIndex}
+            variants={transitionVariants[type]}
+            initial={transitionVariants[type].initial as VariantLabels}
+            animate={transitionVariants[type].animate as VariantLabels}
+            exit={transitionVariants[type].exit as VariantLabels}
+            transition={{
+              duration: transitionDuration,
+              type: ease ? "tween" : "spring",
+              ease: ease || undefined,
+            }}
+          >
+            <VStack>
+              <Box className={`rounded-1vh ${imageDimensions}`}>
+                <img
+                  src={currentImageSrc}
+                  alt={currentImageProject}
+                  className={`object-cover ${imageClassName} w-full h-full rounded-1vh border-900-md shadowNarrowNormal`}
+                />
+              </Box>
               {imagesAndTitles && (
-                <FlexFull className="gap-1vh justify-center textShadow text-sm">
+                <FlexFull className="gap-1vh justify-center textShadow text-sm bg-slate-900/50 border-900-md shadowNarrowNormal">
                   <span className="">{currentImageProject} </span> |{" "}
                   <span className=""> {currentImageTitle}</span>
                 </FlexFull>
               )}
-            </motion.div>
-          </AnimatePresence>
-        </Flex>
+            </VStack>
+          </motion.div>
+        </AnimatePresence>
       ) : (
         <Center className={`relative ${imageDimensions} ${containerClassName}`}>
           <SkeletonLoader />
