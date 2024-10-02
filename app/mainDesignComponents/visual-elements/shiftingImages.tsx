@@ -1,6 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, VariantLabels } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Center, Flex } from "~/buildingBlockComponents/mainContainers";
+import {
+  Center,
+  Flex,
+  transitionVariants,
+  VStack,
+} from "~/buildingBlockComponents/mainContainers";
 import SkeletonLoader from "./skeletonLoader";
 
 interface ShiftingImagesProps {
@@ -8,6 +13,7 @@ interface ShiftingImagesProps {
   imagesAndTitles?: { src: string; project: string; title: string }[];
   delaySeconds?: number;
   transitionDuration?: number;
+  ease?: string;
   imageDimensions?: string;
   shape?:
     | "rectangle"
@@ -19,6 +25,7 @@ interface ShiftingImagesProps {
   imageClassName?: string;
   containerClassName?: string;
   shadow?: string;
+  type?: keyof typeof transitionVariants;
 }
 
 const shapeStyles = {
@@ -35,14 +42,18 @@ export default function ShiftingImages({
   imageArray,
   imagesAndTitles,
   delaySeconds = 4,
-  transitionDuration = 2,
+  ease,
+  transitionDuration = 1.5,
   imageDimensions = "h-full w-full",
   shape = "rectangle",
+  type = "fade",
   imageClassName = "",
   containerClassName = "",
 }: ShiftingImagesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [currentImageProject, setCurrentImageProject] = useState("");
+  const [currentImageTitle, setCurrentImageTitle] = useState("");
 
   const numImages = imagesAndTitles
     ? imagesAndTitles.length
@@ -81,6 +92,14 @@ export default function ShiftingImages({
     };
   }, [currentImageIndex, delaySeconds, numImages, transitionDuration]);
 
+  useEffect(() => {
+    if (imagesAndTitles) {
+      const currentImage = imagesAndTitles[currentImageIndex];
+      setCurrentImageProject(currentImage.project);
+      setCurrentImageTitle(currentImage.title);
+    }
+  }, [currentImageIndex, imagesAndTitles]);
+
   const imageStyle = {
     ...(shapeStyles[shape] ? { clipPath: shapeStyles[shape] } : {}),
   };
@@ -92,27 +111,40 @@ export default function ShiftingImages({
     : "";
 
   return (
-    <Center className="w-full">
+    <>
       {imagesLoaded ? (
         <Flex className={`relative ${imageDimensions} ${containerClassName}`}>
-          <AnimatePresence>
-            <motion.img
-              key={currentImageIndex}
-              src={currentImageSrc}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: transitionDuration, ease: "easeInOut" }}
-              style={imageStyle}
-              className={`absolute inset-0 object-cover ${imageDimensions} ${imageClassName}`}
-            />
-          </AnimatePresence>
+          <VStack>
+            <AnimatePresence>
+              <motion.img
+                key={currentImageIndex}
+                src={currentImageSrc}
+                variants={transitionVariants[type]}
+                initial={transitionVariants[type].initial as VariantLabels}
+                animate={transitionVariants[type].animate as VariantLabels}
+                exit={transitionVariants[type].exit as VariantLabels}
+                transition={{
+                  duration: transitionDuration,
+                  type: ease ? "tween" : "spring",
+                  ease: ease || undefined,
+                }}
+                style={imageStyle}
+                className={`absolute inset-0 object-cover ${imageDimensions} ${imageClassName}`}
+              />
+            </AnimatePresence>
+            {imagesAndTitles && (
+              <VStack className="absolute bottom-0 left-0 right-0 z-10">
+                <span>{currentImageProject}</span>
+                <span>{currentImageTitle}</span>
+              </VStack>
+            )}
+          </VStack>
         </Flex>
       ) : (
         <Center className={`relative ${imageDimensions} ${containerClassName}`}>
           <SkeletonLoader />
         </Center>
       )}
-    </Center>
+    </>
   );
 }

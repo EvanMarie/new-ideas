@@ -398,7 +398,7 @@ export const transitionVariants: Record<string, Variants> = {
   fadeSlideInLeftHalf: {
     initial: { x: "-50vw", opacity: 0 },
     animate: { x: 0, opacity: 1 },
-    exit: { x: "-50vw", opacity: 0 },
+    exit: { x: "50vw", opacity: 0 },
   },
   fadeSlideInTopLeft: {
     initial: { x: "-100vw", y: "-100vh", opacity: 0 },
