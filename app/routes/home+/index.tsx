@@ -22,7 +22,7 @@ export default function HomeIndex() {
           automation.
         </Text>
         <VStackFull gap="gap-0" align="items-start">
-          <h5 className="text-fuchsia-300">
+          <h5 className="text-cyan-300">
             From frontend to backend, we use the latest technologies to build:
           </h5>
           <ul>
@@ -38,7 +38,7 @@ export default function HomeIndex() {
           and satisfaction, while leveraging AI to drive business growth and
           efficiency.
         </Text>
-        <Text>Our AI integration services include:</Text>
+        <h5 className="text-cyan-300">Our AI integration services include:</h5>
         <ul>
           <li>Custom AI model development for specific business needs</li>
           <li>Integration of machine learning algorithms for data analysis</li>
