@@ -2169,8 +2169,13 @@ export default {
           fontSize: "inherit",
         },
         li: {
-          listStyleType: "none",
-          paddingLeft: "3vh",
+          listStyleType: "circle",
+          paddingLeft: "1vh", // Add left padding
+          marginLeft: "1vh", // Push the list item content to the right
+          position: "relative", // For potential future pseudo-element positioning
+        },
+        ul: {
+          paddingLeft: "3vh", // Add padding to the ul to shift everything right
         },
       });
     }),

@@ -4,7 +4,7 @@ import RouteContainer from "~/mainDesignComponents/routeContainer";
 
 export default function HomeLayout() {
   return (
-    <RouteContainer>
+    <RouteContainer bg="bg-indigo-950/50">
       <Outlet />
     </RouteContainer>
   );

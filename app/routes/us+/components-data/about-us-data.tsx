@@ -95,22 +95,22 @@ export const TeamFrames = [
       "Dustin's distinguished career is underpinned by a robust academic foundation with a Ph.D. in Physics from Cornell University and a B.S. in Mathematics from Oklahoma State University. As he pivots into the AI field, Dustin brings a comprehensive suite of expertise and a proven trajectory of innovation and leadership. His ambitious pursuit of opportunities in AI and his unparalleled skill set position him uniquely to create and steer groundbreaking solutions in the industry.",
     ],
   },
-  {
-    name: "UI and AI",
-    role: "the FrontLines",
-    edu1: "We are helping to define the",
-    edu2: "field of AI applications",
-    edu3: "engineering.",
-    image:
-      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/neuralnetwork.png" +
-      teamImageSettings,
-    paragraphs: [
-      "We do this by cleverly combining leading edge tools and technologies to create innovative solutions that are practical, elegant, and intelligent.",
-      "In the swiftly shifting landscape of technology, maintaining a lead in web development transcends mere optionality—it becomes an imperative. Our methodology in web development adopts a comprehensive stance, guaranteeing that each undertaking shines not only in aesthetic allure but in functional robustness as well.",
-      "Our expertise spans the full spectrum from front-end to back-end development, harnessing cutting-edge technologies and frameworks to forge websites that are not only seamless and fully responsive from mobile to 4K ultra HD but also intuitively aligned with the end-user's needs.",
-      "We recognize that a website embodies more than just a digital presence; it encapsulates an entire experience. With this philosophy at our core, we meticulously sculpt every facet of the web development journey, aiming to amplify user engagement and gratification.",
-    ],
-  },
+  //   {
+  //     name: "UI and AI",
+  //     role: "the FrontLines",
+  //     edu1: "We are helping to define the",
+  //     edu2: "field of AI applications",
+  //     edu3: "engineering.",
+  //     image:
+  //       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/neuralnetwork.png" +
+  //       teamImageSettings,
+  //     paragraphs: [
+  //       "We do this by cleverly combining leading edge tools and technologies to create innovative solutions that are practical, elegant, and intelligent.",
+  //       "In the swiftly shifting landscape of technology, maintaining a lead in web development transcends mere optionality—it becomes an imperative. Our methodology in web development adopts a comprehensive stance, guaranteeing that each undertaking shines not only in aesthetic allure but in functional robustness as well.",
+  //       "Our expertise spans the full spectrum from front-end to back-end development, harnessing cutting-edge technologies and frameworks to forge websites that are not only seamless and fully responsive from mobile to 4K ultra HD but also intuitively aligned with the end-user's needs.",
+  //       "We recognize that a website embodies more than just a digital presence; it encapsulates an entire experience. With this philosophy at our core, we meticulously sculpt every facet of the web development journey, aiming to amplify user engagement and gratification.",
+  //     ],
+  //   },
 ];
 
 export type ChatEntry = {

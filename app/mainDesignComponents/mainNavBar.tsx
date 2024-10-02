@@ -20,6 +20,13 @@ export default function MainNavBar() {
         label="home"
       />
       <MainNavButton
+        text="us"
+        inactiveIcon={FaRegSmile}
+        activeIcon={FaSmileBeam}
+        to="/us"
+        label="about us"
+      />
+      <MainNavButton
         text="portfolio"
         inactiveIcon={BsCollection}
         activeIcon={BsCollectionFill}
@@ -32,13 +39,6 @@ export default function MainNavBar() {
         activeIcon={IoBook}
         to="/blog"
         label="blog"
-      />
-      <MainNavButton
-        text="us"
-        inactiveIcon={FaRegSmile}
-        activeIcon={FaSmileBeam}
-        to="/us"
-        label="about us"
       />
       <MainNavButton
         text="connect"
