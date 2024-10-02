@@ -126,7 +126,7 @@ export const Projects = [
     title: "Light Path Learning",
     slug: "light-path-learning",
     description:
-      "Light Path is an innovative educational platform designed to transform how educators plan, teach, and engage with their students. By skillfully integrating advanced AI technology as a supportive tool, along with versatile features, Light Path offers a comprehensive solution for creating dynamic and interactive learning experiences in a clean, streamlined environment.",
+      "Educational platform that transforms how educators plan, teach, and engage with students.",
     link: "https://homeschool.darkviolet.ai/",
     github: "https://github.com/DarkViolet-ai",
     projectInfoImages: [

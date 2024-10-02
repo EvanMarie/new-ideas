@@ -698,7 +698,7 @@ export default {
         115: "1.15",
       },
       fontFamily: {
-        sans: ["Lato", "sans-serif"],
+        sans: ["M PLUS Rounded 1c", "sans-serif"],
         cursive: ["Comic Neue", "cursive"],
       },
       fontSize: {
@@ -1808,7 +1808,8 @@ export default {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          fontFamily: '"Prompt", sans-serif',
+          fontFamily: '"M PLUS Rounded 1c", sans-serif',
+          fontWeight: 500,
           backgroundImage: "url('/images/siteBackground.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
