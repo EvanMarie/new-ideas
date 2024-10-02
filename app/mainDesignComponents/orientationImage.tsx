@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Transition } from "~/buildingBlockComponents/mainContainers";
 
 export default function OrientationImage({
   src,
@@ -28,55 +29,45 @@ export default function OrientationImage({
   squareObjectFit?: "contain" | "cover";
 }) {
   const [imageStyles, setImageStyles] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [aspectRatio, setAspectRatio] = useState("1/1");
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const handleLoad = () => {
-      if (imgRef.current) {
-        const { naturalWidth, naturalHeight } = imgRef.current;
+    const img = new Image();
+    img.src = src;
 
-        if (naturalWidth > naturalHeight) {
-          // LANDSCAPE IMAGES
-          setImageStyles({
-            width: "100%",
-            height: "auto",
-            maxHeight: landscapeMaxHeight,
-            maxWidth: landscapeMaxWidth,
-            objectFit: landscapeObjectFit,
-          });
-        } else if (naturalWidth < naturalHeight) {
-          // PORTRAIT IMAGES
-          setImageStyles({
-            width: "auto",
-            height: "100%",
-            maxHeight: portraitMaxHeight,
-            maxWidth: portraitMaxWidth,
-            objectFit: portraitObjectFit,
-          });
-        } else {
-          // SQUARE IMAGES
-          setImageStyles({
-            width: "100%",
-            height: "100%",
-            maxHeight: squareMaxHeight,
-            maxWidth: squareMaxWidth,
-            objectFit: squareObjectFit,
-          });
-        }
+    img.onload = () => {
+      const { naturalWidth, naturalHeight } = img;
+      setAspectRatio(`${naturalWidth}/${naturalHeight}`);
+
+      if (naturalWidth > naturalHeight) {
+        // LANDSCAPE IMAGES
+        setImageStyles({
+          maxHeight: landscapeMaxHeight,
+          maxWidth: landscapeMaxWidth,
+          objectFit: landscapeObjectFit,
+        });
+      } else if (naturalWidth < naturalHeight) {
+        // PORTRAIT IMAGES
+        setImageStyles({
+          maxHeight: portraitMaxHeight,
+          maxWidth: portraitMaxWidth,
+          objectFit: portraitObjectFit,
+        });
+      } else {
+        // SQUARE IMAGES
+        setImageStyles({
+          maxHeight: squareMaxHeight,
+          maxWidth: squareMaxWidth,
+          objectFit: squareObjectFit,
+        });
       }
+      setIsLoading(false);
     };
 
-    if (imgRef.current) {
-      // In case the image is already loaded
-      if (imgRef.current.complete) {
-        handleLoad();
-      } else {
-        imgRef.current.addEventListener("load", handleLoad);
-      }
-    }
-
     return () => {
-      imgRef.current?.removeEventListener("load", handleLoad);
+      img.onload = null;
     };
   }, [
     src,
@@ -91,17 +82,32 @@ export default function OrientationImage({
     squareObjectFit,
   ]);
 
+  const skeletonClass = `bg-gray-200 animate-pulse ${className} text-transparent`;
+
   return (
-    <div className={className} style={{ display: "inline-block" }}>
-      <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        style={{
-          ...imageStyles,
-          display: "block",
-        }}
-      />
-    </div>
+    <Transition className={`inline-block ${className}`} style={{ aspectRatio }}>
+      {isLoading ? (
+        <div
+          className={skeletonClass}
+          style={{
+            width: "100%",
+            height: "100%",
+            ...imageStyles,
+            minHeight: "40vh",
+            minWidth: "40vw",
+          }}
+        >
+          This
+        </div>
+      ) : (
+        <img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          className="block w-full h-full"
+          style={imageStyles}
+        />
+      )}
+    </Transition>
   );
 }
