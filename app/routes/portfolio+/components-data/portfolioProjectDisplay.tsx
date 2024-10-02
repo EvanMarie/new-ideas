@@ -51,8 +51,9 @@ export default function PortfolioProjectDisplay({
         ))}
       </VStackFull>
       {/* ********************** PROJECT IMAGES ********************** */}
-      <FlexFull className="px-1vh rounded-0.7vh ">
-        <PortfolioAccordion title="Project Images">
+      <FlexFull className="px-1vh rounded-0.7vh pt-3vh">
+        <VStackFull>
+          <span className="text-3vh text-fuchsia-300">Project Images</span>
           <VStackFull className="h-fit py-1vh" gap="gap-3vh">
             {portfolioItem.projectImages.map((image, index) => (
               <VStack key={index} className="py-0.5vh">
@@ -70,7 +71,7 @@ export default function PortfolioProjectDisplay({
               </VStack>
             ))}
           </VStackFull>
-        </PortfolioAccordion>
+        </VStackFull>
       </FlexFull>
     </FlexFull>
   );
