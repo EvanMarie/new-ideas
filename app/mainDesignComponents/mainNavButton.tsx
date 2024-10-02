@@ -42,7 +42,7 @@ export default function MainNavButton({
         gap="gap-1vh"
       >
         <VStack className="h-full justify-center" gap="gap-0.2vh">
-          <span className="md:hidden text-1vh">{label}</span>
+          <span className="md:hidden text-1.3vh">{label}</span>
 
           {inactiveIcon && activeIcon && (
             <Icon

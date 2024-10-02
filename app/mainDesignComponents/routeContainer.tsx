@@ -33,7 +33,7 @@ export default function RouteContainer({
       {showNav && <MainNavBar />}
       {showScrollProgress && (
         <ScrollProgressBar
-          trackColor="bg-slate-900/80"
+          trackColor="bg-indigo-900/80"
           shadow=""
           containerRef={scrollRef}
           position="fixed bottom-[5svh] md:bottom-[4svh]"
