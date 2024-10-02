@@ -93,7 +93,15 @@ export default function OrientationImage({
 
   return (
     <div className={className} style={{ display: "inline-block" }}>
-      <img ref={imgRef} src={src} alt={alt} style={imageStyles} />
+      <img
+        ref={imgRef}
+        src={src}
+        alt={alt}
+        style={{
+          ...imageStyles,
+          display: "block",
+        }}
+      />
     </div>
   );
 }

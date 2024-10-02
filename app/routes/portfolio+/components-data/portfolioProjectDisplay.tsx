@@ -34,14 +34,14 @@ export default function PortfolioProjectDisplay({
               <Text key={index}>{info.description}</Text>
             </Flex>
 
-            {/* Conditionally render the image with onLoad and dynamic orientation */}
             {portfolioItem.projectInfoImages[index] && (
-              <OrientationImage
-                key={portfolioItem.slug + index}
-                src={portfolioItem.projectInfoImages[index].src}
-                alt={`${portfolioItem.title} image ${index}`}
-                className={`rounded-md border-900-md shadowNarrowNormal`}
-              />
+              <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">
+                <OrientationImage
+                  key={portfolioItem.slug + index}
+                  src={portfolioItem.projectInfoImages[index].src}
+                  alt={`${portfolioItem.title} image ${index}`}
+                />
+              </Flex>
             )}
           </VStackFull>
         ))}
@@ -49,16 +49,15 @@ export default function PortfolioProjectDisplay({
       {/* ********************** PROJECT IMAGES ********************** */}
       <FlexFull className="px-1vh rounded-0.7vh ">
         <PortfolioAccordion title="Project Images">
-          <VStackFull className="h-fit py-1vh" gap="gap-1vh">
+          <VStackFull className="h-fit py-1vh" gap="gap-2vh">
             {portfolioItem.projectImages.map((image, index) => (
-              <FlexFull className="p-0.5vh sm:p-1vh xl:p-2vh">
+              <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">
                 <OrientationImage
                   key={index}
                   src={image.src}
                   alt={portfolioItem.title}
-                  className="w-full h-full object-contain rounded-md border-900-md shadowNarrowNormal"
                 />
-              </FlexFull>
+              </Flex>
             ))}
           </VStackFull>
         </PortfolioAccordion>

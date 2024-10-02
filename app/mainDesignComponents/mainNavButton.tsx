@@ -32,16 +32,17 @@ export default function MainNavButton({
         <HStackFull
           className={`hover:cursor-pointer h-4svh group items-center justify-center ${
             isActive
-              ? "text-cyan-300 bg-fuchsia-800/50 shadowNarrowNormal"
-              : "text-fuchsia-300"
-          } hover:text-cyan-300 textShadow transition-300 rounded-none`}
+              ? "text-indigo-900 bg-cyan-300 shadowNarrowNormal textGlowSm hover:text-indigo-900 font-semibold"
+              : "text-cyan-300"
+          } hover:text-fuchsia-300 textShadow transition-300 rounded-none`}
           gap="gap-1vh"
         >
           {inactiveIcon && activeIcon && (
             <Icon
               icon={isActive ? activeIcon : inactiveIcon}
               iconClassName={`text-2vh ${
-                !isActive && "group-hover:rotate-20 group-hover:text-cyan-300"
+                !isActive &&
+                "group-hover:rotate-20 group-hover:text-fuchsia-300"
               } transition-300`}
             />
           )}

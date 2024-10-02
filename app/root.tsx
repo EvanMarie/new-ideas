@@ -48,7 +48,7 @@ export default function App() {
         <FlexFull className="bg-col-880 h-100svh max-h-100svh first-line:overflow-hidden rounded-none relative">
           <Outlet />
           {!isRoot && (
-            <Box className="fixed top-0.5vh left-0.5vh">
+            <Box className="fixed top-0.5vh left-0.5vh z-30">
               <NavLink to="/home">
                 <VStack gap="gap-0" align="items-start">
                   <AnimatedText

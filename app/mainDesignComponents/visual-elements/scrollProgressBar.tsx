@@ -8,6 +8,8 @@ interface ScrollProgressBarProps {
   color?: string;
   height?: string;
   zIndex?: string;
+  shadow?: string;
+  trackColor?: string;
 }
 
 const ScrollProgressBar: React.FC<ScrollProgressBarProps> = ({
@@ -16,6 +18,8 @@ const ScrollProgressBar: React.FC<ScrollProgressBarProps> = ({
   color = "bg-gradient-to-r from-cyan-200 via-cyan-300 to-cyan-400",
   height = "h-0.6vh",
   zIndex = "z-0",
+  shadow = "shadowNarrowTight",
+  trackColor = "bg-slate-900/50",
 }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -38,7 +42,7 @@ const ScrollProgressBar: React.FC<ScrollProgressBarProps> = ({
 
   return (
     <FlexFull
-      className={`${position} h-fit bg-col-950 shadowNarrowTight rounded-none ${zIndex}`}
+      className={`${position} h-fit ${trackColor} ${shadow} rounded-none ${zIndex}`}
     >
       <motion.div
         ref={scrollRef}
