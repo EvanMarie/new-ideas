@@ -1,6 +1,7 @@
 import {
   Flex,
   FlexFull,
+  VStack,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import { PortfolioItem } from "./project-data";
@@ -49,15 +50,21 @@ export default function PortfolioProjectDisplay({
       {/* ********************** PROJECT IMAGES ********************** */}
       <FlexFull className="px-1vh rounded-0.7vh ">
         <PortfolioAccordion title="Project Images">
-          <VStackFull className="h-fit py-1vh" gap="gap-2vh">
+          <VStackFull className="h-fit py-1vh" gap="gap-3vh">
             {portfolioItem.projectImages.map((image, index) => (
-              <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">
-                <OrientationImage
-                  key={index}
-                  src={image.src}
-                  alt={portfolioItem.title}
-                />
-              </Flex>
+              <VStack>
+                {" "}
+                <Flex className="border-900-md shadowNarrowNormal rounded-0.8vh">
+                  <OrientationImage
+                    key={index}
+                    src={image.src}
+                    alt={portfolioItem.title}
+                  />
+                </Flex>{" "}
+                <span className="text-md">
+                  Image {index + 1} - {image.title}
+                </span>
+              </VStack>
             ))}
           </VStackFull>
         </PortfolioAccordion>
