@@ -42,7 +42,7 @@ export default function RouteContainer({
       if (scrollRef.current) {
         const scrollPosition = scrollRef.current.scrollTop;
         const viewportHeight = window.innerHeight;
-        setIsScrolled(scrollPosition > viewportHeight * 0.1);
+        setIsScrolled(scrollPosition > viewportHeight * 0.08);
       }
     };
 

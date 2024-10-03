@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Transition } from "~/buildingBlockComponents/mainContainers";
 
 export default function OrientationImage({
   src,
   alt,
   className,
-  portraitMaxHeight = "75vh",
-  portraitMaxWidth = "75vw",
-  landscapeMaxHeight = "75vh",
-  landscapeMaxWidth = "75vw",
+  portraitMaxHeight = "90vh",
+  portraitMaxWidth = "65vw",
+  landscapeMaxHeight = "65vh",
+  landscapeMaxWidth = "90vw",
   squareMaxHeight = "75vh",
   squareMaxWidth = "75vw",
   portraitObjectFit = "contain",
@@ -39,28 +39,29 @@ export default function OrientationImage({
 
     img.onload = () => {
       const { naturalWidth, naturalHeight } = img;
+      const aspectRatio = naturalWidth / naturalHeight;
       setAspectRatio(`${naturalWidth}/${naturalHeight}`);
 
-      if (naturalWidth > naturalHeight) {
+      if (aspectRatio > 0.9 && aspectRatio < 1.1) {
+        // SQUARE IMAGES
+        setImageStyles({
+          maxHeight: squareMaxHeight,
+          maxWidth: squareMaxWidth,
+          objectFit: squareObjectFit,
+        });
+      } else if (naturalWidth > naturalHeight) {
         // LANDSCAPE IMAGES
         setImageStyles({
           maxHeight: landscapeMaxHeight,
           maxWidth: landscapeMaxWidth,
           objectFit: landscapeObjectFit,
         });
-      } else if (naturalWidth < naturalHeight) {
+      } else {
         // PORTRAIT IMAGES
         setImageStyles({
           maxHeight: portraitMaxHeight,
           maxWidth: portraitMaxWidth,
           objectFit: portraitObjectFit,
-        });
-      } else {
-        // SQUARE IMAGES
-        setImageStyles({
-          maxHeight: squareMaxHeight,
-          maxWidth: squareMaxWidth,
-          objectFit: squareObjectFit,
         });
       }
       setIsLoading(false);
@@ -85,29 +86,34 @@ export default function OrientationImage({
   const skeletonClass = `bg-gray-200 animate-pulse ${className} text-transparent`;
 
   return (
-    <Transition className={`inline-block ${className}`} style={{ aspectRatio }}>
-      {isLoading ? (
-        <div
-          className={skeletonClass}
-          style={{
-            width: "100%",
-            height: "100%",
-            ...imageStyles,
-            minHeight: "40vh",
-            minWidth: "40vw",
-          }}
-        >
-          This
-        </div>
-      ) : (
-        <img
-          ref={imgRef}
-          src={src}
-          alt={alt}
-          className="block w-full h-full"
-          style={imageStyles}
-        />
-      )}
-    </Transition>
+    <>
+      <Transition
+        className={`inline-block ${className} h-fit`}
+        style={{ aspectRatio }}
+      >
+        {isLoading ? (
+          <div
+            className={skeletonClass}
+            style={{
+              width: "100%",
+              height: "100%",
+              ...imageStyles,
+              minHeight: "40vh",
+              minWidth: "40vw",
+            }}
+          >
+            This
+          </div>
+        ) : (
+          <img
+            ref={imgRef}
+            src={src}
+            alt={alt}
+            className="block w-full h-full"
+            style={imageStyles}
+          />
+        )}
+      </Transition>
+    </>
   );
 }

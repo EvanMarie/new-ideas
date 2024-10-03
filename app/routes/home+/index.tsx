@@ -8,6 +8,7 @@ import Text from "~/buildingBlockComponents/text";
 import AnimatedBulletList from "~/mainDesignComponents/animatedBulletList";
 import ShiftingImages from "~/mainDesignComponents/visual-elements/shiftingImages";
 import { randomizedImagesWithTitles } from "../portfolio+/components-data/project-data";
+import { shuffledShiftingImages } from "./components-data/shiftingImages";
 
 export default function HomeIndex() {
   return (
@@ -26,7 +27,7 @@ export default function HomeIndex() {
         </Text>
         <FlexFull className="h-90vw sm:h-50svh md:h-55svh lg:h-70svh xl:h-85svh pt-5vh">
           <ShiftingImages
-            imagesAndTitles={randomizedImagesWithTitles}
+            imagesAndTitles={shuffledShiftingImages}
             imageDimensions="w-95vw sm:w-80vw md:h-45svh md:w-full lg:h-60svh xl:h-70svh"
           />
         </FlexFull>

@@ -11,15 +11,11 @@ import {
 } from "~/buildingBlockComponents/mainContainers";
 import SkeletonLoader from "./skeletonLoader";
 import { useNavigate } from "@remix-run/react";
+import { ShiftingImage } from "~/routes/home+/components-data/shiftingImages";
 
 interface ShiftingImagesProps {
   imageArray?: string[];
-  imagesAndTitles?: {
-    src: string;
-    project: string;
-    title: string;
-    slug: string;
-  }[];
+  imagesAndTitles?: ShiftingImage[];
   delaySeconds?: number;
   transitionDuration?: number;
   imageDimensions?: string;
@@ -87,7 +83,7 @@ export default function ShiftingImages({
       const currentImage = imagesAndTitles[currentImageIndex];
       setCurrentImageProject(currentImage.project);
       setCurrentImageTitle(currentImage.title);
-      setCurrentImageProjectSlug(currentImage.slug);
+      setCurrentImageProjectSlug(currentImage.projectSlug);
     }
   }, [currentImageIndex, imagesAndTitles]);
 
