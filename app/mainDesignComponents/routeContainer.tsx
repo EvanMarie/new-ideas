@@ -109,7 +109,7 @@ export default function RouteContainer({
 
       {/* ***************** DARK VIOLET LOGO ***************** */}
       {!isRoot && (
-        <Box className="fixed top-0.5vh left-0.5vh z-30">
+        <Box className="fixed top-0.5vh left-0.5vh z-40">
           <NavLink to="/home">
             <VStack gap="gap-0" align="items-start">
               <AnimatedText
