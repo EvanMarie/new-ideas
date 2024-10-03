@@ -25,12 +25,13 @@ export default function HomeIndex() {
           elegant, and intelligent web solutions, with a focus on seamless AI
           integration.
         </Text>
-        <FlexFull className="h-90vw sm:h-50svh md:h-55svh lg:h-70svh xl:h-85svh pt-5vh">
+        <FlexFull className="h-90vw sm:h-50svh md:h-55svh lg:h-70svh pt-5vh">
           <ShiftingImages
             imagesAndTitles={shuffledShiftingImages}
-            imageDimensions="w-95vw sm:w-80vw md:h-45svh md:w-full lg:h-60svh xl:h-70svh"
+            imageDimensions="w-95vw sm:w-80vw md:h-45svh md:w-full lg:h-60svh "
           />
         </FlexFull>
+
         <VStackFull gap="gap-[2vh]" className="h-fit" align="items-start">
           <Text>
             In today's fast-paced tech world, staying ahead in web development
