@@ -7,7 +7,6 @@ import {
 import Text from "~/buildingBlockComponents/text";
 import AnimatedBulletList from "~/mainDesignComponents/animatedBulletList";
 import ShiftingImages from "~/mainDesignComponents/visual-elements/shiftingImages";
-import { randomizedImagesWithTitles } from "../portfolio+/components-data/project-data";
 import { shuffledShiftingImages } from "./components-data/shiftingImages";
 
 export default function HomeIndex() {

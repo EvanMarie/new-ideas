@@ -14,8 +14,30 @@ import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
 import PortfolioSideNav from "~/routes/portfolio+/components-data/portfolioSideNav";
 import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 import Image from "~/buildingBlockComponents/image";
-import FloatingUpAndOutImages from "./visual-elements/floatingViolets";
 import AnimatedText from "./visual-elements/animatedText";
+import { useWindowDimensions } from "~/hooks/useWindowDimensions";
+import { useArrowKeyScroll } from "~/hooks/useArrowScroll";
+
+// Throttle function to limit the frequency of event triggers
+function throttle(func: (...args: any[]) => void, limit: number) {
+  let lastFunc: NodeJS.Timeout;
+  let lastRan: number;
+
+  return function (...args: any[]) {
+    if (!lastRan) {
+      func(...args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(() => {
+        if (Date.now() - lastRan >= limit) {
+          func(...args);
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  };
+}
 
 export default function RouteContainer({
   children,
@@ -33,9 +55,9 @@ export default function RouteContainer({
   const location = useLocation();
   const isHome = location.pathname === "/home";
   const isRoot = location.pathname === "/";
-
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Effect to handle scroll event and set isScrolled state
   useEffect(() => {
     const handleScroll = () => {
       if (scrollRef.current) {
@@ -64,6 +86,8 @@ export default function RouteContainer({
     }
   }, [location.pathname]);
 
+  useArrowKeyScroll(scrollRef);
+
   const baseTextClassName =
     "text-violet-950 textGlowXs tracking-wider kufam-font transition-all transition-400";
   const textClassName = isScrolled
@@ -72,6 +96,7 @@ export default function RouteContainer({
 
   return (
     <>
+      {/* ***************** DARK VIOLET LOGO ***************** */}
       {!isRoot && (
         <Box className="fixed top-0.5vh left-0.5vh z-30">
           <NavLink to="/home">
