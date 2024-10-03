@@ -9,7 +9,7 @@ export default function DarkFlexFull({
 }) {
   return (
     <FlexFull
-      className={`bg-slate-900/50 p-1vh border-900-md shadowNarrowNormal`}
+      className={`bg-slate-900/80 p-1vh border-900-md shadowNarrowNormal`}
     >
       {children}
     </FlexFull>
