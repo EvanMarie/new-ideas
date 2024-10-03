@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function ImageWallFullScreenBackground({
   images,
-  overlay = "bg-slate-950/80 bg-gradient-to-bl from-indigo-900/20 via-violet-900/20 to-indigo-900/20",
+  overlay = "bg-slate-950/80 bg-gradient-to-r from-indigo-900/40 via-slate-900/70 to-indigo-900/40",
   overflow = "overflow-y-auto",
 }: {
   images: string[];
