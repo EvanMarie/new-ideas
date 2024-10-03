@@ -7,7 +7,7 @@ export default function ImageWall({
   visibleImagesCount = 30,
   containerWidth = "w-100vw",
   containerHeight = "h-100svh",
-  imageDimensions = "w-50% md:w-33% lg:w-25% xl:w-20% h-16.6% sm:h-25% md:h-20% xxl:h-12%",
+  imageDimensions = "w-50% md:w-33% lg:w-25% xl:w-20% xxl:w-16.6% h-16.6% sm:h-25% md:h-20%",
   borderShadow = "border-900-md shadowNarrowNormal",
   containerRadius = "rounded-none",
 }: {
