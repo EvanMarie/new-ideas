@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function ImageWall({
   imageArray,
   visibleImagesCount = 30,
-  containerWidth = "w-80%",
-  containerHeight = "h-80%",
-  imageDimensions = "w-full sm:w-50% md:w-33.3% lg:w-25%",
+  containerWidth = "w-100vw",
+  containerHeight = "h-100svh",
+  imageDimensions = "w-50% md:w-33% lg:w-25% xl:w-20% h-16.6% sm:h-25% md:h-20% xxl:h-12%",
   borderShadow = "border-900-md shadowNarrowNormal",
-  containerRadius = "rounded-2vh",
+  containerRadius = "rounded-none",
 }: {
   imageArray: string[];
   visibleImagesCount?: number;
@@ -45,27 +45,21 @@ export default function ImageWall({
     [imageArray, currentImages]
   );
 
-  const handleImageChange = useCallback(() => {
-    const randomDelay = Math.random() * (30000 - 10000) + 10000; // Random delay between 10 and 30 seconds
+  const handleImageChange = useCallback(
+    (index: number) => {
+      const randomDelay = Math.random() * (5000 - 500) + 500; // Random delay between 0.5 and 5 seconds
 
-    setTimeout(() => {
-      const indexToChange = Math.floor(Math.random() * currentImages.length);
-      setCurrentImages((prevImages) => {
-        const newImages = [...prevImages];
-        const newImage = getUniqueRandomImage(newImages[indexToChange]);
-        newImages[indexToChange] = newImage;
-        return newImages;
-      });
-      handleImageChange(); // Schedule the next change
-    }, randomDelay);
-  }, [currentImages, getUniqueRandomImage]);
-
-  useEffect(() => {
-    handleImageChange(); // Start the image change cycle
-    return () => {
-      // Clean up any pending timeouts when component unmounts
-    };
-  }, [handleImageChange]);
+      setTimeout(() => {
+        setCurrentImages((prevImages) => {
+          const newImages = [...prevImages];
+          const newImage = getUniqueRandomImage(newImages[index]);
+          newImages[index] = newImage;
+          return newImages;
+        });
+      }, randomDelay);
+    },
+    [getUniqueRandomImage]
+  );
 
   return (
     <Wrap
@@ -87,6 +81,7 @@ export default function ImageWall({
                 duration: 1.5,
                 ease: "easeInOut",
               }}
+              onAnimationComplete={() => handleImageChange(index)}
             >
               <img
                 src={image}
