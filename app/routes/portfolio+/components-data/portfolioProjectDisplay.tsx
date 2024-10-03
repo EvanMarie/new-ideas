@@ -1,6 +1,7 @@
 import {
   Flex,
   FlexFull,
+  HStack,
   HStackFull,
   VStack,
   VStackFull,
@@ -21,12 +22,12 @@ export default function PortfolioProjectDisplay({
       <FlexFull className="flex-col items-center gap-1vh md:pr-9vh lg:pr-15vh lg:pl-2vh xl:pl-3vh xxl:pl-4vh pt-2vh max-w-[150svh]">
         {/* ********************** PROJECT TITLE ********************** */}
         <VStackFull align="items-end text-right px-1vh" gap="gap-0">
-          <HStackFull className="justify-between">
+          <HStack className="items-center" gap="gap-2vh">
             <ProjectIconButtons project={portfolioItem} />
             <h2 className="text-fuchsia-300 font-semibold kufam-font textFogXs">
               {portfolioItem.title}
             </h2>
-          </HStackFull>
+          </HStack>
           <Text className="text-cyan-300 textShadow">
             {portfolioItem.description}
           </Text>

@@ -21,38 +21,10 @@ export const parallaxImageSettings = "?width=1000&resize=contain&quality=75";
 
 export type TeamMember = {
   name: string;
-  role: string;
   linkedin: string;
   github: string;
-  headshot: string;
   resumeLink: string;
-};
-
-export const TeamMembers = [
-  {
-    name: "Evan Marie Carr",
-    role: "Co-Founder, UI / UX & Frontend",
-    linkedin: "https://www.linkedin.com/in/evanmarie/",
-    github: "https://github.com/EvanMarie",
-    headshot:
-      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/evan-headshot.png" +
-      teamImageSettings,
-    resumeLink: "/images/Evan_Marie_Carr_resume.pdf",
-  },
-  {
-    name: "Dustin W. Carr",
-    role: "Co-Founder, AI Specialist, Backend",
-    linkedin: "https://www.linkedin.com/in/dustin-carr-5ab1762/",
-    github: "https://github.com/dwcarr",
-    headshot:
-      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dustin-headshot.png" +
-      teamImageSettings,
-    resumeLink: "/images/Dustin_Carr_cv.pdf",
-  },
-];
-
-export type TeamFrame = {
-  name: string;
+  headshot: string;
   role: string;
   edu1: string | undefined;
   edu2: string | undefined;
@@ -63,10 +35,16 @@ export type TeamFrame = {
   linkDescription?: string;
 };
 
-export const TeamFrames = [
+export const TeamMembers: TeamMember[] = [
   {
     name: "Evan Marie Carr",
-    role: "UI / UX &  Frontend Developer",
+    role: "Co-Founder, UI / UX & Frontend",
+    linkedin: "https://www.linkedin.com/in/evanmarie/",
+    github: "https://github.com/EvanMarie",
+    headshot:
+      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/evan-headshot.png" +
+      teamImageSettings,
+    resumeLink: "/images/Evan_Marie_Carr_resume.pdf",
     edu1: "Postgrad - Universität Mozarteum",
     edu2: "Master's Degree - Georgia State University",
     edu3: "Bachelor's Degree - Vanderbilt University",
@@ -82,7 +60,13 @@ export const TeamFrames = [
   },
   {
     name: "Dustin W. Carr",
-    role: "Backend Developer & AI Specialist",
+    role: "Co-Founder, AI Specialist, Backend",
+    linkedin: "https://www.linkedin.com/in/dustin-carr-5ab1762/",
+    github: "https://github.com/dwcarr",
+    headshot:
+      "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dustin-headshot.png" +
+      teamImageSettings,
+    resumeLink: "/images/Dustin_Carr_cv.pdf",
     edu1: "Ph.D. in Physics - Cornell University",
     edu2: "Master of Science in Physics - Cornell University",
     edu3: "Bachelor of Science in Mathematics - Oklahoma State",

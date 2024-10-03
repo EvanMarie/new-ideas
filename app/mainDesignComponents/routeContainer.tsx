@@ -63,7 +63,7 @@ export default function RouteContainer({
       if (scrollRef.current) {
         const scrollPosition = scrollRef.current.scrollTop;
         const viewportHeight = window.innerHeight;
-        setIsScrolled(scrollPosition > viewportHeight * 0.08);
+        setIsScrolled(scrollPosition > viewportHeight * 0.02);
       }
     };
 
@@ -92,7 +92,7 @@ export default function RouteContainer({
     "text-violet-950 textGlowXs tracking-wider kufam-font transition-all transition-400";
   const textClassName = isScrolled
     ? `${baseTextClassName} text-3vh xl:text-4vh`
-    : `${baseTextClassName} text-5vh xl:text-6vh`;
+    : `${baseTextClassName} text-5.5vh sm:text-6.5vh md:text-7.5vh lg:text-9vh xl:text-10vh`;
 
   return (
     <>
@@ -109,7 +109,7 @@ export default function RouteContainer({
 
       {/* ***************** DARK VIOLET LOGO ***************** */}
       {!isRoot && (
-        <Box className="fixed top-0.5vh left-0.5vh z-45">
+        <Box className="fixed top-1vh left-0.5vh z-45 pl-1vh">
           <NavLink to="/home">
             <VStack gap="gap-0" align="items-start">
               <AnimatedText
@@ -158,7 +158,7 @@ export default function RouteContainer({
         } `}
       >
         <FlexFull
-          className="pt-5svh h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative"
+          className="pt-5.5svh sm:pt-6.5vh md:pt-7.5vh lg:pt-9vh xl:pt-10vh h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative"
           ref={scrollRef}
         >
           <Transition type="fadeSlideInBottom" className="w-full h-fit z-30">

@@ -55,7 +55,7 @@ export default function AnimatedText({
   xDistance = 150,
   distanceAsVH = false,
   gradient,
-  textClassName = "text-[6vh] font-bold text-col-200 textShadow text-stroke-10-500",
+  textClassName = "text-7.5vh font-bold text-col-200 textShadow text-stroke-10-500",
   numSpins = 2,
   leanAngle = 25,
   leanDuration = 8,

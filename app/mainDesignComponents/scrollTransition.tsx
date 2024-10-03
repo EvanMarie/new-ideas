@@ -32,7 +32,7 @@ export const ScrollTransition = React.forwardRef<
       onClick,
       key,
       once = true,
-      amount = 0.3,
+      amount = 0.2,
       ...motionProps
     },
     ref
