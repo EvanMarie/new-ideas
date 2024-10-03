@@ -16,16 +16,8 @@ interface ShiftingImagesProps {
   imagesAndTitles?: { src: string; project: string; title: string }[];
   delaySeconds?: number;
   transitionDuration?: number;
-  ease?: string;
   imageDimensions?: string;
-  shape?:
-    | "rectangle"
-    | "circle"
-    | "triangle"
-    | "diamond"
-    | "octagon"
-    | "invertedTriangle";
-  imageClassName?: string;
+  ease?: string;
   containerClassName?: string;
   shadow?: string;
   type?: keyof typeof transitionVariants;
@@ -34,13 +26,11 @@ interface ShiftingImagesProps {
 export default function ShiftingImages({
   imageArray,
   imagesAndTitles,
-  delaySeconds = 4,
+  delaySeconds = 5,
   ease,
-  transitionDuration = 1.5,
+  transitionDuration = 3,
   imageDimensions = "h-full w-full",
-  shape = "rectangle",
   type = "fade",
-  imageClassName = "",
   containerClassName = "",
 }: ShiftingImagesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -100,43 +90,49 @@ export default function ShiftingImages({
     : "";
 
   return (
-    <>
+    <FlexFull className="justify-center">
       {imagesLoaded ? (
-        <AnimatePresence>
-          <motion.div
-            key={currentImageIndex}
-            variants={transitionVariants[type]}
-            initial={transitionVariants[type].initial as VariantLabels}
-            animate={transitionVariants[type].animate as VariantLabels}
-            exit={transitionVariants[type].exit as VariantLabels}
-            transition={{
-              duration: transitionDuration,
-              type: ease ? "tween" : "spring",
-              ease: ease || undefined,
-            }}
-          >
-            <VStack>
-              <Box className={`rounded-1vh ${imageDimensions}`}>
-                <img
-                  src={currentImageSrc}
-                  alt={currentImageProject}
-                  className={`object-cover ${imageClassName} w-full h-full rounded-1vh border-900-md shadowNarrowNormal`}
-                />
-              </Box>
-              {imagesAndTitles && (
-                <FlexFull className="gap-1vh justify-center textShadow text-sm bg-slate-900/50 border-900-md shadowNarrowNormal">
-                  <span className="">{currentImageProject} </span> |{" "}
-                  <span className=""> {currentImageTitle}</span>
-                </FlexFull>
-              )}
-            </VStack>
-          </motion.div>
-        </AnimatePresence>
+        <FlexFull className={`relative justify-center`}>
+          <AnimatePresence>
+            <motion.div
+              key={currentImageIndex}
+              variants={transitionVariants[type]}
+              initial={transitionVariants[type].initial as VariantLabels}
+              animate={transitionVariants[type].animate as VariantLabels}
+              exit={transitionVariants[type].exit as VariantLabels}
+              className={`absolute inset-0`}
+              transition={{
+                duration: transitionDuration,
+                type: ease ? "tween" : "spring",
+                ease: ease || undefined,
+              }}
+            >
+              <VStack className="w-full">
+                <Box className="rounded-1vh border-900-md shadowNarrowNormal h-fit">
+                  <img
+                    src={currentImageSrc}
+                    alt={currentImageProject}
+                    className={`object-contain ${imageDimensions} `}
+                  />
+                </Box>
+
+                {imagesAndTitles && (
+                  <FlexFull className="pt-0.7vh justify-center">
+                    <Flex className="px-1vh gap-1vh justify-center textShadow text-sm bg-slate-900/50 border-900-md shadowNarrowNormal">
+                      <span className="">{currentImageProject} </span> |{" "}
+                      <span className=""> {currentImageTitle}</span>
+                    </Flex>
+                  </FlexFull>
+                )}
+              </VStack>
+            </motion.div>
+          </AnimatePresence>
+        </FlexFull>
       ) : (
         <Center className={`relative ${imageDimensions} ${containerClassName}`}>
           <SkeletonLoader />
         </Center>
       )}
-    </>
+    </FlexFull>
   );
 }

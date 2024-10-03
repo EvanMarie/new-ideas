@@ -126,7 +126,7 @@ export default function RouteContainer({
         <Image
           src="/images/darkviolet.png"
           alt="Dark Violet"
-          className="absolute bottom-5vh md:bottom-3.5vh left-1vh h-16vh z-30"
+          className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-30"
         />
       )}
 

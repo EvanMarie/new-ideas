@@ -14,7 +14,7 @@ export default function PortfolioIndex() {
       {slug ? (
         <Outlet />
       ) : (
-        <Wrap className="w-full justify-evenly min-h-full items-evenly">
+        <Wrap className="w-full justify-evenly min-h-full items-evenly pt-2vh">
           {Projects.map((project, index) => (
             <PortfolioIndexCard
               key={project.slug}

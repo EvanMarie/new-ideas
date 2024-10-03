@@ -5,20 +5,28 @@ import {
 } from "~/buildingBlockComponents/mainContainers";
 import Text from "~/buildingBlockComponents/text";
 import AnimatedBulletList from "~/mainDesignComponents/animatedBulletList";
+import ShiftingImages from "~/mainDesignComponents/visual-elements/shiftingImages";
+import { randomizedImagesWithTitles } from "../portfolio+/components-data/project-data";
 
 export default function HomeIndex() {
   return (
     <>
-      <FlexFull className="p-1.5vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]">
+      <VStackFull className="p-1.5vh pt-2vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]">
+        <h3 className="text-cyan-300">
+          Innovative Web Solutions & AI Integration
+        </h3>
+        <Text>
+          We combine cutting-edge tools and technologies to create practical,
+          elegant, and intelligent web solutions, with a focus on seamless AI
+          integration.
+        </Text>
+        <FlexFull className="h-90vw sm:h-50svh md:h-55svh lg:h-70svh xl:h-80svh pt-5vh">
+          <ShiftingImages
+            imagesAndTitles={randomizedImagesWithTitles}
+            imageDimensions="w-95vw sm:w-80vw md:h-45svh md:w-full lg:h-60svh xl:h-70svh"
+          />
+        </FlexFull>
         <VStackFull gap="gap-[2vh]" className="h-fit" align="items-start">
-          <h3 className="text-cyan-300">
-            Innovative Web Solutions & AI Integration
-          </h3>
-          <Text>
-            We combine cutting-edge tools and technologies to create practical,
-            elegant, and intelligent web solutions, with a focus on seamless AI
-            integration.
-          </Text>
           <Text>
             In today's fast-paced tech world, staying ahead in web development
             and AI implementation is crucial. Our comprehensive approach ensures
@@ -54,7 +62,7 @@ export default function HomeIndex() {
 
           <VStackFull
             align="items-end"
-            className="text-right pl-10vh"
+            className="text-right pl-15vh md:pl-10vh pb-3vh xl:pl-2vh"
             gap="gap-2vh"
           >
             <Text>
@@ -68,7 +76,10 @@ export default function HomeIndex() {
               className="kufam-font text-cyan-300 textShadow"
             >
               <Text>
-                <em>Evan Marie Carr &amp; Dustin W. Carr</em>
+                <em>Evan Marie Carr &amp;</em>
+              </Text>
+              <Text>
+                <em>Dustin W. Carr</em>
               </Text>
               <Text>
                 <em>Co-Founders</em>
@@ -76,7 +87,7 @@ export default function HomeIndex() {
             </VStack>
           </VStackFull>
         </VStackFull>
-      </FlexFull>
+      </VStackFull>
     </>
   );
 }
