@@ -74,7 +74,12 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
           className="fixed bottom-[6.5vh] md:bottom-[5.5vh] left-[0.7vh] z-20"
         >
           {" "}
-          <ProjectButton icon={VscTriangleUp} onClick={scrollToTop} />
+          <ProjectButton
+            icon={VscTriangleUp}
+            onClick={scrollToTop}
+            label="to top"
+            tooltipPlacement="topRight"
+          />
         </motion.div>
       )}
     </AnimatePresence>

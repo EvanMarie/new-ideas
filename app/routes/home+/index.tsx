@@ -17,10 +17,10 @@ export default function HomeIndex() {
         className="p-1.5vh pt-2vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]"
         align="items-start"
       >
-        <h3 className="text-cyan-300">
+        <h3 className="text-fuchsia-300">
           Innovative Web Solutions & AI Integration
         </h3>
-        <Text>
+        <Text className="textShadow">
           We combine cutting-edge tools and technologies to create practical,
           elegant, and intelligent web solutions, with a focus on seamless AI
           integration.
@@ -33,7 +33,7 @@ export default function HomeIndex() {
         </FlexFull>
 
         <VStackFull gap="gap-[2vh]" className="h-fit" align="items-start">
-          <Text>
+          <Text className="textShadow">
             In today's fast-paced tech world, staying ahead in web development
             and AI implementation is crucial. Our comprehensive approach ensures
             each project excels in aesthetics, functionality, and intelligent
@@ -49,7 +49,7 @@ export default function HomeIndex() {
               "Predictive analytics dashboards",
             ]}
           />
-          <Text>
+          <Text className="textShadow">
             We craft every aspect of web development to maximize user engagement
             and satisfaction, while leveraging AI to drive business growth and
             efficiency.
@@ -71,7 +71,7 @@ export default function HomeIndex() {
             className="text-right pl-15vh md:pl-10vh pb-3vh xl:pl-2vh"
             gap="gap-2vh"
           >
-            <Text>
+            <Text className="textShadow">
               By combining our web development expertise with cutting-edge AI
               technologies, we help businesses stay competitive in the digital
               age, offering smarter solutions that adapt and grow with your
@@ -82,14 +82,14 @@ export default function HomeIndex() {
               className="kufam-font text-cyan-300 textShadow"
             >
               <Flex className="flex-col md:flex-row md:gap-1vh">
-                <Text>
+                <Text className="textShadow">
                   <em>Evan Marie Carr &amp;</em>
                 </Text>
-                <Text>
+                <Text className="textShadow">
                   <em>Dustin W. Carr,</em>
                 </Text>
               </Flex>
-              <Text>
+              <Text className="textShadow">
                 <em>Co-Founders</em>
               </Text>
             </VStack>

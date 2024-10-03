@@ -26,7 +26,7 @@ export default function AnimatedBulletList({
             delay={0.1 * (index + overallDelay)}
             className="w-full"
           >
-            <li className="text-left w-full">
+            <li className="text-left w-full textShow">
               <HStackFull gap="gap-2vh">
                 <span>𐩒</span>
                 {item}

@@ -30,7 +30,6 @@ export default function RouteContainer({
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const projectSlug = useParams().projectSlug;
-  const returnTo = projectSlug ? `/portfolio` : "";
   const location = useLocation();
   const isHome = location.pathname === "/home";
   const isRoot = location.pathname === "/";
@@ -106,9 +105,6 @@ export default function RouteContainer({
           color="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-purple-300"
         />
       )}
-
-      {/* ***************** WHEN TO SHOW RETURN TO ***************** */}
-      {returnTo && <ReturnToButton to={returnTo} />}
 
       {/* ***************** INSET SHADOWS TOP & BOTTOM ***************** */}
       <InsetShadowOverlay position="top" size="xl" />
