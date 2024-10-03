@@ -10,10 +10,16 @@ import {
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import SkeletonLoader from "./skeletonLoader";
+import { useNavigate } from "@remix-run/react";
 
 interface ShiftingImagesProps {
   imageArray?: string[];
-  imagesAndTitles?: { src: string; project: string; title: string }[];
+  imagesAndTitles?: {
+    src: string;
+    project: string;
+    title: string;
+    slug: string;
+  }[];
   delaySeconds?: number;
   transitionDuration?: number;
   imageDimensions?: string;
@@ -36,6 +42,7 @@ export default function ShiftingImages({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [currentImageProject, setCurrentImageProject] = useState("");
+  const [currentImageProjectSlug, setCurrentImageProjectSlug] = useState("");
   const [currentImageTitle, setCurrentImageTitle] = useState("");
 
   const numImages = imagesAndTitles
@@ -80,6 +87,7 @@ export default function ShiftingImages({
       const currentImage = imagesAndTitles[currentImageIndex];
       setCurrentImageProject(currentImage.project);
       setCurrentImageTitle(currentImage.title);
+      setCurrentImageProjectSlug(currentImage.slug);
     }
   }, [currentImageIndex, imagesAndTitles]);
 
@@ -88,7 +96,7 @@ export default function ShiftingImages({
     : imagesAndTitles
     ? imagesAndTitles[currentImageIndex].src
     : "";
-
+  const navigate = useNavigate();
   return (
     <FlexFull className="justify-center">
       {imagesLoaded ? (
@@ -100,24 +108,27 @@ export default function ShiftingImages({
               initial={transitionVariants[type].initial as VariantLabels}
               animate={transitionVariants[type].animate as VariantLabels}
               exit={transitionVariants[type].exit as VariantLabels}
-              className={`absolute inset-0`}
+              className={`absolute inset-0 `}
+              onClick={() => {
+                navigate(`/portfolio/${currentImageProjectSlug}`);
+              }}
               transition={{
                 duration: transitionDuration,
                 type: ease ? "tween" : "spring",
                 ease: ease || undefined,
               }}
             >
-              <VStack className="w-full">
-                <Box className="rounded-1vh border-900-md shadowNarrowNormal h-fit">
+              <VStack className="w-full hover:cursor-pointer group">
+                <Box className="rounded-1vh border-900-md shadowNarrowNormal h-fit group-hover:metallicEdgesSm transition-300 group-hover:scale-101">
                   <img
                     src={currentImageSrc}
                     alt={currentImageProject}
-                    className={`object-contain ${imageDimensions} `}
+                    className={`object-contain ${imageDimensions} hover:cursor-pointer`}
                   />
                 </Box>
 
                 {imagesAndTitles && (
-                  <FlexFull className="pt-0.7vh justify-center">
+                  <FlexFull className="pt-1vh justify-center">
                     <Flex className="px-1vh gap-1vh justify-center textShadow text-sm bg-slate-900/50 border-900-md shadowNarrowNormal">
                       <span className="">{currentImageProject} </span> |{" "}
                       <span className=""> {currentImageTitle}</span>

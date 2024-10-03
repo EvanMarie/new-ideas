@@ -1,4 +1,5 @@
 import {
+  Flex,
   FlexFull,
   VStack,
   VStackFull,
@@ -11,7 +12,10 @@ import { randomizedImagesWithTitles } from "../portfolio+/components-data/projec
 export default function HomeIndex() {
   return (
     <>
-      <VStackFull className="p-1.5vh pt-2vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]">
+      <VStackFull
+        className="p-1.5vh pt-2vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]"
+        align="items-start"
+      >
         <h3 className="text-cyan-300">
           Innovative Web Solutions & AI Integration
         </h3>
@@ -20,7 +24,7 @@ export default function HomeIndex() {
           elegant, and intelligent web solutions, with a focus on seamless AI
           integration.
         </Text>
-        <FlexFull className="h-90vw sm:h-50svh md:h-55svh lg:h-70svh xl:h-80svh pt-5vh">
+        <FlexFull className="h-90vw sm:h-50svh md:h-55svh lg:h-70svh xl:h-85svh pt-5vh">
           <ShiftingImages
             imagesAndTitles={randomizedImagesWithTitles}
             imageDimensions="w-95vw sm:w-80vw md:h-45svh md:w-full lg:h-60svh xl:h-70svh"
@@ -75,12 +79,14 @@ export default function HomeIndex() {
               align="items-end"
               className="kufam-font text-cyan-300 textShadow"
             >
-              <Text>
-                <em>Evan Marie Carr &amp;</em>
-              </Text>
-              <Text>
-                <em>Dustin W. Carr</em>
-              </Text>
+              <Flex className="flex-col md:flex-row md:gap-1vh">
+                <Text>
+                  <em>Evan Marie Carr &amp;</em>
+                </Text>
+                <Text>
+                  <em>Dustin W. Carr,</em>
+                </Text>
+              </Flex>
               <Text>
                 <em>Co-Founders</em>
               </Text>

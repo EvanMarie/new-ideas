@@ -1207,6 +1207,7 @@ export const allImagesWithTitles = Projects.map((project) =>
     src: image.src,
     project: project.title,
     title: image.title,
+    slug: project.slug,
   }))
 ).flat();
 
