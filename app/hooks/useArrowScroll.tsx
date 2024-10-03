@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import throttle from "lodash/throttle"; // Import throttle directly
+import { useEffect, useCallback } from "react";
+import throttle from "lodash/throttle";
 import { useWindowDimensions } from "./useWindowDimensions";
 
 // Custom hook for handling scroll via arrow keys
@@ -9,8 +9,9 @@ export const useArrowKeyScroll = (
 ) => {
   const { height: windowHeight } = useWindowDimensions();
 
-  useEffect(() => {
-    const handleKeyDown = throttle((event: KeyboardEvent) => {
+  // Memoized scroll function to avoid re-creating the handler
+  const handleKeyDown = useCallback(
+    throttle((event: KeyboardEvent) => {
       if (scrollRef.current) {
         if (event.key === "ArrowUp") {
           scrollRef.current.scrollBy({
@@ -24,14 +25,15 @@ export const useArrowKeyScroll = (
           });
         }
       }
-    }, throttleLimit);
+    }, throttleLimit),
+    [scrollRef, windowHeight, throttleLimit]
+  );
 
-    // Attach event listener
+  useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
 
-    // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [windowHeight, scrollRef, throttleLimit]);
+  }, [handleKeyDown]);
 };

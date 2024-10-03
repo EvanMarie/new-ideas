@@ -78,7 +78,7 @@ export default function ImageWall({
 
   // Function to schedule the next image change
   const scheduleNextChange = useCallback(() => {
-    const randomDelay = Math.random() * 3000 + 3000; // 3 to 6 seconds
+    const randomDelay = Math.random() * 1000 + 2300; // 3 to 6 seconds
     timeoutRef.current = setTimeout(changeRandomImage, randomDelay);
   }, [changeRandomImage]);
 
@@ -91,7 +91,7 @@ export default function ImageWall({
 
   // Define variants for animations
   const variants = {
-    initial: { opacity: 0 },
+    initial: { opacity: 1 },
     animate: {
       opacity: 1,
       transition: { duration: 1.5, ease: "easeInOut" }, // Fade-in duration

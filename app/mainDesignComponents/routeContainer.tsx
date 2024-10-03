@@ -8,15 +8,15 @@ import {
 } from "~/buildingBlockComponents/mainContainers";
 import MainNavBar from "./mainNavBar";
 import ScrollProgressBar from "./visual-elements/scrollProgressBar";
-import ReturnToButton from "./returnToButton";
 import { NavLink, useLocation, useParams } from "@remix-run/react";
 import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
 import PortfolioSideNav from "~/routes/portfolio+/components-data/portfolioSideNav";
 import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 import Image from "~/buildingBlockComponents/image";
 import AnimatedText from "./visual-elements/animatedText";
-import { useWindowDimensions } from "~/hooks/useWindowDimensions";
 import { useArrowKeyScroll } from "~/hooks/useArrowScroll";
+import ImageWallFullScreenBackground from "./visual-elements/imageWallFullScreenBackground";
+import { landingShiftingImages } from "~/routes/home+/components-data/shiftingImages";
 
 // Throttle function to limit the frequency of event triggers
 function throttle(func: (...args: any[]) => void, limit: number) {
@@ -96,6 +96,17 @@ export default function RouteContainer({
 
   return (
     <>
+      {/* ***************** ON FROM HOME INDEX ***************** */}
+      {isHome && (
+        <>
+          <Image
+            src="/images/darkviolet.png"
+            alt="Dark Violet"
+            className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-30"
+          />
+        </>
+      )}
+
       {/* ***************** DARK VIOLET LOGO ***************** */}
       {!isRoot && (
         <Box className="fixed top-0.5vh left-0.5vh z-30">
@@ -140,17 +151,6 @@ export default function RouteContainer({
       />
       {/* ***************** SCROLL TO TOP BUTTON ***************** */}
       <ScrollToTopButton scrollContainerRef={scrollRef} />
-
-      {/* ***************** ON FROM HOME INDEX ***************** */}
-
-      {isHome && (
-        <Image
-          src="/images/darkviolet.png"
-          alt="Dark Violet"
-          className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-30"
-        />
-      )}
-
       {/* ***************** CONTENT OF PAGE ***************** */}
       <FlexFull
         className={`w-full h-100svh overflow-hidden ${bg} ${
@@ -161,7 +161,7 @@ export default function RouteContainer({
           className="pt-5svh h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative"
           ref={scrollRef}
         >
-          <Transition type="fadeSlideInBottom" className="w-full h-fit">
+          <Transition type="fadeSlideInBottom" className="w-full h-fit z-30">
             <VStackFull className="h-fit py-1vh">{children}</VStackFull>
           </Transition>
         </FlexFull>
