@@ -15,14 +15,14 @@ export default function SocialLink({
   target?: string;
 }) {
   return (
-    <NavLink to={link} target={target}>
+    <NavLink to={link} target={target} className="p-0.2vh md:p-0.8vh">
       <motion.div
         whileTap={{ scale: 0.8 }}
         whileHover={{ scale: 1.02, rotate: -2 }}
         transition={{ duration: 0.4 }}
       >
         <HStack
-          className="text-cyan-200 textShadow border-col-550 border-[0.2vh] hover:border-cyan-300 transition-400 py-[0.2vh] px-[0.2vh] sm:px-[0.7vh] md:px-[1.5vh] hover:cursor-pointer items-center rounded-[3vh] hover:bg-col-930 hover:shadowNarrowNormal"
+          className="text-cyan-300 textShadow border-550-md border-[0.2vh] hover:border-cyan-300 transition-400 py-0.4vh px-1.3vh hover:cursor-pointer items-center rounded-3vh hover:bg-col-930 insetShadowXl hover:shadowNarrowNormal"
           gap="gap-[0.3vh]"
         >
           <Icon

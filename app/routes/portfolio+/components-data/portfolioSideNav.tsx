@@ -11,7 +11,7 @@ export default function PortfolioSideNav({
   const lenProjects = Projects.length;
   return (
     <Transition
-      className="hidden md:flex fixed right-1vh top-1vh h-90svh flex-shrink-0 p-0.5vh z-10 overflow-visible w-7vh lg:w-10vh"
+      className="hidden md:flex fixed right-1vh top-1vh h-90svh flex-shrink-0 p-0.5vh z-40 overflow-visible w-7vh lg:w-10vh"
       delay={0.3}
       type="zoom"
     >

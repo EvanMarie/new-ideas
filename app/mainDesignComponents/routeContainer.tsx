@@ -17,6 +17,8 @@ import AnimatedText from "./visual-elements/animatedText";
 import { useArrowKeyScroll } from "~/hooks/useArrowScroll";
 import ImageWallFullScreenBackground from "./visual-elements/imageWallFullScreenBackground";
 import { landingShiftingImages } from "~/routes/home+/components-data/shiftingImages";
+import { useScrollToHash } from "~/utils/useScrollToHash";
+import { useScrollToTopOnNav } from "~/hooks/useScrollToTopOnNav";
 
 // Throttle function to limit the frequency of event triggers
 function throttle(func: (...args: any[]) => void, limit: number) {
@@ -56,6 +58,9 @@ export default function RouteContainer({
   const isHome = location.pathname === "/home";
   const isRoot = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
+  useScrollToHash();
+  useArrowKeyScroll(scrollRef);
+  useScrollToTopOnNav(scrollRef);
 
   // Effect to handle scroll event and set isScrolled state
   useEffect(() => {
@@ -79,15 +84,6 @@ export default function RouteContainer({
     };
   }, []);
 
-  // New effect to handle scrolling to top on URL change
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo(0, 0);
-    }
-  }, [location.pathname]);
-
-  useArrowKeyScroll(scrollRef);
-
   const baseTextClassName =
     "text-violet-950 textGlowXs tracking-wider kufam-font transition-all transition-400";
   const textClassName = isScrolled
@@ -98,13 +94,13 @@ export default function RouteContainer({
     <>
       {/* ***************** ON FROM HOME INDEX ***************** */}
       {isHome && (
-        <>
+        <NavLink to="/us#dark-violet-chat">
           <Image
             src="/images/darkviolet.png"
             alt="Dark Violet"
             className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-50"
           />
-        </>
+        </NavLink>
       )}
 
       {/* ***************** DARK VIOLET LOGO ***************** */}
