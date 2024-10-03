@@ -71,7 +71,7 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
           exit="hidden"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-[6.5vh] md:bottom-[5.5vh] left-[0.7vh] z-20"
+          className="fixed bottom-[6.5vh] md:bottom-[5.5vh] left-[0.7vh] z-35"
         >
           {" "}
           <ProjectButton

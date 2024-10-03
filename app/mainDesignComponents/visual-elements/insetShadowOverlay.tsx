@@ -41,7 +41,7 @@ export default function InsetShadowOverlay({
           left ? left : "left-0"
         } ${
           right ? right : "right-0"
-        } rounded-b-none bg-gradient-to-b from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent z-4  0`}
+        } rounded-b-none bg-gradient-to-b from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent z-40  0`}
       >
         .
       </FlexFull>

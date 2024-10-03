@@ -697,6 +697,12 @@ export default {
         114: "1.14",
         115: "1.15",
       },
+      zIndex: Object.assign(
+        { auto: "auto" },
+        ...Array.from({ length: 1000 }, (_, i) => ({
+          [`${i}`]: `${i}`,
+        }))
+      ),
       fontFamily: {
         sans: ["M PLUS Rounded 1c", "sans-serif"],
         cursive: ["Comic Neue", "cursive"],

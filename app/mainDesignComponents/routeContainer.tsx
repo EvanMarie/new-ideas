@@ -102,14 +102,14 @@ export default function RouteContainer({
           <Image
             src="/images/darkviolet.png"
             alt="Dark Violet"
-            className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-30"
+            className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-50"
           />
         </>
       )}
 
       {/* ***************** DARK VIOLET LOGO ***************** */}
       {!isRoot && (
-        <Box className="fixed top-0.5vh left-0.5vh z-40">
+        <Box className="fixed top-0.5vh left-0.5vh z-45">
           <NavLink to="/home">
             <VStack gap="gap-0" align="items-start">
               <AnimatedText
