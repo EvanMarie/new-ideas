@@ -1,28 +1,13 @@
-import {
-  FlexFull,
-  VStack,
-  VStackFull,
-} from "~/buildingBlockComponents/mainContainers";
-import {
-  allImagesWithTitles,
-  randomizedImagesWithTitles,
-} from "../portfolio+/components-data/project-data";
-import ShiftingImages from "~/mainDesignComponents/visual-elements/shiftingImages";
-import {
-  landingShiftingImages,
-  shuffledShiftingImages,
-} from "../home+/components-data/shiftingImages";
-import Image from "~/buildingBlockComponents/image";
-import Text from "~/buildingBlockComponents/text";
-import ReturnToButton from "~/mainDesignComponents/returnToButton";
-import ProjectButton from "~/mainDesignComponents/projectButton";
-import { BiSmile } from "react-icons/bi";
+import { Box, FlexFull, Wrap } from "~/buildingBlockComponents/mainContainers";
+import { landingShiftingImages } from "../home+/components-data/shiftingImages";
+import ImageWall from "~/mainDesignComponents/visual-elements/imageWall";
 
 export default function Test() {
+  const images = landingShiftingImages.map((image) => image.src);
+
   return (
-    <FlexFull className="h-100svh overflow-y-auto">
-      <ReturnToButton to="/portfolio" />
-      <ProjectButton icon={BiSmile} label="test" to="/home" />
+    <FlexFull className="justify-center h-100svh overflow-y-auto items-center">
+      <ImageWall imageArray={images} />
     </FlexFull>
   );
 }
