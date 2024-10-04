@@ -6,8 +6,8 @@ export function Option({
   value,
   currentSelection,
   setSelection,
-  textSize = "text-sm",
-  padding = "pt-0.2vh pb-0.5vh px-1.5vh",
+  textSize = "text-xs sm:text-sm",
+  padding = "px-1vh pt-0.3vh pb-0.5vh sm:px-1.5vh",
 }: {
   value: string;
   currentSelection: string;

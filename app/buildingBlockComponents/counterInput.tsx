@@ -34,7 +34,7 @@ const CounterInput: React.FC<CounterInputProps> = ({
   min = 0,
   max = 100,
   value,
-  labelColor = "text-cyan-200 textShadow",
+  labelColor = "text-col-500 textShadow",
   labelTextSizes = "text-sm-tight md:text-md-tight",
   onChange,
   iconTextColor = "text-col-100",

@@ -37,7 +37,7 @@ export default function BlogIndex() {
   );
   return (
     <>
-      <VStackFull className="pt-2vh pb-5vh" gap="gap-2vh">
+      <VStackFull className="pt-3vh pb-5vh">
         <FlexFull className="py-1vh">
           <OptionSelector
             options={blogCategories}

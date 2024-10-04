@@ -25,7 +25,7 @@ const Slider: React.FC<SliderProps> = ({
   max = 100,
   increment = 1,
   value,
-  labelColor = "text-cyan-200 textShadow",
+  labelColor = "text-col-500 textShadow",
   labelTextSizes = "text-xs-tight md:text-sm-tight",
   onChange,
 }) => {

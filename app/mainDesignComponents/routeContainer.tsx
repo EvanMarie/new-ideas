@@ -6,7 +6,6 @@ import {
   VStack,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
-import MainNavBar from "./mainNavBar";
 import ScrollProgressBar from "./visual-elements/scrollProgressBar";
 import { NavLink, useLocation, useParams } from "@remix-run/react";
 import InsetShadowOverlay from "./visual-elements/insetShadowOverlay";
@@ -18,7 +17,6 @@ import { useArrowKeyScroll } from "~/hooks/useArrowScroll";
 import { useScrollToHash } from "~/utils/useScrollToHash";
 import { useScrollToTopOnNav } from "~/hooks/useScrollToTopOnNav";
 import Icon from "~/buildingBlockComponents/icon";
-import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { BsChatDotsFill } from "react-icons/bs";
 import Tooltip from "~/buildingBlockComponents/tooltip";
 
@@ -45,13 +43,11 @@ function throttle(func: (...args: any[]) => void, limit: number) {
 
 export default function RouteContainer({
   children,
-  showNav = true,
   showScrollProgress = true,
   transition = "fadeSlideInBottom",
   bg,
 }: {
   children: React.ReactNode;
-  showNav?: boolean;
   showScrollProgress?: boolean;
   bg?: string;
   transition?: string;
@@ -106,7 +102,7 @@ export default function RouteContainer({
             <Box className="relative">
               <Box>
                 <Icon
-                  iconClassName="absolute top-0 -right-3vh text-4.2vh text-cyan-200 rotate-15"
+                  iconClassName="absolute top-0 -right-3vh text-4.2vh text-col-500 rotate-15"
                   icon={BsChatDotsFill}
                 />
               </Box>
@@ -147,9 +143,6 @@ export default function RouteContainer({
 
       {/* ***************** ON PORTFOLIO PROJECT PAGE ***************** */}
       {projectSlug && <PortfolioSideNav projectSlug={projectSlug} />}
-
-      {/* ***************** WHEN TO SHOW NAV ***************** */}
-      {/* {showNav && <MainNavBar />} */}
 
       {/* ***************** WHEN TO SHOW PROGRESS ***************** */}
       {showScrollProgress && (

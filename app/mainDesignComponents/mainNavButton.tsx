@@ -39,10 +39,10 @@ export default function MainNavButton({
         className={`hover:cursor-pointer h-5svh md:h-4svh group items-center justify-center 
           ${
             isActive
-              ? "text-indigo-900 font-semibold hover:text-indigo-900"
-              : "text-col-500"
+              ? "text-indigo-900 font-semibold textGlow hover:text-indigo-900"
+              : "text-col-500 textShadow"
           }
-          hover:text-fuchsia-300 textShadow transition-300 rounded-none relative overflow-hidden`}
+          hover:text-fuchsia-300 transition-300 rounded-none relative overflow-hidden`}
         gap="gap-1vh"
       >
         <AnimatePresence>
