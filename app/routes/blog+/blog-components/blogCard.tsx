@@ -46,14 +46,29 @@ export default function BlogIndexCard({
       className={`w-full rounded-none ${widthClass} p-0.5vh`}
     >
       <NavLink to={blog.slug} key={blog.slug}>
-        <HStackFull className="bg-indigo-300/80 bg-gradient-to-r from-fuchsia-300/50 via-cyan-300/50 to-purple-300/50 justify-between rounded-2vh border-900-md shadowNarrowNormal">
-          <VStackFull className="p-1vh">
-            <span className="text-lg text-slate-950 lightTextShadow font-semibold">
+        <HStackFull className="bg-col-300 bg-gradient-to-r from-fuchsia-300/50 via-cyan-300/50 to-purple-300/50 justify-between rounded-2.2vh border-900-md shadowNarrowNormal h-full items-center">
+          <VStackFull className="p-1vh h-full justify-between" gap="gap-0">
+            <span className="text-2vh text-slate-950 lightTextShadow font-semibold">
               {blog.title}
             </span>
+            <span className="text-xs leading-tight text-slate-900">
+              {blog.summary}
+            </span>
+            <HStackFull className="items-center" gap="gap-1.5vh">
+              <Box className="rounded-full  border-900-sm shadowNarrowNormal">
+                <Image
+                  alt={blog.title}
+                  src={blog.avatar}
+                  className="w-4vh h-4vh rounded-full"
+                />
+              </Box>
+              <span className="text-2vh text-slate-900 lightTextShadow">
+                {blog.author}
+              </span>
+            </HStackFull>
           </VStackFull>
 
-          <Flex className="w-13vh h-13vh flex-shrink-0">
+          <Flex className="w-15vh h-15vh flex-shrink-0">
             <Image
               src={blog.image}
               alt={blog.title}
