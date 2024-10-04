@@ -191,7 +191,7 @@ export const blogArray: BlogPost[] = [
 
 export type ParagraphContent = ReactElement;
 
-export type Categories =
+export type BlogCategories =
   | "Programming"
   | "Creativity"
   | "Science & Philosophy"
@@ -216,5 +216,5 @@ export type BlogPost = {
   image: string;
   summary: string;
   paragraphs?: ReactElement[];
-  categories: Categories[];
+  categories: BlogCategories[];
 };

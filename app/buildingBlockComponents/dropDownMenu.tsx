@@ -9,14 +9,14 @@ import { Flex, FlexFull, HStackFull, VStackFull } from "./mainContainers";
 export default function DropDownMenu({
   options,
   buttonText = "Select",
-  maxHeight = "max-h-[13vh]",
-  buttonTextSize = "text-[2vh]",
-  elementTextSize = "text-[2vh]",
-  iconSize = "text-[3.5vh]",
+  maxHeight = "max-h-80vh",
+  buttonTextSize,
+  elementTextSize,
+  iconSize = "text-4vh",
   elementClassName = "",
-  bgSettings = "bg-100-diagonal5op50 hover:bg-100-diagonal5op75 transition-500",
+  bgSettings = "bg-cyan-300 hover:bg-cyan-200 hover:cursor-pointer bg-gradient-to-r from-indigo-200/30 via-fuchsia-200/40 to-indigo-300/40 transition-300 ",
   menuTextColor = "text-col-900",
-  elementPadding = "px-[1vh] py-[0.2vh]",
+  elementPadding = "px-1vh py-0.5vh",
   label,
   selectedOption,
   setSelectedOption,
@@ -46,13 +46,13 @@ export default function DropDownMenu({
   }) {
     return (
       <HStackFull
-        className={`${alignment} ${bgSettings} ${elementTextSize} ${elementPadding} ${elementClassName} h-[3.5vh] rounded-none`}
+        className={`${alignment} ${bgSettings} ${elementTextSize} ${elementPadding} ${elementClassName} h-fit group file:rounded-none`}
         onClick={() => {
           setSelectedOption(text);
           setIsDropDownOpen(false);
         }}
       >
-        <Text>{text}</Text>
+        <span className="group-hover:font-semibold">{text}</span>
       </HStackFull>
     );
   }
@@ -100,9 +100,10 @@ export default function DropDownMenu({
               top: "100%",
               left: "0",
             }}
+            className="h-fit"
           >
             <FlexFull
-              className={`${maxHeight} ${bgSettings} ${menuTextColor} overflow-y-auto  rounded-t-none  transition-500`}
+              className={`${maxHeight} ${bgSettings} ${menuTextColor} overflow-y-auto rounded-t-none  transition-500`}
             >
               <VStackFull
                 gap="gap-[0px]"

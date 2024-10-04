@@ -1,8 +1,9 @@
 import { useParams } from "@remix-run/react";
-import { blogArray } from "./blog-posts/blogsArray";
+import { blogArray, BlogPost } from "./blog-posts/blogsArray";
+import BlogDisplay from "./blog-components/blogDisplay";
 
 export default function BlogSlug() {
   const blogSlug = useParams().blogSlug;
   const blog = blogArray.find((blog) => blog.slug === blogSlug);
-  return <></>;
+  return <BlogDisplay blog={blog as BlogPost} />;
 }
