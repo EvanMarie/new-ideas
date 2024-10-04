@@ -93,7 +93,7 @@ export default function DropDownMenu({
             transition={{ duration: 0.4 }}
             style={{
               width: "100%",
-              zIndex: 50,
+              zIndex: 150,
               borderRadius: "0px",
               position: "absolute",
               top: "100%",

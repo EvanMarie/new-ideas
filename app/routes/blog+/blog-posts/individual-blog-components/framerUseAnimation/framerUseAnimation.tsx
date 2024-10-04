@@ -24,6 +24,7 @@ import { IoMenu, IoPlay } from "react-icons/io5";
 import { RiNumber1, RiNumber2, RiNumber4 } from "react-icons/ri";
 import Text from "~/buildingBlockComponents/text";
 import { AnimationSequencer } from "./sequenceBuildingBlocks";
+import { OptionSelector } from "~/buildingBlockComponents/optionSelector";
 
 export const springProps = {
   type: "spring",
@@ -1386,31 +1387,6 @@ export function PropertyPlayground() {
     startAnimation();
   };
 
-  function Option({
-    value,
-    currentSelection,
-    setSelection,
-  }: {
-    value: string;
-    currentSelection: string;
-    setSelection: (value: string) => void;
-  }) {
-    const isActive = currentSelection === value;
-
-    return (
-      <motion.button
-        onClick={() => setSelection(value)}
-        className={`flex gap-[0.5vh] items-center ${
-          isActive
-            ? "text-col-500 border-500-md px-[1.5vh] bg-col-950 rounded-xl metallicEdgesXs"
-            : "text-col-100 border-transparent border-[0.2vh]"
-        }`}
-      >
-        <span className="textShadow">{value}</span>
-      </motion.button>
-    );
-  }
-
   function SliderSelector({
     label,
     value,
@@ -1441,36 +1417,6 @@ export function PropertyPlayground() {
           value={value}
           onChange={(e) => setValue(Number(e.target.value))}
         />
-      </VStackFull>
-    );
-  }
-
-  function OptionSelector({
-    label,
-    options,
-    value,
-    setValue,
-  }: {
-    label?: string;
-    options: string[];
-    value: string;
-    setValue: (value: string) => void;
-  }) {
-    return (
-      <VStackFull align="items-start">
-        {label && (
-          <Text className="text-col-500 textShadow font-semibold">{label}</Text>
-        )}
-        <Wrap className="w-full justify-evenly">
-          {options.map((option) => (
-            <Option
-              key={option}
-              value={option}
-              currentSelection={value}
-              setSelection={setValue}
-            />
-          ))}
-        </Wrap>
       </VStackFull>
     );
   }

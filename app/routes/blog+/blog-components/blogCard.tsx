@@ -37,7 +37,7 @@ export default function BlogIndexCard({
             border: "0.2vh solid #000",
             boxShadow: "0 0 1vh rgba(49, 46, 129, 0.5)",
             padding: "1vh 0",
-            zIndex: 10,
+            zIndex: 0,
             borderRadius: "2.2vh",
           }}
           whileHover={{
