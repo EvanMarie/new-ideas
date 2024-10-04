@@ -99,7 +99,6 @@ export default function DropDownMenu({
               top: "100%",
               left: "0",
             }}
-            className="h-fit"
           >
             <FlexFull
               className={`${maxHeight} ${bgSettings} ${menuTextColor} overflow-y-auto rounded-t-none  transition-500`}

@@ -100,7 +100,7 @@ export default function RouteContainer({
       {isHome && (
         <NavLink
           to="/us#dark-violet-chat"
-          className="absolute bottom-5vh md:bottom-3.5vh left-2vh xl:left-4.5vh hover:cursor-pointer z-50"
+          className="absolute bottom-[5svh] md:bottom-[3.5svh] left-4.5vh hover:cursor-pointer z-50"
         >
           <Tooltip label="Dark Violet chat" placement="topRight">
             <Box className="relative">
@@ -136,6 +136,7 @@ export default function RouteContainer({
           </NavLink>
         </Box>
       )}
+
       {/* ***************** ON PORTFOLIO PROJECT PAGE ***************** */}
       {projectSlug && <PortfolioSideNav projectSlug={projectSlug} />}
 
@@ -145,12 +146,12 @@ export default function RouteContainer({
       {/* ***************** WHEN TO SHOW PROGRESS ***************** */}
       {showScrollProgress && (
         <ScrollProgressBar
-          trackColor="bg-indigo-900/80"
+          trackColor="bg-slate-900/90"
           shadow=""
           containerRef={scrollRef}
           position="fixed bottom-[5svh] md:bottom-[4svh]"
           height="h-0.5vh"
-          zIndex="z-10"
+          zIndex="z-40"
           color="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-purple-300"
         />
       )}

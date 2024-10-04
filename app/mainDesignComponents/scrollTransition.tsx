@@ -15,6 +15,7 @@ interface ScrollTransitionProps {
   key?: string;
   once?: boolean;
   amount?: number | "some" | "all";
+  overflow?: string;
 }
 
 export const ScrollTransition = React.forwardRef<
@@ -31,6 +32,7 @@ export const ScrollTransition = React.forwardRef<
       duration = 0.5,
       onClick,
       key,
+      overflow = "overflow-hidden",
       once = true,
       amount = 0.2,
       ...motionProps
@@ -39,7 +41,7 @@ export const ScrollTransition = React.forwardRef<
   ) => {
     return (
       <motion.div
-        className={`flex justify-center overflow-hidden ${className} `}
+        className={`flex justify-center ${className} `}
         key={key}
         initial="initial"
         whileInView="animate"

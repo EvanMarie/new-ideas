@@ -47,11 +47,13 @@ export default function BlogIndex() {
             setSelectedOption={setCategory}
           />
         </Transition>
-        <Wrap className="w-full justify-evenly">
-          {blogsByDate.map((blog, index) => (
-            <BlogIndexCard blog={blog} key={index} index={index} />
-          ))}
-        </Wrap>
+        <FlexFull className="lg:p-2vh">
+          <Wrap className="w-full justify-evenly">
+            {blogsByDate.map((blog, index) => (
+              <BlogIndexCard blog={blog} key={index} index={index} />
+            ))}
+          </Wrap>
+        </FlexFull>
       </VStackFull>
     </>
   );
