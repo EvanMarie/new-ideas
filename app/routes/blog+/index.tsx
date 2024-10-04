@@ -36,7 +36,7 @@ export default function BlogIndex() {
   );
   return (
     <>
-      <VStackFull className="pt-2vh" gap="gap-2vh">
+      <VStackFull className="pt-2vh pb-5vh" gap="gap-2vh">
         <Transition
           className="w-full px-2vh sm:w-60vh overflow-visible"
           type="fadeSlideInRight"

@@ -17,6 +17,10 @@ import AnimatedText from "./visual-elements/animatedText";
 import { useArrowKeyScroll } from "~/hooks/useArrowScroll";
 import { useScrollToHash } from "~/utils/useScrollToHash";
 import { useScrollToTopOnNav } from "~/hooks/useScrollToTopOnNav";
+import Icon from "~/buildingBlockComponents/icon";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { BsChatDotsFill } from "react-icons/bs";
+import Tooltip from "~/buildingBlockComponents/tooltip";
 
 // Throttle function to limit the frequency of event triggers
 function throttle(func: (...args: any[]) => void, limit: number) {
@@ -92,18 +96,31 @@ export default function RouteContainer({
 
   return (
     <>
-      {/* ***************** ON FROM HOME INDEX ***************** */}
+      {/* ***************** DARK VIOLET IMAGE CHAT ***************** */}
       {isHome && (
-        <NavLink to="/us#dark-violet-chat">
-          <Image
-            src="/images/darkviolet.png"
-            alt="Dark Violet"
-            className="absolute bottom-5vh md:bottom-3.5vh left-5vh h-16vh z-50"
-          />
+        <NavLink
+          to="/us#dark-violet-chat"
+          className="absolute bottom-5vh md:bottom-3.5vh left-2vh hover:cursor-pointer z-50"
+        >
+          <Tooltip label="Dark Violet chat" placement="topRight">
+            <Box className="relative">
+              <Box>
+                <Icon
+                  iconClassName="absolute top-0 -right-3vh text-4.2vh text-cyan-200 rotate-15"
+                  icon={BsChatDotsFill}
+                />
+              </Box>
+              <Image
+                src="/images/darkviolet.png"
+                alt="Dark Violet"
+                className="h-16vh hover:cursor-pointer"
+              />
+            </Box>
+          </Tooltip>
         </NavLink>
       )}
 
-      {/* ***************** DARK VIOLET LOGO ***************** */}
+      {/* ***************** DARK VIOLET NAME LOGO ***************** */}
       {!isRoot && (
         <Box className="fixed top-1vh left-0.5vh z-45 pl-1vh">
           <NavLink to="/home">

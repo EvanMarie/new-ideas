@@ -18,36 +18,14 @@ export default function BlogIndexCard({
   blog: BlogPost;
   index: number;
 }) {
-  const lgScreenWidths = [
-    "lg:w-65% xxl:w-1/3",
-    "lg:w-35% xxl:w-1/3",
-    "lg:w-40% xxl:w-1/3",
-    "lg:w-60% xxl:w-30%",
-    "lg:w-55% xxl:w-30%",
-    "lg:w-45% xxl:w-30%",
-    "lg:w-35% xxl:w-35%",
-    "lg:w-65% xxl:w-30%",
-    "lg:w-50% xxl:w-35%",
-    "lg:w-50% xxl:w-30%",
-    "lg:w-40% xxl:w-35%",
-    "lg:w-60% xxl:w-30%",
-  ];
-
-  function getWidthByIndex(index: number): string {
-    const indexDigit = (index + 12) % 10;
-    return lgScreenWidths[indexDigit];
-  }
-
-  const widthClass = getWidthByIndex(index);
-
   return (
     <ScrollTransition
       delay={0.01 * (index + 0.1) + 0.1}
       type="rotate3D"
-      className={`w-full rounded-none ${widthClass} p-0.5vh`}
+      className={`w-full lg:w-1/2 xl:w-1/3 rounded-none py-0.5vh px-1vh sm:py-0.7vh sm:px-3vh md:px-5vh lg:p-0 lg:rounded-none`}
     >
       <NavLink to={blog.slug} key={blog.slug}>
-        <HStackFull className="bg-col-300 bg-gradient-to-r from-fuchsia-300/50 via-cyan-300/50 to-purple-300/50 justify-between rounded-2.2vh border-900-md shadowNarrowNormal h-full items-center">
+        <HStackFull className="bg-col-300 bg-gradient-to-r from-fuchsia-300/50 via-cyan-300/50 to-purple-300/50 justify-between rounded-2.2vh lg:rounded-none border-900-md shadowNarrowNormal h-full items-center">
           <VStackFull
             className="p-1vh h-full justify-between"
             gap="gap-0"
@@ -80,7 +58,7 @@ export default function BlogIndexCard({
             <Image
               src={blog.image}
               alt={blog.title}
-              className="w-full h-full rounded-2vh"
+              className="w-full h-full rounded-tl-none rounded-bl-none rounded-tr-2vh rounded-br-2vh lg:rounded-none"
             />
           </Flex>
         </HStackFull>{" "}

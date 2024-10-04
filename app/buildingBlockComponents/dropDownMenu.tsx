@@ -2,7 +2,6 @@ import { Dispatch, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Icon from "./icon";
 import { BiChevronDown } from "react-icons/bi";
-import Text from "./text";
 import DefaultLabel from "./defaultLabel";
 import { Flex, FlexFull, HStackFull, VStackFull } from "./mainContainers";
 
@@ -14,7 +13,7 @@ export default function DropDownMenu({
   elementTextSize,
   iconSize = "text-4vh",
   elementClassName = "",
-  bgSettings = "bg-cyan-300 hover:bg-cyan-200 hover:cursor-pointer bg-gradient-to-r from-indigo-200/30 via-fuchsia-200/40 to-indigo-300/40 transition-300 ",
+  bgSettings = "bg-cyan-200 hover:bg-cyan-100 hover:cursor-pointer bg-gradient-to-r from-indigo-200/30 via-fuchsia-200/40 to-indigo-300/40 transition-300 ",
   menuTextColor = "text-col-900",
   elementPadding = "px-1vh py-0.5vh",
   label,
