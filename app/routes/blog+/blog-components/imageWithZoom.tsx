@@ -11,6 +11,7 @@ import {
   FlexFull,
 } from "~/buildingBlockComponents/mainContainers";
 import Modal from "~/buildingBlockComponents/modal";
+import ProjectButton from "~/mainDesignComponents/projectButton";
 
 interface ImageWithZoomProps {
   alt: string;
@@ -21,23 +22,25 @@ interface ImageWithZoomProps {
 export function ImageWithZoom({
   alt,
   src,
-  className = "w-85% xl:w-60%",
+  className = "w-85vw md:w-60vh",
 }: ImageWithZoomProps) {
   const [imageOpen, setImageOpen] = useState(false);
   return (
-    <div className="relative">
-      <Box className="absolute top-[2%] right-[5%] sm:right-[11%] md:right-[13%] lg:right-[21%] xl:right-[25.5%] border-900-md shadowNarrowNormal">
-        <IconButton
-          icon={BiExpandAlt}
-          type="smallUnstyled"
-          onClick={() => {
-            setImageOpen(true);
-          }}
-          containerClassName="bg-col-500 hover:bg-col-200 transition-300"
-          iconClassName="text-col-900"
-        />
+    <FlexFull className="justify-center">
+      <Box className="relative w-fit border-900-md shadowNarrowNormal">
+        <Box className="absolute top-0.5vh right-0.5vh">
+          <IconButton
+            icon={BiExpandAlt}
+            type="smallUnstyled"
+            onClick={() => {
+              setImageOpen(true);
+            }}
+            containerClassName="bg-col-500 hover:bg-col-200 transition-300 border-900-md shadowNarrowTight"
+            iconClassName="text-col-900"
+          />
+        </Box>
+        <img src={src} alt={alt} className={className} />
       </Box>
-      <img src={src} alt={alt} className={className} />
       <Modal
         isOpen={imageOpen}
         setModalOpen={setImageOpen}
@@ -57,14 +60,14 @@ export function ImageWithZoom({
             />
           </Flex>
           <FlexFull className="justify-center">
-            <Button
+            <ProjectButton
+              text="close"
+              icon={CloseIcon}
               onClick={() => setImageOpen(false)}
-              buttonText="close"
-              iconLeft={CloseIcon}
             />
           </FlexFull>
         </CenterFull>
       </Modal>
-    </div>
+    </FlexFull>
   );
 }

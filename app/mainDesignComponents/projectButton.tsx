@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "@remix-run/react";
 import { motion } from "framer-motion";
 import { CSSProperties } from "react";
 import Icon from "~/buildingBlockComponents/icon";
+import { HStack } from "~/buildingBlockComponents/mainContainers";
 import Tooltip, { TooltipPlacement } from "~/buildingBlockComponents/tooltip";
 
 export default function ProjectButton({
@@ -33,14 +34,25 @@ export default function ProjectButton({
       {/* @ts-ignore  */}
       <NavLink to={to} target={target}>
         <motion.button
-          className={`bg-col-500 rounded-full p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300 ${position}`}
+          className={`bg-col-500 ${
+            text ? "rounded-2vh" : "rounded-full"
+          } p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300 ${position}`}
           onClick={onClick ? onClick : () => {}}
         >
-          <Icon
-            icon={icon}
-            iconClassName="text-lg text-slate-800 group-hover:text-col-500"
-          />
-          {text && <span className="sr-only">{text}</span>}
+          {text ? (
+            <HStack className="gap-0.5vh px-0.5vh">
+              <Icon
+                icon={icon}
+                iconClassName="text-lg text-slate-800 group-hover:text-col-500"
+              />
+              <span className="text-sm text-col-900">{text}</span>
+            </HStack>
+          ) : (
+            <Icon
+              icon={icon}
+              iconClassName="text-lg text-slate-800 group-hover:text-col-500"
+            />
+          )}
         </motion.button>
       </NavLink>
     </Tooltip>

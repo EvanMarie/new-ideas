@@ -1853,7 +1853,7 @@ export default {
           // fontSize: "inherit",
         },
         h1: {
-          color: theme("colors.col.300"),
+          color: theme("colors.col.500"),
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           fontWeight: 600,
@@ -1870,7 +1870,7 @@ export default {
           },
         },
         h2: {
-          color: theme("colors.col.300"),
+          color: theme("colors.col.500"),
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           marginBottom: "1.5vh",
@@ -1886,7 +1886,7 @@ export default {
           },
         },
         h3: {
-          color: theme("colors.col.300"),
+          color: theme("colors.col.400"),
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           marginBottom: "1.5vh",
@@ -1902,7 +1902,7 @@ export default {
           },
         },
         h4: {
-          color: theme("colors.col.300"),
+          color: theme("colors.col.400"),
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           marginBottom: "1.5vh",
@@ -1918,7 +1918,7 @@ export default {
           },
         },
         h5: {
-          color: theme("colors.col.300"),
+          color: theme("colors.col.400"),
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           marginBottom: "1.5vh",
@@ -1934,7 +1934,7 @@ export default {
           },
         },
         h6: {
-          color: theme("colors.col.300"),
+          color: theme("colors.col.400"),
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           marginBottom: "1.5vh",
