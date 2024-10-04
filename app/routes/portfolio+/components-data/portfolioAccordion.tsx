@@ -20,7 +20,7 @@ interface AccordionProps {
 export default function PortfolioAccordion({
   title,
   children,
-  titleStyles = "bg-slate-800 bg-gradient-to-bl from-slate-900/50 via-indigo-950/50 to-slate-900/50 hover:bg-indigo-950 transition-300 text-cyan-300 textShadow",
+  titleStyles = "bg-slate-800 bg-gradient-to-bl from-slate-900/50 via-indigo-950/50 to-slate-900/50 hover:bg-indigo-950 transition-300 text-col-500 textShadow",
   contentStyles = "bg-slate-800 bg-gradient-to-bl from-indigo-500/40 via-fuchsia-500/40 to-indigo-500/40 text-col-100 textShadow",
 }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(true);

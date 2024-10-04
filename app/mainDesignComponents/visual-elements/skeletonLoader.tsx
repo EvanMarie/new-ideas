@@ -9,7 +9,7 @@ export default function SkeletonLoader({
   colors = ["#240057", "#360057", "#57004d"],
   speed = 3,
   text,
-  textColor = "text-cyan-300",
+  textColor = "text-col-500",
   textClassName = "text-[2.5vh] font-semibold",
 }: {
   imageDimensions?: string;

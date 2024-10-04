@@ -1439,7 +1439,7 @@ export function PropertyPlayground() {
             />
           </FlexFull>
           <motion.div
-            className=" w-[10vh] h-[10vh] md:w-[13vh] md:h-[13vh] bg-cyan-300 border-900-md shadowNarrowNormal"
+            className=" w-[10vh] h-[10vh] md:w-[13vh] md:h-[13vh] bg-col-500 border-900-md shadowNarrowNormal"
             animate={controls}
           />
         </FlexFull>

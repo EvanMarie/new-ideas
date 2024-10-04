@@ -4,7 +4,12 @@ import { CloseIcon } from "styles";
 import Button from "~/buildingBlockComponents/button";
 import IconButton from "~/buildingBlockComponents/iconButton";
 import Image from "~/buildingBlockComponents/image";
-import { Box, CenterFull, Flex, FlexFull } from "~/buildingBlockComponents/mainContainers";
+import {
+  Box,
+  CenterFull,
+  Flex,
+  FlexFull,
+} from "~/buildingBlockComponents/mainContainers";
 import Modal from "~/buildingBlockComponents/modal";
 
 interface ImageWithZoomProps {
@@ -42,7 +47,7 @@ export function ImageWithZoom({
         showBottomClose={false}
         modalSize="w-[100vw] h-[100svh]"
       >
-        <CenterFull className="flex-col gap-[1vh] bg-col-950 bg-gradient-to-br from-violet-500/50 via-indigo-500/50 to-cyan-300/50">
+        <CenterFull className="flex-col gap-[1vh] bg-col-950 bg-gradient-to-br from-violet-500/50 via-indigo-500/50 to-col-500/50">
           <Flex className="rounded-[2vh] justify-center image-with-zoom">
             <Image
               alt={alt}

@@ -58,7 +58,7 @@ export default function CodeModal({
               gap="gap-[0px]"
               className="overflow-y-hidden rounded-none"
             >
-              <Center className="w-full bg-indigo-900 rounded-[0.4vh] text-cyan-300 textShadow rounded-b-none">
+              <Center className="w-full bg-indigo-900 rounded-[0.4vh] text-col-500 textShadow rounded-b-none">
                 <Text className="text-[3vh] font-semibold">{title}</Text>
               </Center>
               <FlexFull className="h-full overflow-y-auto rounded-none insetShadowXl">

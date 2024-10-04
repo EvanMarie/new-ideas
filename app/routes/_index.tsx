@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   const navigate = useNavigate();
   const taglineStyles =
-    "text-2.1vh sm:text-3vh md:text-3vh text-cyan-300 textShadow";
+    "text-2.1vh sm:text-3vh md:text-3vh text-col-500 textShadow";
   const handleNavigation = () => {
     navigate("/home"); // Navigate to the next page
   };

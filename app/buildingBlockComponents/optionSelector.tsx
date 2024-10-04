@@ -5,58 +5,28 @@ export function Option({
   value,
   currentSelection,
   setSelection,
+  textSize = "text-sm",
+  padding = "pt-0.2vh pb-0.5vh px-1.5vh",
 }: {
   value: string;
   currentSelection: string;
   setSelection: (value: string) => void;
+  textSize?: string;
+  padding?: string;
 }) {
   const isActive = currentSelection === value;
 
   return (
     <motion.button
       onClick={() => setSelection(value)}
-      className={`flex gap-[0.5vh] items-center ${
+      className={`flex ${textSize} gap-0.5vh items-center ${padding} ${
         isActive
-          ? "text-col-500 border-500-md px-[1.5vh] bg-col-950 rounded-xl metallicEdgesXs"
-          : "text-col-100 border-transparent border-[0.2vh]"
+          ? "text-col-500 border-500-md bg-indigo-950/70 rounded-xl metallicEdgesXs"
+          : "text-col-100 border-transparent border-[0.2vh] hover:text-col-500 transition-300"
       }`}
     >
       <span className="textShadow">{value}</span>
     </motion.button>
-  );
-}
-
-function SliderSelector({
-  label,
-  value,
-  setValue,
-  min,
-  max,
-  step,
-}: {
-  label: string;
-  value: number;
-  setValue: (value: number) => void;
-  min: number;
-  max: number;
-  step: number;
-}) {
-  return (
-    <VStackFull align="items-start">
-      <HStackFull className="justify-between text-col-500 textShadow font-semibold">
-        <span>{label}</span>
-        <span>{value}</span>
-      </HStackFull>
-      <input
-        type="range"
-        className="dark-mode"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
-      />
-    </VStackFull>
   );
 }
 
@@ -65,11 +35,15 @@ export function OptionSelector({
   options,
   value,
   setValue,
+  textSize,
+  padding,
 }: {
   label?: string;
   options: string[];
   value: string;
   setValue: (value: string) => void;
+  textSize?: string;
+  padding?: string;
 }) {
   return (
     <VStackFull align="items-start">
@@ -79,10 +53,12 @@ export function OptionSelector({
       <Wrap className="w-full justify-evenly">
         {options.map((option) => (
           <Option
+            textSize={textSize}
             key={option}
             value={option}
             currentSelection={value}
             setSelection={setValue}
+            padding={padding}
           />
         ))}
       </Wrap>

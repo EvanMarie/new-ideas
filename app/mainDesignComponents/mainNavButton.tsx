@@ -36,8 +36,8 @@ export default function MainNavButton({
       <HStackFull
         className={`hover:cursor-pointer h-5svh md:h-4svh group items-center justify-center ${
           isActive
-            ? "text-indigo-900 bg-cyan-300 shadowNarrowNormal textGlowSm hover:text-indigo-900 font-semibold"
-            : "text-cyan-300"
+            ? "text-indigo-900 bg-col-500 shadowNarrowNormal textGlowSm hover:text-indigo-900 font-semibold"
+            : "text-col-500"
         } hover:text-fuchsia-300 textShadow transition-300 rounded-none`}
         gap="gap-1vh"
       >

@@ -78,7 +78,7 @@ export default function HomeIndex() {
             </Text>
             <VStack
               align="items-end"
-              className="kufam-font text-cyan-300 textShadow"
+              className="kufam-font text-col-500 textShadow"
             >
               <Flex className="flex-col md:flex-row md:gap-1vh">
                 <Text className="textShadow">

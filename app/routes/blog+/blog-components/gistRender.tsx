@@ -33,7 +33,7 @@ export default function GistRender({
   function ErrorContainer({ children }: { children: React.ReactNode }) {
     return (
       <FlexFull
-        className={`${codeBackground} text-cyan-300 justify-center py-[0.5vh] text-stroke-5-500 textShadow border-500-sm`}
+        className={`${codeBackground} text-col-500 justify-center py-[0.5vh] text-stroke-5-500 textShadow border-500-sm`}
       >
         {children}
       </FlexFull>
@@ -91,7 +91,7 @@ export default function GistRender({
       headerContent={
         <NavLink to={gistLink} target="_blank" className=" rounded-[2vh]">
           <HStack
-            className="items-center bg-cyan-300 w-fit px-[0.5vh] md:px-[1vh] border-900-md hover:cursor-pointer h-[2.7vh] rounded-[2vh] hover:metallicEdgesSm transition-300"
+            className="items-center bg-col-500 w-fit px-[0.5vh] md:px-[1vh] border-900-md hover:cursor-pointer h-[2.7vh] rounded-[2vh] hover:metallicEdgesSm transition-300"
             gap="gap-[0.4vh]"
           >
             <Icon icon={FaGithub} iconClassName="text-col-900 " />

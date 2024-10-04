@@ -528,7 +528,7 @@ export function RenderJSONExample({
             gap="gap-0"
           >
             <HStackFull className="">
-              <Text className="text-cyan-300 text-sm textShadow">
+              <Text className="text-col-500 text-sm textShadow">
                 <strong>{subKey}:</strong>
               </Text>
               <VStackFull className="w-full " align="items-start">
@@ -562,7 +562,7 @@ export function RenderJSONExample({
           {Object.keys(shape).map((key, index) => (
             <VStackFull key={index} className="w-full h-full" gap="gap-0">
               {/* Top-level key */}
-              <Text className="text-[4vh] text-cyan-300 text-semibold textShadow">
+              <Text className="text-[4vh] text-col-500 text-semibold textShadow">
                 {key}
               </Text>
               <VStackFull className="w-full" gap="gap-0" align="items-start">
@@ -629,7 +629,7 @@ export function EditableJSONInput({
       return Object.keys(value).map((key) => (
         <VStackFull key={key} className="w-full h-full pl-2vh">
           <HStackFull gap="gap-[2vh]">
-            <Text className="text-cyan-300 text-sm textShadow">
+            <Text className="text-col-500 text-sm textShadow">
               <strong>{key}:</strong>
             </Text>
             <VStackFull className="w-full" align="items-start">
@@ -666,7 +666,7 @@ export function EditableJSONInput({
         {Object.keys(jsonState).map((key) => (
           <VStackFull key={key} className="w-full h-full">
             {/* Top-level JSON key */}
-            <Text className=" text-cyan-300 text-semibold textShadow">
+            <Text className=" text-col-500 text-semibold textShadow">
               {key}
             </Text>
             <VStackFull className="w-full" align="items-start">
@@ -740,7 +740,7 @@ export default function DemoJsonInput() {
             onClick={() => handleJSONTypeChange(type as any)} // Handle JSON type change
             className={`font-semibold px-[1.5vh] py-[0.2vh] rounded-[2vh] ${
               selectedJSON === type
-                ? "text-cyan-300 border-500-md bg-col-740 metallicEdgesSm"
+                ? "text-col-500 border-500-md bg-col-740 metallicEdgesSm"
                 : "text-fuchsia-300 border-600-md shadowNarrowNormal hover:bg-col-330 transition-300"
             }`}
           >

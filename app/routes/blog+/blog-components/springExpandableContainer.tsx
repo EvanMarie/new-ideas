@@ -223,7 +223,7 @@ export default function SpringExpandableContainer({
                 containerRef={scrollRef}
                 height="h-[0.6vh]"
                 position="absolute bottom-0 left-0 right-0"
-                color="bg-gradient-to-r from-fuchsia-500 via-cyan-300 to-fuchsia-500"
+                color="bg-gradient-to-r from-fuchsia-500 via-col-500 to-fuchsia-500"
               />
             )}
 
@@ -234,7 +234,7 @@ export default function SpringExpandableContainer({
                   setExpanded(false);
                 }}
               >
-                <Flex className="items-center bg-cyan-300 w-fit px-[0.5vh] border-900-md hover:cursor-pointer h-[2.7vh]">
+                <Flex className="items-center bg-col-500 w-fit px-[0.5vh] border-900-md hover:cursor-pointer h-[2.7vh]">
                   <Icon icon={FaChevronUp} iconClassName="text-col-900" />
                 </Flex>
               </motion.button>

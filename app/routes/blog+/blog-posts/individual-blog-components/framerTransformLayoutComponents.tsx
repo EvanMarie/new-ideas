@@ -410,7 +410,7 @@ export function TrackElementPosition() {
     return (
       <Box className="w-full ">
         <motion.div
-          className="h-[1vh] bg-gradient-to-r from-cyan-300 to-fuchsia-400"
+          className="h-[1vh] bg-gradient-to-r from-col-500 to-fuchsia-400"
           style={{ scaleX: scrollYProgress }}
         />
       </Box>

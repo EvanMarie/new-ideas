@@ -15,7 +15,7 @@ export default function AnimatedBulletList({
 }) {
   return (
     <VStackFull align="items-start">
-      <h5 className="text-cyan-300">{heading}</h5>
+      <h5 className="text-col-500">{heading}</h5>
       <ul className="w-full list-disc pl-5">
         {" "}
         {/* Added list-disc and pl-5 classes */}

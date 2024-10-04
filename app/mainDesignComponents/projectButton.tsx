@@ -33,12 +33,12 @@ export default function ProjectButton({
       {/* @ts-ignore  */}
       <NavLink to={to} target={target}>
         <motion.button
-          className={`bg-cyan-300 rounded-full p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300 ${position}`}
+          className={`bg-col-500 rounded-full p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300 ${position}`}
           onClick={onClick ? onClick : () => {}}
         >
           <Icon
             icon={icon}
-            iconClassName="text-lg text-slate-800 group-hover:text-cyan-300"
+            iconClassName="text-lg text-slate-800 group-hover:text-col-500"
           />
           {text && <span className="sr-only">{text}</span>}
         </motion.button>

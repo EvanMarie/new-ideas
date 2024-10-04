@@ -6,7 +6,7 @@ import { darkVioletSVGPaths } from "./darkVioletLandingAnimationPaths";
 
 export default function DarkVioletIndexAnimation() {
   const taglineStyles =
-    "text-2.1vh sm:text-3vh md:text-3vh text-cyan-300 textShadow";
+    "text-2.1vh sm:text-3vh md:text-3vh text-col-500 textShadow";
   return (
     <Center className={`w-screen h-100svh rounded-none `}>
       <VStack gap="gap-0">

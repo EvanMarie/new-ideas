@@ -22,7 +22,7 @@ export default function SocialLink({
         transition={{ duration: 0.4 }}
       >
         <HStack
-          className="text-cyan-300 textShadow border-550-md border-[0.2vh] hover:border-cyan-300 transition-400 py-0.4vh px-1.3vh hover:cursor-pointer items-center rounded-3vh hover:bg-col-930 insetShadowXl hover:shadowNarrowNormal"
+          className="text-col-500 textShadow border-550-md border-[0.2vh] hover:border-col-500 transition-400 py-0.4vh px-1.3vh hover:cursor-pointer items-center rounded-3vh hover:bg-col-930 insetShadowXl hover:shadowNarrowNormal"
           gap="gap-[0.3vh]"
         >
           <Icon

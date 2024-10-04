@@ -8,6 +8,7 @@ import {
 } from "~/buildingBlockComponents/mainContainers";
 import DropDownMenu from "~/buildingBlockComponents/dropDownMenu";
 import BlogIndexCard from "./blog-components/blogCard";
+import { OptionSelector } from "~/buildingBlockComponents/optionSelector";
 
 export default function BlogIndex() {
   const blogCategories = [
@@ -37,16 +38,14 @@ export default function BlogIndex() {
   return (
     <>
       <VStackFull className="pt-2vh pb-5vh" gap="gap-2vh">
-        <Transition
-          className="w-full px-2vh sm:w-60vh overflow-visible"
-          type="fadeSlideInRight"
-        >
-          <DropDownMenu
-            options={blogCategories.filter((item) => item !== category)}
-            selectedOption={category}
-            setSelectedOption={setCategory}
+        <FlexFull className="py-1vh">
+          <OptionSelector
+            options={blogCategories}
+            value={category}
+            setValue={setCategory}
           />
-        </Transition>
+        </FlexFull>
+
         <FlexFull className="lg:p-2vh">
           <Wrap className="w-full justify-evenly">
             {blogsByDate.map((blog, index) => (

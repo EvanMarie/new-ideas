@@ -8,7 +8,7 @@ export function ExampleTenExplained() {
   return (
     <CenterHorizontalFull className="lg:px-[1vh] pt-[2vh]">
       <Flex className="bg-slate-900 border-900-md shadowBroadNormal px-[1vh] py-[2vh] gap-[2vh] flex-col">
-        <Text className={`${paragraphTextSize} text-cyan-300`}>
+        <Text className={`${paragraphTextSize} text-col-500`}>
           Example Ten: Sequenced Skewed Text
         </Text>
         <Text className={paragraphTextSize}>
@@ -17,7 +17,7 @@ export function ExampleTenExplained() {
           and forth in a sequence using timing animations. Here’s a detailed
           breakdown of its functionality and implementation.
         </Text>
-        <Text className={`${paragraphTextSize} text-cyan-300`}>
+        <Text className={`${paragraphTextSize} text-col-500`}>
           Key Features
         </Text>
         <Text className={paragraphTextSize}>
@@ -57,7 +57,7 @@ export function ExampleTenExplained() {
             </li>
           </ul>
         </Text>
-        <Text className={`${paragraphTextSize} text-cyan-300`}>
+        <Text className={`${paragraphTextSize} text-col-500`}>
           Component Structure
         </Text>
         <Text className={paragraphTextSize}>

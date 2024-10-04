@@ -28,7 +28,7 @@ export default function PortfolioProjectDisplay({
               {portfolioItem.title}
             </h2>
           </HStack>
-          <Text className="text-cyan-300 textShadow">
+          <Text className="text-col-500 textShadow">
             {portfolioItem.description}
           </Text>
         </VStackFull>

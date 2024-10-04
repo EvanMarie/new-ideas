@@ -35,7 +35,7 @@ export default function BlogIndexCard({
           layout
           style={{
             border: "0.2vh solid #000",
-            boxShadow: "0.5vh 0.5vh 0.5vh rgba(0, 0, 100, 1)",
+            boxShadow: "0.5vh 0.5vh 0.5vh rgba(0, 0, 100, 0.9)",
             padding: "1vh 0",
             zIndex: 0,
             borderRadius: "2.2vh",
@@ -62,8 +62,9 @@ export default function BlogIndexCard({
                   {blog.title}
                 </span>
                 <Text
-                  className="text-sm leading-tight text-white subtleTextShadow"
+                  className="text-sm text-white subtleTextShadow"
                   noOfLines={2}
+                  style={{ lineHeight: 1.6 }}
                 >
                   {blog.summary}
                 </Text>
@@ -72,7 +73,7 @@ export default function BlogIndexCard({
                 <Image
                   src={blog.image}
                   alt={blog.title}
-                  className="w-full h-full rounded-full fade-outer z-20 "
+                  className="w-full h-full rounded-full fade-outer z-20"
                 />
               </Flex>
             </HStackFull>

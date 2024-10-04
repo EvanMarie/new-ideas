@@ -345,7 +345,7 @@ export function ComponentDrivenImage({
       >
         <VStackFull className="h-[100svh] justify-between bg-slate-900 bg-gradient-to-b from-violet-900/70 via-indigo-900/70 to-violet-900/70 shadowBroadLoose border-970-md relative">
           <HStackFull className="h-[5vh] justify-between px-[1vh] py-[0.5vh] items-center bg-slate-900/60 border-b-970-md rounded-b-none absolute top-0 right-0 left-0">
-            <Text className="text-cyan-300 text-[2vh] leading-[2.3vh] md:text-[2.7vh] md:leading-[3vh] leading-tighter">
+            <Text className="text-col-500 text-[2vh] leading-[2.3vh] md:text-[2.7vh] md:leading-[3vh] leading-tighter">
               {title}
             </Text>
             <Flex className="h-full w-7% justify-end">
