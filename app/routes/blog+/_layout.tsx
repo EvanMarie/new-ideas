@@ -5,7 +5,7 @@ export default function BlogLayout() {
   const isBlogIndex = useLocation().pathname.endsWith("/blog");
   return (
     <>
-      <RouteContainer transition="none" bg="bg-cyan-500/30">
+      <RouteContainer transition="none" bg="bg-cyan-300/20">
         <Outlet />
       </RouteContainer>{" "}
     </>

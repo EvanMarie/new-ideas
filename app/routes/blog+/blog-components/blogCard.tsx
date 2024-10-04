@@ -31,11 +31,11 @@ export default function BlogIndexCard({
     >
       <NavLink to={blog.slug} key={blog.slug} className="rounded-2.2vh">
         <motion.div
-          className="w-full flex bg-indigo-950 bg-gradient-to-r from-fuchsia-500/10 via-fuchsia-500/10 to-fuchsia-500/10 justify-between h-full items-center hover:cursor-pointer rounded-[2.2vh]"
+          className="w-full flex bg-indigo-950 bg-gradient-to-r from-fuchsia-500/10 via-fuchsia-500/10 to-fuchsia-500/10 justify-between h-full items-center hover:cursor-pointer rounded-[2.2vh] group"
           layout
           style={{
             border: "0.2vh solid #000",
-            boxShadow: "0 0 1vh rgba(49, 46, 129, 0.5)",
+            boxShadow: "0.5vh 0.5vh 0.5vh rgba(0, 0, 100, 1)",
             padding: "1vh 0",
             zIndex: 0,
             borderRadius: "2.2vh",
@@ -44,8 +44,8 @@ export default function BlogIndexCard({
             scale: 1.06,
             transition: { duration: 0.3 },
             borderRadius: "4vh",
-            boxShadow: boxGlow,
-            border: "0.2vh solid #000",
+            // boxShadow: boxGlow,
+            border: "0.1vh solid cyan",
             backgroundColor: indigo900,
             padding: "1vh 0",
             zIndex: 50,
@@ -72,7 +72,7 @@ export default function BlogIndexCard({
                 <Image
                   src={blog.image}
                   alt={blog.title}
-                  className="w-full h-full rounded-full fade-outer z-20"
+                  className="w-full h-full rounded-full fade-outer z-20 "
                 />
               </Flex>
             </HStackFull>

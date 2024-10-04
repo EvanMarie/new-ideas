@@ -89,10 +89,10 @@ export default function RouteContainer({
   }, []);
 
   const baseTextClassName =
-    "text-purple-900 textGlowXs tracking-wider kufam-font transition-all transition-400";
+    "text-purple-900 tracking-wider kufam-font transition-all transition-400";
   const textClassName = isScrolled
-    ? `${baseTextClassName} text-3vh xl:text-4vh`
-    : `${baseTextClassName} text-5.5vh sm:text-6.5vh md:text-7.5vh lg:text-9vh xl:text-10vh`;
+    ? `${baseTextClassName} text-3vh xl:text-4vh textGlowXs`
+    : `${baseTextClassName} text-5.5vh sm:text-6.5vh md:text-7.5vh lg:text-9vh xl:text-10vh textGlowSm`;
 
   return (
     <>
