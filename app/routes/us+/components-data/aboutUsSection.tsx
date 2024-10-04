@@ -67,7 +67,10 @@ export default function AboutUsSection({
             gap="md:gap-1vh"
           >
             {educationInfo.map((edu) => (
-              <Wrap className="w-full justify-center gap-x-1vh xl:justify-end">
+              <Wrap
+                className="w-full justify-center gap-x-1vh xl:justify-end"
+                key={edu}
+              >
                 <span className="text-fuchsia-200 textShadow md:w-full xl:w-fit">
                   {edu?.split(" - ")[0]}
                 </span>
@@ -89,9 +92,10 @@ export default function AboutUsSection({
       </FlexFull>
       <VStackFull gap="gap-2vh">
         {teamMember.paragraphs.map((paragraph) => (
-          <RenderParagraphs textItem={paragraph} />
+          <RenderParagraphs textItem={paragraph} key={paragraph} />
         ))}
       </VStackFull>
+      <Divider m="mt-3vh mb-2vh" bg="bg-cyan-500/70" />
     </FlexFull>
   );
 }

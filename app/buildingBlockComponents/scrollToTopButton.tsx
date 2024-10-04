@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ProjectButton from "~/mainDesignComponents/projectButton";
 import { VscTriangleUp } from "react-icons/vsc";
-import { useLocation, useNavigate } from "@remix-run/react";
+import { useLocation } from "@remix-run/react";
 
 interface ScrollToTopProps {
   scrollContainerRef: React.RefObject<HTMLElement>;
@@ -15,7 +15,7 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const hash = useLocation().hash;
   const pathname = useLocation().pathname;
-  const navigate = useNavigate();
+
   useEffect(() => {
     const toggleVisibility = () => {
       if (
@@ -54,6 +54,18 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
     visible: { z: 0, opacity: 1 },
   };
 
+  const onClick = () => {
+    if (hash) {
+      // Use history.replaceState to remove the hash without scrolling to it
+      window.history.replaceState(null, "", pathname);
+
+      // Scroll to the top afterward
+      scrollToTop();
+    } else {
+      scrollToTop();
+    }
+  };
+
   return (
     <AnimatePresence>
       {isVisible && (
@@ -68,7 +80,7 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
         >
           <ProjectButton
             icon={VscTriangleUp}
-            onClick={hash !== "" ? () => navigate(pathname) : scrollToTop}
+            onClick={onClick}
             label="to top"
             tooltipPlacement="topRight"
           />

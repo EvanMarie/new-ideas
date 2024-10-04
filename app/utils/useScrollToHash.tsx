@@ -1,44 +1,34 @@
 import { useEffect } from "react";
-
-const findCumulativeOffset = (element: Element | null): number => {
-  let top = 0;
-  while (element) {
-    top += (element as HTMLElement).offsetTop || 0;
-    element = (element as HTMLElement).offsetParent as Element | null;
-  }
-  return top;
-};
+import { useLocation } from "react-router-dom"; // or "@remix-run/react" for Remix apps
 
 export const useScrollToHash = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section[id]");
-      let currentSectionId = "";
-      let lastSectionOffset = Number.MAX_VALUE;
-
-      sections.forEach((section) => {
-        const sectionElement = section as HTMLElement;
-        const sectionTop = findCumulativeOffset(sectionElement);
-        const sectionHeight = sectionElement.offsetHeight;
-        const pageOffset = window.pageYOffset;
-
-        if (
-          pageOffset >= sectionTop - sectionHeight / 3 &&
-          pageOffset < sectionTop + sectionHeight
-        ) {
-          if (pageOffset < lastSectionOffset) {
-            lastSectionOffset = pageOffset;
-            currentSectionId = sectionElement.id;
+    const scrollToHash = () => {
+      const hash = location.hash;
+      if (hash) {
+        // Defer execution to ensure elements are rendered
+        setTimeout(() => {
+          const target = document.querySelector(hash);
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
           }
-        }
-      });
-
-      if (currentSectionId) {
-        window.history.replaceState(null, "", `#${currentSectionId}`);
+        }, 100); // Adjust the timeout if needed
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    // Check if there's already a hash in the URL
+    scrollToHash();
+
+    // Scroll on hash change
+    window.addEventListener("hashchange", scrollToHash);
+
+    return () => {
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, [location]);
 };

@@ -7,11 +7,7 @@ export default function AboutUsIndex() {
   return (
     <VStackFull className="p-1.5vh pt-2vh pb-5vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]">
       {TeamMembers.map((teamMember, index) => (
-        <>
-          <AboutUsSection teamMember={teamMember} key={index} />
-
-          <Divider m="mt-3vh mb-2vh" bg="bg-cyan-500/70" />
-        </>
+        <AboutUsSection teamMember={teamMember} key={index} />
       ))}
       <FlexFull id="dark-violet-chat">
         <VStackFull>
