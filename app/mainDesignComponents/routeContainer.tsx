@@ -120,6 +120,14 @@ export default function RouteContainer({
         </NavLink>
       )}
 
+      {/* ***************** INSET SHADOWS TOP & BOTTOM ***************** */}
+      <InsetShadowOverlay position="top" size="xl" />
+      <InsetShadowOverlay
+        position="bottom"
+        size="md"
+        bottom="bottom-[5.5svh] md:bottom-[4.5svh]"
+      />
+
       {/* ***************** DARK VIOLET NAME LOGO ***************** */}
       {!isRoot && (
         <Box className="fixed top-1vh left-0.5vh z-45 pl-1vh">
@@ -156,13 +164,6 @@ export default function RouteContainer({
         />
       )}
 
-      {/* ***************** INSET SHADOWS TOP & BOTTOM ***************** */}
-      <InsetShadowOverlay position="top" size="xl" />
-      <InsetShadowOverlay
-        position="bottom"
-        size="md"
-        bottom="bottom-[5.5svh] md:bottom-[4.5svh]"
-      />
       {/* ***************** SCROLL TO TOP BUTTON ***************** */}
       <ScrollToTopButton scrollContainerRef={scrollRef} />
       {/* ***************** CONTENT OF PAGE ***************** */}
