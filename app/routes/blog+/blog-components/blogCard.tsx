@@ -1,7 +1,7 @@
 import { ScrollTransition } from "~/mainDesignComponents/scrollTransition";
 import { BlogPost } from "../blog-posts/blogsArray";
 import { NavLink } from "@remix-run/react";
-import { Box, FlexFull } from "~/buildingBlockComponents/mainContainers";
+import { Box, Flex, FlexFull } from "~/buildingBlockComponents/mainContainers";
 import Image from "~/buildingBlockComponents/image";
 
 export default function BlogIndexCard({
@@ -41,9 +41,9 @@ export default function BlogIndexCard({
         <NavLink to={blog.slug} key={blog.slug}>
           <span>{blog.title}</span>
         </NavLink>
-        <Box className="w-13vh h-13vh">
-          <Image src={blog.image} alt={blog.title} className="w-full h-auto" />
-        </Box>
+        <Flex className="w-13vh h-13vh flex-shrink-0">
+          <Image src={blog.image} alt={blog.title} className="w-full h-full" />
+        </Flex>
       </FlexFull>
     </ScrollTransition>
   );
