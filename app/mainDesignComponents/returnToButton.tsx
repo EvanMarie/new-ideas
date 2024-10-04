@@ -7,7 +7,7 @@ export default function ReturnToButton({ to }: { to: string }) {
     <ProjectButton
       to={to}
       icon={IoArrowUndo}
-      position="fixed bottom-[6.5vh] md:bottom-[5.5vh] right-[0.7vh] z-20"
+      position="fixed bottom-8.5vh right-1vh z-100"
       label="return"
     />
   );

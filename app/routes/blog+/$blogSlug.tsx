@@ -1,6 +1,7 @@
 import { useParams } from "@remix-run/react";
 import { blogArray, BlogPost } from "./blog-posts/blogsArray";
 import BlogDisplay from "./blog-components/blogDisplay";
+import ReturnToButton from "~/mainDesignComponents/returnToButton";
 
 export default function BlogSlug() {
   const blogSlug = useParams().blogSlug;
