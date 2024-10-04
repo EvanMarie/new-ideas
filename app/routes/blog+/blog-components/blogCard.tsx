@@ -9,6 +9,7 @@ import {
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import Image from "~/buildingBlockComponents/image";
+import Text from "~/buildingBlockComponents/text";
 
 export default function BlogIndexCard({
   blog,
@@ -18,9 +19,9 @@ export default function BlogIndexCard({
   index: number;
 }) {
   const lgScreenWidths = [
-    "lg:w-65% xxl:w-35%",
-    "lg:w-35% xxl:w-40%",
-    "lg:w-40% xxl:w-25%",
+    "lg:w-65% xxl:w-1/3",
+    "lg:w-35% xxl:w-1/3",
+    "lg:w-40% xxl:w-1/3",
     "lg:w-60% xxl:w-30%",
     "lg:w-55% xxl:w-30%",
     "lg:w-45% xxl:w-30%",
@@ -47,13 +48,20 @@ export default function BlogIndexCard({
     >
       <NavLink to={blog.slug} key={blog.slug}>
         <HStackFull className="bg-col-300 bg-gradient-to-r from-fuchsia-300/50 via-cyan-300/50 to-purple-300/50 justify-between rounded-2.2vh border-900-md shadowNarrowNormal h-full items-center">
-          <VStackFull className="p-1vh h-full justify-between" gap="gap-0">
-            <span className="text-2vh text-slate-950 lightTextShadow font-semibold">
+          <VStackFull
+            className="p-1vh h-full justify-between"
+            gap="gap-0"
+            align="items-start"
+          >
+            <span className="text-2vh text-purple-900 textGlowXs font-semibold">
               {blog.title}
             </span>
-            <span className="text-xs leading-tight text-slate-900">
+            <Text
+              className="text-sm leading-tight text-slate-900"
+              noOfLines={2}
+            >
               {blog.summary}
-            </span>
+            </Text>
             <HStackFull className="items-center" gap="gap-1.5vh">
               <Box className="rounded-full  border-900-sm shadowNarrowNormal">
                 <Image
