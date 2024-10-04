@@ -22,7 +22,8 @@ export default function SocialLink({
         transition={{ duration: 0.4 }}
       >
         <HStack
-          className="text-col-500 textShadow border-550-md border-[0.2vh] hover:border-col-500 transition-400 py-0.4vh px-1.3vh hover:cursor-pointer items-center rounded-3vh hover:bg-col-930 insetShadowXl hover:shadowNarrowNormal"
+          // className="text-col-500 textShadow border-550-md border-[0.2vh] hover:border-col-500 transition-400 py-0.4vh px-1.3vh hover:cursor-pointer items-center rounded-3vh hover:bg-col-930 insetShadowXl hover:shadowNarrowNormal"
+          className="text-col-500 border-500-sm bg-indigo-950/70 rounded-xl metallicEdgesXs px-1vh sm:px-1.3vh pt-0.2vh pb-0.3vh items-center hover:bg-indigo-900 hover:cursor-pointer transition-300"
           gap="gap-[0.3vh]"
         >
           <Icon

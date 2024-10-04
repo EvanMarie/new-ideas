@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { HStackFull, VStackFull, Wrap } from "./mainContainers";
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { VStackFull, Wrap } from "./mainContainers";
 
 export function Option({
   value,
@@ -19,13 +20,22 @@ export function Option({
   return (
     <motion.button
       onClick={() => setSelection(value)}
-      className={`flex ${textSize} gap-0.5vh items-center ${padding} ${
-        isActive
-          ? "text-col-500 border-500-md bg-indigo-950/70 rounded-xl metallicEdgesXs"
-          : "text-col-100 border-transparent border-[0.2vh] hover:text-col-500 transition-300"
-      }`}
+      className={`flex ${textSize} gap-0.5vh items-center ${padding} relative`}
     >
-      <span className="textShadow">{value}</span>
+      {isActive && (
+        <motion.div
+          layoutId="active-background"
+          className="absolute inset-0 bg-indigo-950/70 rounded-xl border-500-md metallicEdgesXs"
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        />
+      )}
+      <span
+        className={`relative z-10 textShadow ${
+          isActive ? "text-col-500" : "text-col-100"
+        }`}
+      >
+        {value}
+      </span>
     </motion.button>
   );
 }
@@ -51,17 +61,21 @@ export function OptionSelector({
         <span className="text-col-500 textShadow font-semibold">{label}</span>
       )}
       <Wrap className="w-full justify-evenly">
-        {options.map((option) => (
-          <Option
-            textSize={textSize}
-            key={option}
-            value={option}
-            currentSelection={value}
-            setSelection={setValue}
-            padding={padding}
-          />
-        ))}
+        <AnimatePresence>
+          {options.map((option) => (
+            <Option
+              key={option}
+              value={option}
+              currentSelection={value}
+              setSelection={setValue}
+              textSize={textSize}
+              padding={padding}
+            />
+          ))}
+        </AnimatePresence>
       </Wrap>
     </VStackFull>
   );
 }
+
+export default OptionSelector;
