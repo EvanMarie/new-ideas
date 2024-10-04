@@ -89,7 +89,7 @@ export default function RouteContainer({
   }, []);
 
   const baseTextClassName =
-    "text-violet-950 textGlowXs tracking-wider kufam-font transition-all transition-400";
+    "text-purple-900 textGlowXs tracking-wider kufam-font transition-all transition-400";
   const textClassName = isScrolled
     ? `${baseTextClassName} text-3vh xl:text-4vh`
     : `${baseTextClassName} text-5.5vh sm:text-6.5vh md:text-7.5vh lg:text-9vh xl:text-10vh`;
@@ -100,7 +100,7 @@ export default function RouteContainer({
       {isHome && (
         <NavLink
           to="/us#dark-violet-chat"
-          className="absolute bottom-5vh md:bottom-3.5vh left-2vh hover:cursor-pointer z-50"
+          className="absolute bottom-5vh md:bottom-3.5vh left-2vh xl:left-4.5vh hover:cursor-pointer z-50"
         >
           <Tooltip label="Dark Violet chat" placement="topRight">
             <Box className="relative">

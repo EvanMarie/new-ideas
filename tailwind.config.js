@@ -1814,7 +1814,7 @@ export default {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          fontFamily: '"M PLUS Rounded 1c", sans-serif',
+          fontFamily: '"M PLUS 2", sans-serif',
           fontWeight: 500,
           backgroundImage: "url('/images/siteBackground.webp')",
           backgroundSize: "cover",

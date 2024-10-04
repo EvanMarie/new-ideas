@@ -25,22 +25,25 @@ export default function BlogIndexCard({
       className={`w-full lg:w-1/2 xl:w-1/3 rounded-none py-0.5vh px-1vh sm:py-0.7vh sm:px-3vh md:px-5vh lg:p-0 lg:rounded-none`}
     >
       <NavLink to={blog.slug} key={blog.slug}>
-        <HStackFull className="bg-col-300 bg-gradient-to-r from-fuchsia-300/50 via-cyan-300/50 to-purple-300/50 justify-between rounded-2.2vh lg:rounded-none border-900-md shadowNarrowNormal h-full items-center">
+        <HStackFull className="bg-sky-900 bg-gradient-to-r from-cyan-300/30 via-col-120 to-cyan-300/30 justify-between rounded-2.2vh lg:rounded-none border-900-md shadowNarrowNormal h-full items-center hover:cursor-pointer">
           <VStackFull
             className="p-1vh h-full justify-between"
             gap="gap-0"
             align="items-start"
           >
-            <span className="text-2vh text-purple-900 textGlowXs font-semibold">
+            <span className="text-2vh text-fuchsia-200 textShadow font-semibold">
               {blog.title}
             </span>
             <Text
-              className="text-sm leading-tight text-slate-900"
+              className="text-sm leading-tight text-white subtleTextShadow"
               noOfLines={2}
             >
               {blog.summary}
             </Text>
-            <HStackFull className="items-center" gap="gap-1.5vh">
+            <HStackFull
+              className="items-center hover:cursor-pointer"
+              gap="gap-1.5vh"
+            >
               <Box className="rounded-full  border-900-sm shadowNarrowNormal">
                 <Image
                   alt={blog.title}
@@ -48,7 +51,7 @@ export default function BlogIndexCard({
                   className="w-4vh h-4vh rounded-full"
                 />
               </Box>
-              <span className="text-2vh text-slate-900 lightTextShadow">
+              <span className="text-2vh text-cyan-200 textShadow">
                 {blog.author}
               </span>
             </HStackFull>

@@ -14,7 +14,7 @@ import { FlexFull } from "./buildingBlockComponents/mainContainers";
 export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap",
   },
   {
     rel: "stylesheet",
