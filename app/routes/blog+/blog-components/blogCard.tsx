@@ -12,20 +12,22 @@ export default function BlogIndexCard({
   index: number;
 }) {
   const lgScreenWidths = [
-    "w-65%",
-    "w-35%",
-    "w-40%",
-    "w-60%",
-    "w-55%",
-    "w-45%",
-    "w-35%",
-    "w-65%",
-    "w-50%",
-    "w-50%",
+    "lg:w-65% xxl:w-25%",
+    "lg:w-35% xxl:w-50%",
+    "lg:w-40% xxl:w-25%",
+    "lg:w-60% xxl:w-35%",
+    "lg:w-55% xxl:w-24%",
+    "lg:w-45% xxl:w-40%",
+    "lg:w-35% xxl:w-40%",
+    "lg:w-65% xxl:w-30%",
+    "lg:w-50% xxl:w-30%",
+    "lg:w-50% xxl:w-30%",
+    "lg:w-40% xxl:w-40%",
+    "lg:w-60% xxl:w-30%",
   ];
 
   function getWidthByIndex(index: number): string {
-    const indexDigit = index % 10;
+    const indexDigit = (index + 12) % 10;
     return lgScreenWidths[indexDigit];
   }
 
@@ -37,12 +39,16 @@ export default function BlogIndexCard({
       type="rotate3D"
       className={`w-full rounded-none ${widthClass} p-1vh`}
     >
-      <FlexFull className="bg-slate-900/80 bg-gradient-to-r from-violet-900/30 via-fuchsia-900/50 to violet-900/30 px-1vh py-0.3vh rounded-none justify-between">
+      <FlexFull className="bg-slate-900/80 bg-gradient-to-r from-violet-900/30 via-fuchsia-900/50 to violet-900/30 px-1vh py-0.3vh rounded-none justify-between rounded-2vh">
         <NavLink to={blog.slug} key={blog.slug}>
           <span>{blog.title}</span>
         </NavLink>
         <Flex className="w-13vh h-13vh flex-shrink-0">
-          <Image src={blog.image} alt={blog.title} className="w-full h-full" />
+          <Image
+            src={blog.image}
+            alt={blog.title}
+            className="w-full h-full rounded-2vh"
+          />
         </Flex>
       </FlexFull>
     </ScrollTransition>
