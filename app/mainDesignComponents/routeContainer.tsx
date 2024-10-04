@@ -15,8 +15,6 @@ import ScrollToTopButton from "~/buildingBlockComponents/scrollToTopButton";
 import Image from "~/buildingBlockComponents/image";
 import AnimatedText from "./visual-elements/animatedText";
 import { useArrowKeyScroll } from "~/hooks/useArrowScroll";
-import ImageWallFullScreenBackground from "./visual-elements/imageWallFullScreenBackground";
-import { landingShiftingImages } from "~/routes/home+/components-data/shiftingImages";
 import { useScrollToHash } from "~/utils/useScrollToHash";
 import { useScrollToTopOnNav } from "~/hooks/useScrollToTopOnNav";
 
