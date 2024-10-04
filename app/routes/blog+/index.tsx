@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { blogArray, BlogCategories } from "./blog-posts/blogsArray";
+import { blogArray, BlogCategories, blogImages } from "./blog-posts/blogsArray";
 import {
   FlexFull,
   Transition,
@@ -8,6 +8,7 @@ import {
 } from "~/buildingBlockComponents/mainContainers";
 import DropDownMenu from "~/buildingBlockComponents/dropDownMenu";
 import BlogIndexCard from "./blog-components/blogCard";
+import ImageWallFullScreenBackground from "~/mainDesignComponents/visual-elements/imageWallFullScreenBackground";
 
 export default function BlogIndex() {
   const blogCategories = [
@@ -35,22 +36,25 @@ export default function BlogIndex() {
     a.date > b.date ? -1 : 1
   );
   return (
-    <VStackFull className="pt-2vh" gap="gap-2vh">
-      <Transition
-        className="w-full px-2vh sm:w-60vh overflow-visible"
-        type="fadeSlideInRight"
-      >
-        <DropDownMenu
-          options={blogCategories.filter((item) => item !== category)}
-          selectedOption={category}
-          setSelectedOption={setCategory}
-        />
-      </Transition>
-      <Wrap className="w-full justify-evenly">
-        {blogsByDate.map((blog, index) => (
-          <BlogIndexCard blog={blog} key={index} index={index} />
-        ))}
-      </Wrap>
-    </VStackFull>
+    <FlexFull className="fixed h-100svh inset-0">
+      {/* <ImageWallFullScreenBackground images={blogImages} /> */}
+      <VStackFull className="pt-2vh" gap="gap-2vh">
+        <Transition
+          className="w-full px-2vh sm:w-60vh overflow-visible"
+          type="fadeSlideInRight"
+        >
+          <DropDownMenu
+            options={blogCategories.filter((item) => item !== category)}
+            selectedOption={category}
+            setSelectedOption={setCategory}
+          />
+        </Transition>
+        <Wrap className="w-full justify-around">
+          {blogsByDate.map((blog, index) => (
+            <BlogIndexCard blog={blog} key={index} index={index} />
+          ))}
+        </Wrap>
+      </VStackFull>
+    </FlexFull>
   );
 }

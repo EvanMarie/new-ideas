@@ -218,3 +218,5 @@ export type BlogPost = {
   paragraphs?: ReactElement[];
   categories: BlogCategories[];
 };
+
+export const blogImages = blogArray.map((item) => item.image);

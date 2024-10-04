@@ -29,9 +29,7 @@ export default function BlogIndexCard({
       //       : "fadeSlideInRightHalf"
       //   }
       type="rotate3D"
-      className={`w-full rounded-none ${
-        index === 0 || index % 2 === 0 ? randomWidth : "md:w-auto"
-      }`}
+      className={`w-full rounded-none ${randomWidth} p-1vh`}
     >
       <FlexFull className="bg-slate-900/80 bg-gradient-to-r from-violet-900/30 via-fuchsia-900/50 to violet-900/30 px-1vh py-0.3vh rounded-none">
         <NavLink to={blog.slug} key={blog.slug}>
