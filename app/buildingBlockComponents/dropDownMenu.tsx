@@ -61,7 +61,7 @@ export default function DropDownMenu({
 
   return (
     <VStackFull
-      className={`mainShadow relative `}
+      className={` shadowNarrowNormal relative `}
       gap="gap-[0.5vh]"
       align="items-start"
     >
@@ -94,7 +94,7 @@ export default function DropDownMenu({
             transition={{ duration: 0.4 }}
             style={{
               width: "100%",
-              zIndex: 10,
+              zIndex: 50,
               borderRadius: "0px",
               position: "absolute",
               top: "100%",

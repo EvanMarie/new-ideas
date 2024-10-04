@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { blogArray, BlogCategories } from "./blog-posts/blogsArray";
-import { FlexFull, VStackFull } from "~/buildingBlockComponents/mainContainers";
+import {
+  FlexFull,
+  Transition,
+  VStackFull,
+  Wrap,
+} from "~/buildingBlockComponents/mainContainers";
 import DropDownMenu from "~/buildingBlockComponents/dropDownMenu";
 import BlogIndexCard from "./blog-components/blogCard";
 
@@ -31,16 +36,22 @@ export default function BlogIndex() {
   );
   return (
     <VStackFull className="pt-2vh">
-      <FlexFull className="px-2vh sm:w-60vh">
+      <Transition
+        className="w-full px-2vh sm:w-60vh overflow-visible"
+        delay={0.4}
+        type="fadeSlideInRight"
+      >
         <DropDownMenu
           options={blogCategories.filter((item) => item !== category)}
           selectedOption={category}
           setSelectedOption={setCategory}
         />
-      </FlexFull>
-      {blogsByDate.map((blog, index) => (
-        <BlogIndexCard blog={blog} key={index} index={index} />
-      ))}
+      </Transition>
+      <Wrap className="w-full justify-evenly">
+        {blogsByDate.map((blog, index) => (
+          <BlogIndexCard blog={blog} key={index} index={index} />
+        ))}
+      </Wrap>
     </VStackFull>
   );
 }
