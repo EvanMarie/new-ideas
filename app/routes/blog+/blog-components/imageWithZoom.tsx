@@ -50,15 +50,24 @@ export function ImageWithZoom({
         showBottomClose={false}
         modalSize="w-[100vw] h-[100svh]"
       >
-        <CenterFull className="flex-col gap-[1vh] bg-col-950 bg-gradient-to-br from-violet-500/50 via-indigo-500/50 to-col-500/50">
-          <Flex className="rounded-[2vh] justify-center image-with-zoom">
-            <Image
-              alt={alt}
-              src={src}
-              objectFit="contain"
-              className="rounded-[2vh] border-900-md "
-            />
-          </Flex>
+        <CenterFull
+          className="flex-col gap-[1vh] bg-col-950 bg-gradient-to-br from-violet-500/50 via-indigo-500/50 to-col-500/50 sm:h-full"
+          onClick={() => {
+            setImageOpen(false);
+          }}
+        >
+          <FlexFull className="p-1vh justify-center">
+            <Flex className="rounded-[2vh] justify-center image-with-zoom">
+              <Box className="border-900-md shadowNarrowNormal rounded-2vh">
+                <Image
+                  alt={alt}
+                  src={src}
+                  objectFit="contain"
+                  className="rounded-[2vh] max-h-90svh "
+                />
+              </Box>
+            </Flex>
+          </FlexFull>
           <FlexFull className="justify-center">
             <ProjectButton
               text="close"

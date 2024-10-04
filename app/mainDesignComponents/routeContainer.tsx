@@ -19,6 +19,7 @@ import { useScrollToTopOnNav } from "~/hooks/useScrollToTopOnNav";
 import Icon from "~/buildingBlockComponents/icon";
 import { BsChatDotsFill } from "react-icons/bs";
 import Tooltip from "~/buildingBlockComponents/tooltip";
+import BlogSideNav from "~/routes/blog+/blog-components/blogSideNav";
 
 // Throttle function to limit the frequency of event triggers
 function throttle(func: (...args: any[]) => void, limit: number) {
@@ -45,15 +46,20 @@ export default function RouteContainer({
   children,
   showScrollProgress = true,
   transition = "fadeSlideInBottom",
+  padding = "pt-5.5svh sm:pt-6.5vh md:pt-7.5vh lg:pt-9vh xl:pt-10vh",
+  noPadding = false,
   bg,
 }: {
   children: React.ReactNode;
   showScrollProgress?: boolean;
+  padding?: string;
   bg?: string;
   transition?: string;
+  noPadding?: boolean;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const projectSlug = useParams().projectSlug;
+  const blogSlug = useParams().blogSlug;
   const location = useLocation();
   const isHome = location.pathname === "/home";
   const isRoot = location.pathname === "/";
@@ -144,6 +150,9 @@ export default function RouteContainer({
       {/* ***************** ON PORTFOLIO PROJECT PAGE ***************** */}
       {projectSlug && <PortfolioSideNav projectSlug={projectSlug} />}
 
+      {/* ***************** ON BLOG POST PAGE ***************** */}
+      {blogSlug && <BlogSideNav />}
+
       {/* ***************** WHEN TO SHOW PROGRESS ***************** */}
       {showScrollProgress && (
         <ScrollProgressBar
@@ -166,11 +175,13 @@ export default function RouteContainer({
         } `}
       >
         <FlexFull
-          className="pt-5.5svh sm:pt-6.5vh md:pt-7.5vh lg:pt-9vh xl:pt-10vh h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative"
+          className={`${padding} h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative`}
           ref={scrollRef}
         >
           <Transition type={transition} className="w-full h-fit z-30">
-            <VStackFull className="h-fit py-1vh">{children}</VStackFull>
+            <VStackFull className={`h-fit ${noPadding ? "" : "py-1vh"}`}>
+              {children}
+            </VStackFull>
           </Transition>
         </FlexFull>
       </FlexFull>

@@ -28,7 +28,6 @@ export default function ProjectButton({
     style?: CSSProperties;
   }>;
 }) {
-  const navigate = useNavigate();
   return (
     <Tooltip label={label} placement={tooltipPlacement as TooltipPlacement}>
       {/* @ts-ignore  */}
@@ -40,12 +39,14 @@ export default function ProjectButton({
           onClick={onClick ? onClick : () => {}}
         >
           {text ? (
-            <HStack className="gap-0.5vh px-0.5vh">
+            <HStack className="gap-0.5vh px-0.5vh group hover:cursor-pointer">
               <Icon
                 icon={icon}
                 iconClassName="text-lg text-slate-800 group-hover:text-col-500"
               />
-              <span className="text-sm text-col-900">{text}</span>
+              <span className="text-sm text-col-900 group-hover:text-col-500 hover:cursor-pointer">
+                {text}
+              </span>
             </HStack>
           ) : (
             <Icon

@@ -28,16 +28,16 @@ export default function BlogIndexCard({
   return (
     <ScrollTransition
       type="rotate3D"
-      className={`w-full lg:w-1/2 xxl:w-1/3 py-0.5vh px-3vh sm:py-0.7vh sm:px-5vh md:px-8vh lg:p-1.3vh rounded-2.2vh `}
+      className={`w-full lg:w-1/2 xxl:w-1/3 py-0.5vh px-3vh sm:py-0.7vh sm:px-5vh md:px-8vh lg:px-1.3vh rounded-2.2vh `}
     >
-      <motion.div className="hover:py-1.3vh transition-300">
+      <motion.div className="my-1.3vh hover:my-0 hover:py-1.3vh transition-300">
         <NavLink
           to={blog.slug}
           key={blog.slug}
           className="rounded-2.2vh hover:cursor-pointer "
         >
           <motion.div
-            className="w-full flex bg-indigo-950 bg-gradient-to-r from-fuchsia-500/10 via-fuchsia-500/10 to-fuchsia-500/10 justify-between h-full items-center hover:cursor-pointer rounded-[2.2vh] group"
+            className="w-full flex bg-indigo-950 bg-gradient-to-r from-fuchsia-500/10 via-fuchsia-500/10 to-fuchsia-500/10 justify-between items-center hover:cursor-pointer rounded-[2.2vh] group h-full"
             layout
             style={{
               border: "0.2vh solid #000",
