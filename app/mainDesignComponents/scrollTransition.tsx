@@ -39,7 +39,7 @@ export const ScrollTransition = React.forwardRef<
   ) => {
     return (
       <motion.div
-        className={`flex justify-center overflow-hidden ${className}`}
+        className={`flex justify-center overflow-hidden ${className} `}
         key={key}
         initial="initial"
         whileInView="animate"
