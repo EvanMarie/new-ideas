@@ -22,7 +22,7 @@ interface ImageWithZoomProps {
 export function ImageWithZoom({
   alt,
   src,
-  className = "w-85vw md:w-60vh",
+  className = "w-85vw md:w-80vh xxl:w-90vh",
 }: ImageWithZoomProps) {
   const [imageOpen, setImageOpen] = useState(false);
   return (
@@ -51,7 +51,7 @@ export function ImageWithZoom({
         modalSize="w-[100vw] h-[100svh]"
       >
         <CenterFull
-          className="flex-col gap-[1vh] bg-col-950 bg-gradient-to-br from-violet-500/50 via-indigo-500/50 to-col-500/50 sm:h-full"
+          className="flex-col gap-[1vh] bg-col-950 bg-gradient-to-br from-violet-500/50 via-indigo-500/50 to-col-500/50 sm:h-full backdrop-blur-sm"
           onClick={() => {
             setImageOpen(false);
           }}

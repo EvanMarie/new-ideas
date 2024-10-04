@@ -1,6 +1,7 @@
 import { EvanAvatar } from "~/routes/us+/components-data/about-us-data";
 import { BlogPost } from "../blogsArray";
 import React from "react";
+import { ImageWithZoom } from "../../blog-components/imageWithZoom";
 
 export const WebsiteMockupsAndClones: BlogPost =
   // Website Mockups and Clones
@@ -48,10 +49,9 @@ export const WebsiteMockupsAndClones: BlogPost =
         </p>
 
         {/* ********************* IMAGE ********************* */}
-        <img
+        <ImageWithZoom
           src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/blog32-2.png"
           alt="Anthropic clone project"
-          className="w-80% xl:w-60%"
         />
 
         {/* ********************* MAIN HEADINGS ********************* */}

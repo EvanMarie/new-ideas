@@ -30,7 +30,7 @@ export default function BlogSideNav() {
   const currentBlogSlug = useParams().blogSlug;
   return (
     <Transition
-      className="hidden xl:flex w-25vw h-95.5vh absolute top-0 right-0 bottom-0 overflow-hidden p-1.2vh z-100 bg-indigo-900/90 rounded-2vh border-500-md"
+      className="hidden xl:flex w-25vw h-95.5vh absolute top-0 right-0 bottom-0 overflow-hidden p-1.2vh z-100 bg-indigo-900/90 rounded-2vh border-550-sm"
       type="fadeSlideInRight"
       delay={0.5}
     >

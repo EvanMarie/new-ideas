@@ -11,19 +11,18 @@ import {
 import { BlogPost } from "../blog-posts/blogsArray";
 import Image from "~/buildingBlockComponents/image";
 import FormatDate from "~/utils/formatDate";
-import Divider from "~/buildingBlockComponents/divider";
 import Text from "~/buildingBlockComponents/text";
 
 export default function BlogDisplay({ blog }: { blog: BlogPost }) {
   return (
-    <Transition className="w-full" type="fadeSlideInLeft" delay={0.5}>
+    <Transition className="w-full" type="fadeSlideInLeft" delay={0.4}>
       <VStackFull className="h-fit">
         <FlexFull className="shadowNarrowTight">
-          <VStackFull className="bg-fuchsia-950 bg-gradient-to-r from-slate-950/40 via-slate-950/20 to-slate-950/40 pt-10vh px-1.5vh pb-5vh sm:px-2.5vh md:px-3vh lg:px-4vh xxl:px-6vh border-900-md insetShadow6xl rounded-none xl:w-75vw">
+          <VStackFull className="bg-fuchsia-950 bg-gradient-to-r from-slate-950/40 via-slate-950/20 to-slate-950/40 pt-10vh px-1.5vh pb-5vh sm:px-2.5vh md:px-3vh lg:px-4vh xl:px-6vh xxl:px-8vh border-900-md insetShadow6xl rounded-none xl:w-75vw">
             {/* *********************** HEADER CONTENT *********************** */}
             <FlexFull className="p-1vh justify-center lg:pt-3vh xl:pt-4vh">
               <VStackFull
-                className="bg-indigo-950/60 p-1vh border-700-md insetShadow6xl lg:max-w-90vh"
+                className="bg-indigo-950/60 p-1vh border-700-md insetShadow6xl lg:max-w-90vh lg:py-2vh"
                 gap="gap-1.5vh"
               >
                 {/* *********************** TITLE *********************** */}
