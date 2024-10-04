@@ -45,12 +45,14 @@ export default function RouteContainer({
   children,
   showNav = true,
   showScrollProgress = true,
+  transition = "fadeSlideInBottom",
   bg,
 }: {
   children: React.ReactNode;
   showNav?: boolean;
   showScrollProgress?: boolean;
   bg?: string;
+  transition?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const projectSlug = useParams().projectSlug;
@@ -157,7 +159,7 @@ export default function RouteContainer({
           className="pt-5.5svh sm:pt-6.5vh md:pt-7.5vh lg:pt-9vh xl:pt-10vh h-95.5svh overflow-y-auto overflow-x-hidden hide-scrollbar insetShadow6xl rounded-none relative"
           ref={scrollRef}
         >
-          <Transition type="fadeSlideInBottom" className="w-full h-fit z-30">
+          <Transition type={transition} className="w-full h-fit z-30">
             <VStackFull className="h-fit py-1vh">{children}</VStackFull>
           </Transition>
         </FlexFull>

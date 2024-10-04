@@ -35,10 +35,9 @@ export default function BlogIndex() {
     a.date > b.date ? -1 : 1
   );
   return (
-    <VStackFull className="pt-2vh">
+    <VStackFull className="pt-2vh" gap="gap-2vh">
       <Transition
         className="w-full px-2vh sm:w-60vh overflow-visible"
-        delay={0.4}
         type="fadeSlideInRight"
       >
         <DropDownMenu

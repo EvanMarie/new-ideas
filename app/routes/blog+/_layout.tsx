@@ -3,7 +3,7 @@ import RouteContainer from "~/mainDesignComponents/routeContainer";
 
 export default function BlogLayout() {
   return (
-    <RouteContainer>
+    <RouteContainer transition="none">
       <Outlet />
     </RouteContainer>
   );
