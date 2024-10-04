@@ -149,7 +149,7 @@ export default function RouteContainer({
       {projectSlug && <PortfolioSideNav projectSlug={projectSlug} />}
 
       {/* ***************** WHEN TO SHOW NAV ***************** */}
-      {showNav && <MainNavBar />}
+      {/* {showNav && <MainNavBar />} */}
 
       {/* ***************** WHEN TO SHOW PROGRESS ***************** */}
       {showScrollProgress && (
