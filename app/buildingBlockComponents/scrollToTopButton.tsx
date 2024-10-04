@@ -1,14 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Box, Flex } from "./mainContainers";
 import { motion } from "framer-motion";
-import Icon from "./icon";
-import { PiArrowURightUpBold, PiTriangleFill } from "react-icons/pi";
 import ProjectButton from "~/mainDesignComponents/projectButton";
-import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
-import { FaTurnUp } from "react-icons/fa6";
-import { RiTriangleFill } from "react-icons/ri";
 import { VscTriangleUp } from "react-icons/vsc";
+import { useLocation, useNavigate } from "@remix-run/react";
 
 interface ScrollToTopProps {
   scrollContainerRef: React.RefObject<HTMLElement>;
@@ -18,7 +13,9 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
   scrollContainerRef,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-
+  const hash = useLocation().hash;
+  const pathname = useLocation().pathname;
+  const navigate = useNavigate();
   useEffect(() => {
     const toggleVisibility = () => {
       if (
@@ -57,10 +54,6 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
     visible: { z: 0, opacity: 1 },
   };
 
-  const buttonStyle =
-    "bg-cyan-300 hover:bg-slate-950 transition-400 hover:metallicEdgesSm z-10 cursor-pointer group p-0.5vh md:p-0.3vh rounded-full group";
-  const iconStyle =
-    "text-slate-900 text-2.5vh md:text-3vh transition-300 group-hover:text-cyan-300";
   return (
     <AnimatePresence>
       {isVisible && (
@@ -71,12 +64,11 @@ const ScrollToTopButton: React.FC<ScrollToTopProps> = ({
           exit="hidden"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-[6.5vh] md:bottom-[5.5vh] left-[0.7vh] z-35"
+          className="fixed bottom-[6.5vh] md:bottom-[5.5vh] left-[0.7vh] z-40"
         >
-          {" "}
           <ProjectButton
             icon={VscTriangleUp}
-            onClick={scrollToTop}
+            onClick={hash !== "" ? () => navigate(pathname) : scrollToTop}
             label="to top"
             tooltipPlacement="topRight"
           />
