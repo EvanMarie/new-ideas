@@ -1,3 +1,5 @@
+import DivinationIos from "./divinationIos";
+
 export type ProjectInfoSection = {
   heading: string;
   description: string;
@@ -20,106 +22,10 @@ export type PortfolioItem = {
   projectInfo: ProjectInfoSection[];
   projectInfoImages: ProjectInfoImage[];
   thumbnail: string;
+  additionalComponents?: JSX.Element;
 };
+
 export const Projects = [
-  // PROJECT TITLE
-  // {
-  //   id: 9,
-  //   title: "",
-  //   description: "",
-  //   link: "",
-  //   github: "",
-  //   projectInfoImages: [
-  //     {
-  //       src: "",
-  //       dimension: "w-30%",
-  //     },
-  //     {
-  //       src: "",
-  //       dimension: "w-40%",
-  //     },
-  //   ],
-
-  //   projectInfo: [
-  //     {
-  //       heading: "",
-  //       description: "",
-  //     },
-  //     {
-  //       heading: "",
-  //       description: "",
-  //     },
-  //     {
-  //       heading: "",
-  //       description: "",
-  //     },
-  //     {
-  //       heading: "",
-  //       description: "",
-  //     },
-  //   ],
-
-  //   projectImages: [
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  //       title: "",
-  //     },
-  //   ],
-  //   thumbnail:
-  //     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
-  // },
   //  LIGHT PATH
   {
     id: 10,
@@ -265,6 +171,7 @@ export const Projects = [
       "An immersive web application that blends the ancient art of divination with AI technology.",
     link: "https://divination.darkviolet.ai/",
     github: "https://github.com/DarkViolet-ai",
+    additionalComponents: <DivinationIos />,
     projectInfoImages: [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dark-violet-divinations-portfolio-image-11.png",
@@ -1080,122 +987,7 @@ export const Projects = [
     ],
     thumbnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dreams-index.png",
-  }, // Aetherial Role Play
-  // {
-  //   id: 8,
-  //   title: "Aethereal Role Play",
-  //   description:
-  //     "Role play and story creation with the help of Dark Violet and AI.",
-  //   link: "more info",
-  //   moreInfoText: {
-  //     heading: "This app has evolved.",
-  //     lineOne: "Chatter.DarkViolet.ai took over",
-  //     lineTwo: "where Atehereal left off.",
-  //   },
-  //   github: "https://github.com/DarkViolet-ai/aethereal-rp",
-  //   projectImages: [
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-register.png",
-  //       title: "Aethereal RP - Register",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-login.png",
-  //       title: "Aethereal RP - Login",
-  //     },
-
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-confirm.png",
-  //       title: "Aethereal RP - Confirm Account",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-storieslist.png",
-  //       title: "Aethereal RP - Story List",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-storydetails.png",
-  //       title: "Aethereal RP - Story Details",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-story2.png",
-  //       title: "Aethereal RP - Story Details",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-startstory.png",
-  //       title: "Aethereal RP - Start Story",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-editstory.png",
-  //       title: "Aethereal RP - Edit Story",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-createstory.png",
-  //       title: "Aethereal RP - Create Story",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-storyplay.png",
-  //       title: "Aethereal RP - Story Play",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-charactermenu.png",
-  //       title: "Aethereal RP - Character Menu",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-characterdetails.png",
-  //       title: "Aethereal RP - Character Details",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-character2.png",
-  //       title: "Aethereal RP - Character Details",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-areyousure.png",
-  //       title: "Aethereal RP - Leave Story",
-  //     },
-  //   ],
-
-  //   projectInfo: [
-  //     {
-  //       heading: "A New Dawn for Role Playing",
-  //       description:
-  //         "Aethereal RP Multiverses, developed by DarkViolet.ai, merges human creativity with AI to create an immersive role-playing adventure. Players craft their narratives, alongside others or AI, in a world guided by Dark Violet. As both narrator and director, she ensures a fluid story progression, offering a unique space for players to inhabit their characters and co-create a diverse narrative tapestry, marking a revolutionary shift in the role-playing genre.",
-  //     },
-  //     {
-  //       heading: "Create, Play, and Immerse",
-  //       description:
-  //         "In Aethereal RP Multiverses, starting your adventure is easy: pick a title, craft a description, and the AI, embodied by Dark Violet, introduces characters to inhabit. Suitable for veterans and newcomers, its intuitive design and evolving narrative structure allow players to deeply engage, crafting their story within a continuously adapting world, ensuring an uninterrupted and evolving role-playing journey.",
-  //     },
-  //     {
-  //       heading: "Infinite Stories, Boundless Possibilities",
-  //       description:
-  //         "Aethereal RP Multiverses offers a portal to limitless narratives, each an exploration of new realms. The synergy of human and AI creativity fosters a versatile role-playing space, unpredictable and captivating. With Dark Violet steering the story, adventures deepen, providing a rich experience for players as co-creators of a dynamic multiverse. This platform offers unparalleled role-playing, where imagination runs free, and each session unveils a novel adventure, making every story an invitation to endless exploration.",
-  //     },
-  //   ],
-
-  //   projectInfoImages: [
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-projectInfoImage1.png",
-  //       dimension: "w-45%",
-  //     },
-  //     {
-  //       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-projectInfoImage2.png",
-  //       dimension: "w-45%",
-  //     },
-  //   ],
-  //   thumbnail:
-  //     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-login.png",
-  // },
-  // RealConnection.Life
-  // {
-  //   id: 3,
-  //   title: "RealConnection.Life",
-  //   description:
-  //     "AI-powered human connection social media platform for work and play.",
-  //   link: "https://www.realconnection.life",
-  //   github: "https://github.com/DarkViolet-ai/realconnection",
-  //   projectImages: [""],
-  //   thumbnail:
-  //     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/neuralnetwork.png?t=2024-02-25T01%3A43%3A41.707Z)",
-  // },
+  },
 ];
 
 export const allProjectImages = Projects.map((project) =>
@@ -1223,3 +1015,219 @@ function shuffleArray<T>(array: T[]): T[] {
 
 // Create a randomized version of allImagesWithTitles
 export const randomizedImagesWithTitles = shuffleArray(allImagesWithTitles);
+
+// PROJECT TITLE
+// {
+//   id: 9,
+//   title: "",
+//   description: "",
+//   link: "",
+//   github: "",
+//   projectInfoImages: [
+//     {
+//       src: "",
+//       dimension: "w-30%",
+//     },
+//     {
+//       src: "",
+//       dimension: "w-40%",
+//     },
+//   ],
+
+//   projectInfo: [
+//     {
+//       heading: "",
+//       description: "",
+//     },
+//     {
+//       heading: "",
+//       description: "",
+//     },
+//     {
+//       heading: "",
+//       description: "",
+//     },
+//     {
+//       heading: "",
+//       description: "",
+//     },
+//   ],
+
+//   projectImages: [
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+//       title: "",
+//     },
+//   ],
+//   thumbnail:
+//     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/.png",
+// },
+
+// Aetherial Role Play
+// {
+//   id: 8,
+//   title: "Aethereal Role Play",
+//   description:
+//     "Role play and story creation with the help of Dark Violet and AI.",
+//   link: "more info",
+//   moreInfoText: {
+//     heading: "This app has evolved.",
+//     lineOne: "Chatter.DarkViolet.ai took over",
+//     lineTwo: "where Atehereal left off.",
+//   },
+//   github: "https://github.com/DarkViolet-ai/aethereal-rp",
+//   projectImages: [
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-register.png",
+//       title: "Aethereal RP - Register",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-login.png",
+//       title: "Aethereal RP - Login",
+//     },
+
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-confirm.png",
+//       title: "Aethereal RP - Confirm Account",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-storieslist.png",
+//       title: "Aethereal RP - Story List",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-storydetails.png",
+//       title: "Aethereal RP - Story Details",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-story2.png",
+//       title: "Aethereal RP - Story Details",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-startstory.png",
+//       title: "Aethereal RP - Start Story",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-editstory.png",
+//       title: "Aethereal RP - Edit Story",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-createstory.png",
+//       title: "Aethereal RP - Create Story",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-storyplay.png",
+//       title: "Aethereal RP - Story Play",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-charactermenu.png",
+//       title: "Aethereal RP - Character Menu",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-characterdetails.png",
+//       title: "Aethereal RP - Character Details",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-character2.png",
+//       title: "Aethereal RP - Character Details",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-areyousure.png",
+//       title: "Aethereal RP - Leave Story",
+//     },
+//   ],
+
+//   projectInfo: [
+//     {
+//       heading: "A New Dawn for Role Playing",
+//       description:
+//         "Aethereal RP Multiverses, developed by DarkViolet.ai, merges human creativity with AI to create an immersive role-playing adventure. Players craft their narratives, alongside others or AI, in a world guided by Dark Violet. As both narrator and director, she ensures a fluid story progression, offering a unique space for players to inhabit their characters and co-create a diverse narrative tapestry, marking a revolutionary shift in the role-playing genre.",
+//     },
+//     {
+//       heading: "Create, Play, and Immerse",
+//       description:
+//         "In Aethereal RP Multiverses, starting your adventure is easy: pick a title, craft a description, and the AI, embodied by Dark Violet, introduces characters to inhabit. Suitable for veterans and newcomers, its intuitive design and evolving narrative structure allow players to deeply engage, crafting their story within a continuously adapting world, ensuring an uninterrupted and evolving role-playing journey.",
+//     },
+//     {
+//       heading: "Infinite Stories, Boundless Possibilities",
+//       description:
+//         "Aethereal RP Multiverses offers a portal to limitless narratives, each an exploration of new realms. The synergy of human and AI creativity fosters a versatile role-playing space, unpredictable and captivating. With Dark Violet steering the story, adventures deepen, providing a rich experience for players as co-creators of a dynamic multiverse. This platform offers unparalleled role-playing, where imagination runs free, and each session unveils a novel adventure, making every story an invitation to endless exploration.",
+//     },
+//   ],
+
+//   projectInfoImages: [
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-projectInfoImage1.png",
+//       dimension: "w-45%",
+//     },
+//     {
+//       src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-projectInfoImage2.png",
+//       dimension: "w-45%",
+//     },
+//   ],
+//   thumbnail:
+//     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/am-login.png",
+// },
+// RealConnection.Life
+// {
+//   id: 3,
+//   title: "RealConnection.Life",
+//   description:
+//     "AI-powered human connection social media platform for work and play.",
+//   link: "https://www.realconnection.life",
+//   github: "https://github.com/DarkViolet-ai/realconnection",
+//   projectImages: [""],
+//   thumbnail:
+//     "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/neuralnetwork.png?t=2024-02-25T01%3A43%3A41.707Z)",
+// },
