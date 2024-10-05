@@ -7,6 +7,7 @@ export default function InsetShadowOverlay({
   top,
   left,
   right,
+  zIndex = "z-40",
 }: {
   position?: "top" | "bottom" | "left" | "right";
   size?: "xs" | "sm" | "md" | "lg" | "xl";
@@ -14,6 +15,7 @@ export default function InsetShadowOverlay({
   top?: string;
   left?: string;
   right?: string;
+  zIndex?: string;
 }) {
   let height = "";
   let width = "";
@@ -41,7 +43,7 @@ export default function InsetShadowOverlay({
           left ? left : "left-0"
         } ${
           right ? right : "right-0"
-        } rounded-b-none bg-gradient-to-b from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent z-40  0`}
+        } rounded-b-none bg-gradient-to-b from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent ${zIndex}`}
       >
         .
       </FlexFull>
@@ -53,7 +55,7 @@ export default function InsetShadowOverlay({
           left ? left : "left-0"
         } ${
           bottom ? bottom : "bottom-0"
-        } rounded-r-none bg-gradient-to-r from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent z-40`}
+        } rounded-r-none bg-gradient-to-r from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent  ${zIndex}`}
       >
         .
       </Flex>
@@ -65,7 +67,7 @@ export default function InsetShadowOverlay({
           right ? right : "right-0"
         } ${
           bottom ? bottom : "bottom-0"
-        } rounded-l-none bg-gradient-to-l from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent ${width} z-40`}
+        } rounded-l-none bg-gradient-to-l from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent ${width}  ${zIndex}`}
       >
         .
       </Flex>
@@ -73,9 +75,9 @@ export default function InsetShadowOverlay({
   }
   return (
     <FlexFull
-      className={`absolute z-40 ${height} ${bottom ? bottom : "bottom-0"} ${
-        right ? right : "right-0"
-      } ${
+      className={`absolute  ${zIndex} ${height} ${
+        bottom ? bottom : "bottom-0"
+      } ${right ? right : "right-0"} ${
         left ? left : "left-0"
       } rounded-t-none bg-gradient-to-t from-indigo-950/90 via-indigo-950/30 to-transparent text-transparent`}
     >
