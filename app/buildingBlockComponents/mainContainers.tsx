@@ -898,7 +898,7 @@ export const Transition = React.forwardRef<
     return (
       <motion.div
         className={`flex justify-center overflow-hidden ${className}`}
-        key={key}
+        // key={key}
         variants={transitionVariants[type]}
         initial="initial"
         animate="animate"
@@ -939,7 +939,7 @@ export const TransitionFull = React.forwardRef<
     return (
       <Transition
         className={`w-full ${className}`}
-        key={key}
+        // key={key}
         type={type}
         delay={delay}
         duration={duration}
