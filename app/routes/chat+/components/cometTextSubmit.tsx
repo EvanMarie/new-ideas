@@ -111,6 +111,7 @@ export default function CometTextSubmit({
                   onChange={onChange}
                   className="pr-6vh"
                   onKeyDown={handleKeyDown}
+                  placeholder="THIS"
                 />
               </FlexFull>
             )}
