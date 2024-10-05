@@ -36,7 +36,7 @@ export default function HomeIndex() {
         </DarkFlexFull>
 
         {/* ********************* IMAGES SHIFTING ********************* */}
-        <FlexFull className="h-90vw sm:h-55svh md:h-60svh lg:h-70svh pt-5vh">
+        <FlexFull className="h-90vw sm:h-55svh md:h-60svh lg:h-70svh xxl:h-75svh pt-5vh">
           <ShiftingImages
             imagesAndTitles={shuffledShiftingImages}
             imageDimensions="w-95vw sm:w-80vw md:h-45svh md:w-full lg:h-60svh "
