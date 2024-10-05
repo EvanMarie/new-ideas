@@ -324,22 +324,22 @@ const buttonStyles = plugin(function ({ addUtilities, theme }) {
     ".normalButtonStyles": generateButtonStyles(
       "2.1vh", // fontSize
       "3.5vh", // height
-      "col.600", // bgColor
+      "indigo.800", // bgColor
       "col.100", // color
-      "col.900", // borderColor
-      "col.300", // hoverBgColor
-      "col.900", // hoverColor
-      "col.970" //hoverBorderColor
+      "col.100", // borderColor
+      "purple.800", // hoverBgColor
+      "cyan.300", // hoverColor
+      "cyan.300" //hoverBorderColor
     ),
     ".smallButtonStyles": generateButtonStyles(
       "1.6vh", // fontSize
       "2.9vh", // height
-      "col.600", // bgColor
+      "indigo.800", // bgColor
       "col.100", // color
-      "col.900", // borderColor
-      "col.300", // hoverBgColor
-      "col.900", // hoverColor
-      "col.970" //hoverBorderColor
+      "col.100", // borderColor
+      "purple.800", // hoverBgColor
+      "cyan.300", // hoverColor
+      "cyan.300" //hoverBorderColor
     ),
     ".negativeButtonStyles": generateButtonStyles(
       "2.1vh", // fontSize

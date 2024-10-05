@@ -14,6 +14,8 @@ export default function ProjectButton({
   label,
   tooltipPlacement,
   target,
+  type,
+  isDisabled,
 }: {
   to?: string;
   position?: string;
@@ -22,6 +24,8 @@ export default function ProjectButton({
   label?: string;
   tooltipPlacement?: string;
   target?: string;
+  type?: "button" | "submit" | "reset" | undefined;
+  isDisabled?: boolean;
   icon: React.ComponentType<{
     className?: string;
     tabIndex?: number;
@@ -33,10 +37,12 @@ export default function ProjectButton({
       {/* @ts-ignore  */}
       <NavLink to={to} target={target}>
         <motion.button
+          disabled={isDisabled}
           className={`bg-col-500 ${
             text ? "rounded-2vh" : "rounded-full"
           } p-0.4vh border-900-md shadowNarrowTight group hover:bg-slate-800 transition-300 ${position}`}
           onClick={onClick ? onClick : () => {}}
+          type={type}
         >
           {text ? (
             <HStack className="gap-0.5vh px-0.5vh group hover:cursor-pointer">

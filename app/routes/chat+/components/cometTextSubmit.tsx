@@ -2,6 +2,7 @@ import { Form, useSubmit } from "@remix-run/react";
 import { useEffect, useRef } from "react";
 import { BsSend } from "react-icons/bs";
 import BouncingDots from "~/buildingBlockComponents/bouncingDots";
+import Button from "~/buildingBlockComponents/button";
 import CometBorder from "~/buildingBlockComponents/cometBorder";
 import IconButton from "~/buildingBlockComponents/iconButton";
 import {
@@ -11,6 +12,7 @@ import {
   FlexFull,
 } from "~/buildingBlockComponents/mainContainers";
 import TextArea from "~/buildingBlockComponents/textArea";
+import ProjectButton from "~/mainDesignComponents/projectButton";
 
 export default function CometTextSubmit({
   isLoading,
