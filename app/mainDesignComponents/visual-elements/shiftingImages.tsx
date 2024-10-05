@@ -115,7 +115,7 @@ export default function ShiftingImages({
               }}
             >
               <VStack className="w-full hover:cursor-pointer group">
-                <Box className="rounded-1vh border-900-md shadowNarrowNormal h-fit group-hover:metallicEdgesSm transition-300 group-hover:scale-101">
+                <Box className="rounded-1vh border-900-md shadowNarrowNormal h-fit group-hover:boxGlowXs transition-300 group-hover:scale-101">
                   <img
                     src={currentImageSrc}
                     alt={currentImageProject}

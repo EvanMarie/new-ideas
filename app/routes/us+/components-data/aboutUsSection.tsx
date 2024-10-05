@@ -37,10 +37,10 @@ export default function AboutUsSection({
             gap="gap-0"
             className="pt-1vh pb-2vh"
           >
-            <span className="text-3.5vh lg:text-4.5vh text-fuchsia-300 textShadow">
+            <span className="text-3.5vh lg:text-4.5vh text-fuchsia-300 textFogXxs">
               {teamMember.name}
             </span>
-            <span className="textShadow">{teamMember.role}</span>
+            <span className="textFogXxs">{teamMember.role}</span>
           </VStackFull>
           <Wrap className={`justify-evenly`}>
             <SocialLink
@@ -71,11 +71,13 @@ export default function AboutUsSection({
                 className="w-full justify-center gap-x-1vh xl:justify-end"
                 key={edu}
               >
-                <span className="text-fuchsia-200 textShadow md:w-full xl:w-fit">
+                <span className="text-fuchsia-200 textFogXxs md:w-full xl:w-fit">
                   {edu?.split(" - ")[0]}
                 </span>
-                <span className="text-0.8em md:hidden xl:inline">-</span>
-                <span className="md:w-full xl:w-fit">
+                <span className="text-0.8em md:hidden xl:inline textFogXxs">
+                  -
+                </span>
+                <span className="md:w-full xl:w-fit textFogXxs">
                   {edu?.split(" - ")[1]}
                 </span>
               </Wrap>
@@ -92,7 +94,11 @@ export default function AboutUsSection({
       </FlexFull>
       <VStackFull gap="gap-2vh">
         {teamMember.paragraphs.map((paragraph) => (
-          <RenderParagraphs textItem={paragraph} key={paragraph} />
+          <RenderParagraphs
+            textItem={paragraph}
+            key={paragraph}
+            textClassName="textFogXxs"
+          />
         ))}
       </VStackFull>
       <Divider m="mt-3vh mb-2vh" bg="bg-cyan-500/70" />

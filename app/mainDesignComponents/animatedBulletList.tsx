@@ -15,7 +15,7 @@ export default function AnimatedBulletList({
 }) {
   return (
     <VStackFull align="items-start">
-      <h5 className="text-col-500">{heading}</h5>
+      <h5 className="text-col-500 textFogXxs">{heading}</h5>
       <ul className="w-full list-disc pl-5">
         {" "}
         {/* Added list-disc and pl-5 classes */}
@@ -26,7 +26,7 @@ export default function AnimatedBulletList({
             delay={0.1 * (index + overallDelay)}
             className="w-full"
           >
-            <li className="text-left w-full textShow">
+            <li className="text-left w-full textFogXxs">
               <HStackFull gap="gap-2vh">
                 <span>𐩒</span>
                 {item}

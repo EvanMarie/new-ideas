@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function ImageWallFullScreenBackground({
   images,
-  overlay = "bg-violet-300/70 bg-gradient-to-r from-indigo-900/50 via-indigo-950/70 to-indigo-900/50",
+  overlay = "bg-violet-300/70 bg-gradient-to-r from-indigo-800/50 via-indigo-900/50 to-indigo-800/50 backdrop-blur-xs",
   overflow = "overflow-y-auto",
 }: {
   images: string[];
@@ -36,7 +36,7 @@ export default function ImageWallFullScreenBackground({
         ))}
       </Wrap>
       <FlexFull
-        className={`justify-center h-100svh items-center fixed ${overflow} ${overlay} text-transparent`}
+        className={`justify-center h-100svh items-center fixed ${overflow} ${overlay} text-transparent backdrop-blur-xs`}
         style={{ zIndex: 5 }}
       >
         This

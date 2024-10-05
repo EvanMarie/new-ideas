@@ -818,7 +818,29 @@ export default {
         textShadow: "0.2vh 0.2vh 0.2vh rgba(0, 0, 0, 0.9)",
         subtleTextShadow: "0.1vh 0.1vh 0.2vh rgba(0, 0, 0, 0.9)",
         standoutTextShadow: "0.3vh 0.3vh 0.4vh rgba(0, 0, 0, 0.9)",
+        textFogPurple:
+          "0 0 0.5vh #1A001A, 0 0 1vh #1A001A, 0 0 1.5vh #1A001A, 0 0 1vh #1A001A, 0 0 3vh #1A001A, 0 0 4vh #330033, 0 0 5.5vh #4C004C, 0 0 7.5vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleMd:
+          "0 0 0.3vh #1A001A, 0 0 0.8vh #1A001A, 0 0 1.2vh #1A001A, 0 0 0.8vh #1A001A, 0 0 2.5vh #1A001A, 0 0 3vh #330033, 0 0 4vh #4C004C, 0 0 5vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleSm:
+          "0 0 0.2vh #1A001A, 0 0 0.6vh #1A001A, 0 0 0.9vh #1A001A, 0 0 0.6vh #1A001A, 0 0 2vh #1A001A, 0 0 2.2vh #330033, 0 0 3vh #4C004C, 0 0 4vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleXs:
+          "0 0 0.1vh #1A001A, 0 0 0.4vh #1A001A, 0 0 0.6vh #1A001A, 0 0 0.4vh #1A001A, 0 0 1.5vh #1A001A, 0 0 1.8vh #330033, 0 0 2vh #4C004C, 0 0 3vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleXxs:
+          "0 0 0.1vh #1A001A, 0 0 0.4vh #1A001A, 0 0 0.6vh #1A001A, 0 0 0.2vh #1A001A, 0 0 0.6vh #1A001A, 0 0 1vh #330033, 0 0 1vh #4C004C, 0 0 1.5vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleLg:
+          "0 0 0.8vh #1A001A, 0 0 1.2vh #1A001A, 0 0 2vh #1A001A, 0 0 1.2vh #1A001A, 0 0 4vh #1A001A, 0 0 5vh #330033, 0 0 6.5vh #4C004C, 0 0 9vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleXl:
+          "0 0 1vh #1A001A, 0 0 1.5vh #1A001A, 0 0 2.5vh #1A001A, 0 0 1.5vh #1A001A, 0 0 5vh #1A001A, 0 0 6vh #330033, 0 0 8vh #4C004C, 0 0 10vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogPurpleXxl:
+          "0 0 1.2vh #1A001A, 0 0 1.8vh #1A001A, 0 0 3vh #1A001A, 0 0 1.8vh #1A001A, 0 0 6vh #1A001A, 0 0 7vh #330033, 0 0 9vh #4C004C, 0 0 12vh #1A001A, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
 
+        textFogLg:
+          "0 0 0.8vh #000, 0 0 1.2vh #000, 0 0 2vh #000, 0 0 1.2vh #000, 0 0 4vh #000, 0 0 5vh #575757, 0 0 6.5vh #5E5E5E, 0 0 9vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogXl:
+          "0 0 1vh #000, 0 0 1.5vh #000, 0 0 2.5vh #000, 0 0 1.5vh #000, 0 0 5vh #000, 0 0 6vh #575757, 0 0 8vh #5E5E5E, 0 0 10vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
+        textFogXxl:
+          "0 0 1.2vh #000, 0 0 1.8vh #000, 0 0 3vh #000, 0 0 1.8vh #000, 0 0 6vh #000, 0 0 7vh #575757, 0 0 9vh #5E5E5E, 0 0 12vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
         textFog:
           "0 0 0.5vh #000, 0 0 1vh #000, 0 0 1.5vh #000, 0 0 1vh #000, 0 0 3vh #000, 0 0 4vh #575757, 0 0 5.5vh #5E5E5E, 0 0 7.5vh #000, 0.2vh 0.2vh 0.2vh rgba(0,0,0,0);",
         textFogMd:
@@ -1490,6 +1512,9 @@ export default {
         "fade-center":
           "radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%)",
       },
+      backdropBlur: {
+        xs: "0.2vh",
+      },
     },
   },
   variants: {
@@ -1815,7 +1840,7 @@ export default {
           flexDirection: "column",
           alignItems: "center",
           fontFamily: '"M PLUS 2", sans-serif',
-          fontWeight: 500,
+          fontWeight: 400,
           backgroundImage: "url('/images/siteBackground.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
