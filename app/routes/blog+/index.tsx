@@ -48,7 +48,7 @@ export default function BlogIndex() {
         </FlexFull>
 
         <FlexFull className="lg:p-2vh">
-          <Wrap className="w-full justify-evenly">
+          <Wrap className="w-full justify-evenly xxl:pb-10vh">
             {blogsByDate.map((blog, index) => (
               <BlogIndexCard blog={blog} key={index} index={index} />
             ))}

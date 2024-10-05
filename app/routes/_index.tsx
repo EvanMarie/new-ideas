@@ -9,7 +9,6 @@ import Text from "~/buildingBlockComponents/text";
 import TimedNavigation from "~/mainDesignComponents/timedNavigation";
 import AnimatedComponentSpring from "~/mainDesignComponents/visual-elements/animatedComponentSpring";
 import FloatingUpAndOutImages from "~/mainDesignComponents/visual-elements/floatingViolets";
-import DarkVioletIndexAnimation from "~/mainDesignComponents/visual-elements/indexAnimation";
 
 export const meta: MetaFunction = () => {
   return [
@@ -55,7 +54,6 @@ export default function Index() {
             </VStack>
           </VStack>
         </VStack>
-        {/* <DarkVioletIndexAnimation /> */}
         <FloatingUpAndOutImages />
       </TimedNavigation>
     </TransitionFull>

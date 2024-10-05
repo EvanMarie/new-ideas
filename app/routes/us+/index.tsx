@@ -12,13 +12,6 @@ export default function AboutUsIndex() {
       {TeamMembers.map((teamMember, index) => (
         <AboutUsSection teamMember={teamMember} key={index} />
       ))}
-      <FlexFull id="dark-violet-chat">
-        <VStackFull>
-          <span className="text-3.5vh lg:text-4.5vh text-fuchsia-300 textShadow">
-            Chat with Dark Violet
-          </span>
-        </VStackFull>
-      </FlexFull>
     </VStackFull>
   );
 }

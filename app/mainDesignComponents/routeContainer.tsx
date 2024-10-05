@@ -115,7 +115,7 @@ export default function RouteContainer({
             <Image
               src="/images/darkviolet.png"
               alt="Dark Violet"
-              className="h-10vh md:h-16vh hover:cursor-pointer"
+              className="h-13vh md:h-20vh hover:cursor-pointer"
             />
           </Box>
         </Tooltip>
@@ -179,7 +179,11 @@ export default function RouteContainer({
           ref={scrollRef}
         >
           <Transition type={transition} className="w-full h-fit z-30">
-            <VStackFull className={`h-fit ${noPadding ? "" : "py-1vh"}`}>
+            <VStackFull
+              className={`h-fit ${
+                noPadding ? "" : "py-1vh"
+              } pb-9vh md:pb-16vh xxl:pb-3vh`}
+            >
               {children}
             </VStackFull>
           </Transition>
