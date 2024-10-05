@@ -168,7 +168,7 @@ export const Projects = [
     title: "Dark Violet Divinations",
     slug: "dark-violet-divinations",
     description:
-      "An immersive web application that blends the ancient art of divination with AI technology.",
+      "An immersive application that blends the ancient art of divination with AI technology, available on iOS or on the web.",
     link: "https://divination.darkviolet.ai/",
     github: "https://github.com/DarkViolet-ai",
     additionalComponents: <DivinationIos />,

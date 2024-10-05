@@ -43,6 +43,7 @@ export default function BlogIndex() {
             options={blogCategories}
             value={category}
             setValue={setCategory}
+            textShadowUnselected="textFogPurpleXxs"
           />
         </FlexFull>
 

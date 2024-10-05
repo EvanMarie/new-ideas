@@ -7,12 +7,14 @@ export function Option({
   currentSelection,
   setSelection,
   textSize = "text-xs sm:text-sm",
+  textShadowUnselected = "textShadow",
   padding = "px-1vh pt-0.3vh pb-0.5vh sm:px-1.5vh",
 }: {
   value: string;
   currentSelection: string;
   setSelection: (value: string) => void;
   textSize?: string;
+  textShadowUnselected?: string;
   padding?: string;
 }) {
   const isActive = currentSelection === value;
@@ -31,7 +33,7 @@ export function Option({
       )}
       <span
         className={`relative z-10 textShadow ${
-          isActive ? "text-col-500" : "text-col-100"
+          isActive ? "text-col-500" : `text-col-100 ${textShadowUnselected}`
         }`}
       >
         {value}
@@ -47,6 +49,7 @@ export function OptionSelector({
   setValue,
   textSize,
   padding,
+  textShadowUnselected,
 }: {
   label?: string;
   options: string[];
@@ -54,6 +57,7 @@ export function OptionSelector({
   setValue: (value: string) => void;
   textSize?: string;
   padding?: string;
+  textShadowUnselected?: string;
 }) {
   return (
     <VStackFull align="items-start">
@@ -70,6 +74,7 @@ export function OptionSelector({
               setSelection={setValue}
               textSize={textSize}
               padding={padding}
+              textShadowUnselected={textShadowUnselected}
             />
           ))}
         </AnimatePresence>

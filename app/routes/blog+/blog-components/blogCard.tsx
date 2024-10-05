@@ -89,7 +89,7 @@ export default function BlogIndexCard({
                 </VStackFull>
               </HStackFull>
               {/* *********************** TAGS *********************** */}
-              <Wrap className="w-full justify-evenly pt-0.5vh pb-1vh gap-0.5vh hover:cursor-pointer ">
+              <Wrap className="w-full justify-evenly pt-0.5vh pb-1vh gap-0.5vh hover:cursor-pointer px-1vh">
                 {blog.tags.map((tag) => (
                   <Box
                     key={tag}

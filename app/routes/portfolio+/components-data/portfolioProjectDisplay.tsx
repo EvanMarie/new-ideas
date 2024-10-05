@@ -23,7 +23,7 @@ export default function PortfolioProjectDisplay({
         <VStackFull align="items-end text-right px-1vh" gap="gap-0">
           <HStack className="items-center" gap="gap-2vh">
             <ProjectIconButtons project={portfolioItem} />
-            <h2 className="text-fuchsia-300 font-semibold kufam-font textFogXxs">
+            <h2 className="text-lg md:text-xl text-fuchsia-300 font-semibold kufam-font textFogXxs">
               {portfolioItem.title}
             </h2>
           </HStack>
@@ -31,10 +31,11 @@ export default function PortfolioProjectDisplay({
             {portfolioItem.description}
           </Text>
         </VStackFull>
-        {portfolioItem.additionalComponents &&
-          portfolioItem.additionalComponents}
+
         {/* ********************** PROJECT INFORMATION ********************** */}
-        <VStackFull className="gap-2vh px-2vh">
+        <VStackFull className="gap-2vh px-2vh pt-2vh">
+          {portfolioItem.additionalComponents &&
+            portfolioItem.additionalComponents}
           {portfolioItem.projectInfo.map((info, index) => (
             <VStackFull gap="gap-1.5vh" key={index}>
               <DarkFlexFull>

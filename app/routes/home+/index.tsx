@@ -16,7 +16,7 @@ export default function HomeIndex() {
   return (
     <>
       <VStackFull
-        className="p-1.5vh pt-3vh sm:px-4vh md:px-3vh lg:px-7vh max-w-[140svh]"
+        className="p-1.5vh pt-4vh sm:px-4vh md:px-3vh lg:px-7vh max-w-[140svh]"
         align="items-start"
         gap="gap-2vh md:gap-3vh"
       >

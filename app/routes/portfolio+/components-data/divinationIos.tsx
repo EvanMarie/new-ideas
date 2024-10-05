@@ -1,8 +1,9 @@
-import { NavLink } from "@remix-run/react";
+import { NavLink, useNavigate } from "@remix-run/react";
 import Image from "~/buildingBlockComponents/image";
 import {
   Box,
   Flex,
+  FlexFull,
   HStackFull,
   VStack,
   VStackFull,
@@ -19,28 +20,30 @@ export default function DivinationIos() {
         i + 1
       }.webp?width=700&resize=contain&quality=75`
   );
+
+  const navigate = useNavigate();
   return (
-    <NavLink
-      to="https://apps.apple.com/us/app/dreams-and-divinations/id6503323930"
-      target="_blank"
-      className="pb-2vh w-95vw"
-    >
-      <DarkFlexFull>
-        <HStackFull className="px-2vh">
-          <VStackFull className="w-5/12" gap="gap-2vh">
-            <Box className="relative h-30vh w-25vh">
-              <ShiftingImages
-                containerClassName="border-970-md shadowBroadLooser"
-                imageArray={genImages}
-                imageDimensions="h-30vh"
-              />
-            </Box>
-          </VStackFull>
-          <VStack className="w-7/12 h-full justify-center" gap="gap-2vh">
-            <VStack className="text-lg text-col-500 textFogXxs">
-              <span>Dreams & Divinations</span>
-              <span>with Dark Violet</span>
-            </VStack>
+    <DarkFlexFull>
+      <VStackFull gap="gap-2vh">
+        <FlexFull className="sm:text-lg text-col-500 textFogXxs justify-center">
+          <span>Dreams & Divinations with Dark Violet</span>
+        </FlexFull>
+        <FlexFull
+          className="flex-col items-center h-fit gap-2vh py-1vh lg:flex-col"
+          onClick={() => {
+            navigate(
+              "https://apps.apple.com/us/app/dreams-and-divinations/id6503323930"
+            );
+          }}
+        >
+          <Box className="relative h-57svh sm:h-65svh w-40vh">
+            <ShiftingImages
+              containerClassName="border-970-md shadowBroadLooser"
+              imageArray={genImages}
+              imageDimensions="h-56svh sm:h-64svh"
+            />
+          </Box>
+          <VStackFull gap="gap-2vh">
             <HStackFull className="justify-evenly items-center">
               <NavLink
                 to="https://apps.apple.com/us/app/dreams-and-divinations/id6503323930"
@@ -49,7 +52,7 @@ export default function DivinationIos() {
                 <Image
                   src="/images/downloadOnAppStore.png"
                   alt="download on app store"
-                  className="h-4vh"
+                  className="h-5vh"
                 />
               </NavLink>
               <Flex className="hidden md:flex">
@@ -65,9 +68,9 @@ export default function DivinationIos() {
                 </NavLink>
               </Flex>
             </HStackFull>
-          </VStack>
-        </HStackFull>
-      </DarkFlexFull>
-    </NavLink>
+          </VStackFull>
+        </FlexFull>
+      </VStackFull>
+    </DarkFlexFull>
   );
 }
