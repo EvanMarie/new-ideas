@@ -17,8 +17,9 @@ export default function HomeIndex() {
       <VStackFull
         className="p-1.5vh pt-3vh sm:px-4vh md:px-3vh lg:px-7vh max-w-[140svh]"
         align="items-start"
+        gap="gap-2vh md:gap-3vh"
       >
-        {/* ********************* INTRO INFO ********************* */}
+        {/* ********************* INTRO INFO 1 ********************* */}
         <DarkFlexFull>
           <VStackFull gap="gap-2vh" className={darkFlexInnerPadding}>
             <h3
@@ -43,7 +44,7 @@ export default function HomeIndex() {
           />
         </FlexFull>
 
-        {/* ********************* FURTHER INFO ********************* */}
+        {/* ********************* INTRO INFO 2 ********************* */}
         <DarkFlexFull>
           <VStackFull className={darkFlexInnerPadding}>
             <VStackFull gap="gap-[2vh]" className="h-fit" align="items-start">
@@ -63,49 +64,61 @@ export default function HomeIndex() {
                   "Predictive analytics dashboards",
                 ]}
               />
+            </VStackFull>
+          </VStackFull>
+        </DarkFlexFull>
+
+        {/* ********************* INTRO INFO 3 ********************* */}
+        <DarkFlexFull>
+          <VStackFull className={darkFlexInnerPadding}>
+            <Text className="textFogXxs">
+              We craft every aspect of web development to maximize user
+              engagement and satisfaction, while leveraging AI to drive business
+              growth and efficiency.
+            </Text>
+            <AnimatedBulletList
+              heading="Our AI integration services include:"
+              items={[
+                "Custom AI model development for specific business needs",
+                "Integration of machine learning algorithms for data analysis",
+                "Natural Language Processing for improved customer interactions",
+                "AI-driven recommendation systems to boost sales",
+                "Automated decision-making processes to streamline operations",
+              ]}
+            />
+          </VStackFull>
+        </DarkFlexFull>
+
+        {/* ********************* INTRO INFO 4 ********************* */}
+        <DarkFlexFull>
+          <VStackFull className={darkFlexInnerPadding}>
+            <VStackFull
+              align="items-end"
+              className="text-right pl-15vh md:pl-10vh pb-3vh xl:pl-2vh"
+              gap="gap-2vh"
+            >
               <Text className="textFogXxs">
-                We craft every aspect of web development to maximize user
-                engagement and satisfaction, while leveraging AI to drive
-                business growth and efficiency.
+                By combining our web development expertise with cutting-edge AI
+                technologies, we help businesses stay competitive in the digital
+                age, offering smarter solutions that adapt and grow with your
+                needs.
               </Text>
-              <AnimatedBulletList
-                heading="Our AI integration services include:"
-                items={[
-                  "Custom AI model development for specific business needs",
-                  "Integration of machine learning algorithms for data analysis",
-                  "Natural Language Processing for improved customer interactions",
-                  "AI-driven recommendation systems to boost sales",
-                  "Automated decision-making processes to streamline operations",
-                ]}
-              />
-              <VStackFull
+              <VStack
                 align="items-end"
-                className="text-right pl-15vh md:pl-10vh pb-3vh xl:pl-2vh"
-                gap="gap-2vh"
+                className="kufam-font text-col-500 textShadow"
               >
-                <Text className="textFogXxs">
-                  By combining our web development expertise with cutting-edge
-                  AI technologies, we help businesses stay competitive in the
-                  digital age, offering smarter solutions that adapt and grow
-                  with your needs.
-                </Text>
-                <VStack
-                  align="items-end"
-                  className="kufam-font text-col-500 textShadow"
-                >
-                  <Flex className="flex-col md:flex-row md:gap-1vh">
-                    <Text className="textFogXxs">
-                      <em>Evan Marie Carr &amp;</em>
-                    </Text>
-                    <Text className="textFogXxs">
-                      <em>Dustin W. Carr,</em>
-                    </Text>
-                  </Flex>
+                <Flex className="flex-col md:flex-row md:gap-1vh">
                   <Text className="textFogXxs">
-                    <em>Co-Founders</em>
+                    <em>Evan Marie Carr &amp;</em>
                   </Text>
-                </VStack>
-              </VStackFull>
+                  <Text className="textFogXxs">
+                    <em>Dustin W. Carr,</em>
+                  </Text>
+                </Flex>
+                <Text className="textFogXxs">
+                  <em>Co-Founders</em>
+                </Text>
+              </VStack>
             </VStackFull>
           </VStackFull>
         </DarkFlexFull>
