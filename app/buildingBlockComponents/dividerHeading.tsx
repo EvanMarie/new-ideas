@@ -61,7 +61,9 @@ export default function DividerHeading({
       {bothSides && !rightSide && !leftSide && !noDividers && <Divider />}
       {leftSide ? <Divider /> : null}
       <span
-        className={`${textSize} ${textColor} ${textShadow} ${fontFamily} flex flex-shrink-0 text-nowrap`}
+        className={`${textSize} ${textColor} ${textShadow} ${fontFamily} flex  ${
+          noDividers ? "" : "text-nowrap flex-shrink-0"
+        }`}
       >
         {heading}
       </span>

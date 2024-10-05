@@ -99,28 +99,28 @@ export default function RouteContainer({
   return (
     <>
       {/* ***************** DARK VIOLET IMAGE CHAT ***************** */}
-      {isHome && (
-        <NavLink
-          to="/us#dark-violet-chat"
-          className="absolute bottom-[5svh] md:bottom-[3.5svh] left-4.5vh hover:cursor-pointer z-50"
-        >
-          <Tooltip label="Dark Violet chat" placement="topRight">
-            <Box className="relative group">
-              <Box>
-                <Icon
-                  iconClassName="absolute top-0 -right-3vh text-4.2vh text-col-500 rotate-10   group-hover:rotate-30 transition-300"
-                  icon={BsChatDotsFill}
-                />
-              </Box>
-              <Image
-                src="/images/darkviolet.png"
-                alt="Dark Violet"
-                className="h-16vh hover:cursor-pointer"
+      {/* {isHome && ( */}
+      <NavLink
+        to="/us#dark-violet-chat"
+        className="absolute bottom-[5svh] md:bottom-[3.5svh] left-1vh hover:cursor-pointer z-50"
+      >
+        <Tooltip label="Dark Violet chat" placement="topRight">
+          <Box className="relative group">
+            <Box>
+              <Icon
+                iconClassName="absolute top-0 -right-3vh text-3vh md:text-4.2vh text-col-500 rotate-10   group-hover:rotate-30 transition-300"
+                icon={BsChatDotsFill}
               />
             </Box>
-          </Tooltip>
-        </NavLink>
-      )}
+            <Image
+              src="/images/darkviolet.png"
+              alt="Dark Violet"
+              className="h-10vh md:h-16vh hover:cursor-pointer"
+            />
+          </Box>
+        </Tooltip>
+      </NavLink>
+      {/* )} */}
 
       {/* ***************** INSET SHADOWS TOP & BOTTOM ***************** */}
       <InsetShadowOverlay position="top" size="lg" />

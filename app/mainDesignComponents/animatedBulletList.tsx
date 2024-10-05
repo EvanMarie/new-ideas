@@ -12,6 +12,7 @@ export default function AnimatedBulletList({
   headingShadow = "textFogXxs",
   headingColor = "text-col-500",
   headingDivider = "none",
+  headingSize = "text-xl",
 }: {
   heading: string;
   items: string[];
@@ -19,6 +20,7 @@ export default function AnimatedBulletList({
   headingShadow?: string;
   headingColor?: string;
   headingDivider?: "both" | "left" | "right" | "none";
+  headingSize?: string;
 }) {
   const headingBothSides = headingDivider === "both";
   const headingLeftSide = headingDivider === "left";
@@ -28,6 +30,7 @@ export default function AnimatedBulletList({
   return (
     <VStackFull align="items-start">
       <DividerHeading
+        textSize={headingSize}
         heading={heading}
         textColor={headingColor}
         textShadow={headingShadow}

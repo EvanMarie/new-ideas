@@ -64,6 +64,7 @@ export default function HomeIndex() {
                     aesthetics, functionality, and intelligent automation.
                   </Text>
                   <AnimatedBulletList
+                    headingSize="text-lg"
                     heading="From frontend to backend, we use the latest technologies to build:"
                     items={[
                       "Seamless, fully responsive websites",
@@ -87,6 +88,7 @@ export default function HomeIndex() {
                   business growth and efficiency.
                 </Text>
                 <AnimatedBulletList
+                  headingSize="text-lg"
                   heading="Our AI integration services include:"
                   items={[
                     "Custom AI model development for specific business needs",
@@ -101,11 +103,11 @@ export default function HomeIndex() {
           </ScrollTransition>
           {/* ********************* INTRO INFO 4 ********************* */}
           <ScrollTransition type="fadeSlideInBottomQuarter">
-            <DarkFlexFull>
+            <DarkFlexFull className="xl:h-fit">
               <VStackFull className={darkFlexInnerPadding}>
                 <VStackFull
                   align="items-end"
-                  className="text-right pl-15vh md:pl-10vh pb-3vh xl:pl-2vh"
+                  className="text-right pl-15vh md:pl-10vh xl:pl-2vh"
                   gap="gap-2vh"
                 >
                   <Text className="textFogXxs">
