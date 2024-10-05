@@ -30,17 +30,17 @@ export default function BlogSideNav() {
   const currentBlogSlug = useParams().blogSlug;
   return (
     <Transition
-      className="hidden xl:flex w-25vw h-95.5vh absolute top-0 right-0 bottom-0 overflow-hidden p-1.2vh z-100 bg-indigo-900/90 rounded-2vh border-550-sm"
+      className="hidden xl:flex w-25vw h-95.5vh absolute top-0 right-0 bottom-0 overflow-hidden rounded-none z-100 bg-indigo-900/90 border-l-col-600 border-l-[0.2vh] border-l-solid"
       type="fadeSlideInRight"
       delay={0.5}
     >
       <FlexFull>
-        <VStackFull>
-          <FlexFull className="text-col-500 textShadow justify-center pb-0.5vh">
+        <VStackFull className="bg-fuchsia-900">
+          <FlexFull className="text-col-500 textShadow justify-center pb-0.5vh bg-slate-950/30 rounded-none">
             DarkViolet.ai Blog
           </FlexFull>
-          <FlexFull className="bg-slate-950/50 overflow-hidden border-550-md rounded-2vh">
-            <FlexFull className="h-89vh overflow-y-auto overflow-x-hidden">
+          <FlexFull className="bg-slate-900/80 overflow-hidden rounded-none">
+            <FlexFull className="h-91.3vh overflow-y-auto overflow-x-hidden insetShadow6xl rounded-none">
               <VStackFull align="items-start" className="h-fit">
                 <AnimatePresence>
                   {blogList.map(
@@ -54,7 +54,7 @@ export default function BlogSideNav() {
                         {currentBlogSlug === blog.slug && (
                           <motion.div
                             layoutId="active-blog-background"
-                            className="absolute inset-0 bg-fuchsia-900/60 shadowNarrowTight rounded-none"
+                            className="absolute inset-0 bg-col-400 shadowNarrowTight rounded-none"
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.5 }}
@@ -77,7 +77,7 @@ export default function BlogSideNav() {
                           <span
                             className={`text-sm w-full relative z-10 ${
                               currentBlogSlug === blog.slug
-                                ? "text-col-500 subtleTextShadow"
+                                ? "text-col-900 font-semibold lightTextShadow"
                                 : ""
                             }`}
                           >

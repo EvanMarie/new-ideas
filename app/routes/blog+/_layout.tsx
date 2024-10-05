@@ -7,7 +7,7 @@ export default function BlogLayout() {
     <>
       <RouteContainer
         transition="none"
-        bg="bg-col-500/20"
+        bg="bg-fuchsia-200/20"
         padding={blogSlug ? "" : undefined}
         noPadding={blogSlug ? true : false}
       >

@@ -48,7 +48,7 @@ export default function RouteContainer({
   transition = "fadeSlideInBottom",
   padding = "pt-5.5svh sm:pt-6.5vh md:pt-7.5vh lg:pt-9vh xl:pt-10vh",
   noPadding = false,
-  bg,
+  bg = "bg-violet-300/20",
 }: {
   children: React.ReactNode;
   showScrollProgress?: boolean;
