@@ -9,6 +9,7 @@ export const CalendarIcon = BsCalendar3;
 export const ArrowLeftIcon = RiArrowLeftSFill;
 export const ArrowRightIcon = RiArrowRightSFill;
 export const HomeIcon = IoHomeOutline;
+export const darkFlexInnerPadding = "p-0.5vh sm:px-1vh md:px-1.5vh lg:p-2.5vh";
 
 export const themeColors = {
   transparent: "transparent",

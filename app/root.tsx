@@ -37,7 +37,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <FlexFull className="bg-indigo-900/80 bg-gradient-to-r from-slate-800/40 via-slate-900/30 to-slate-800/50 h-100svh max-h-100svh first-line:overflow-hidden rounded-none relative">
+        <FlexFull className="bg-indigo-800/70 bg-gradient-to-r from-slate-800/40 via-slate-900/30 to-slate-800/50 h-100svh max-h-100svh first-line:overflow-hidden rounded-none relative">
           <Outlet />
           {/* ***************** WHEN TO SHOW NAV ***************** */}
           <MainNavBar />

@@ -6,6 +6,7 @@ import {
 } from "~/buildingBlockComponents/mainContainers";
 import { Projects } from "./components-data/project-data";
 import PortfolioIndexCard from "./components-data/portfolioIndexCard";
+import DivinationIos from "./components-data/divinationIos";
 
 export default function PortfolioIndex() {
   const slug = useParams().slug;
@@ -14,15 +15,18 @@ export default function PortfolioIndex() {
       {slug ? (
         <Outlet />
       ) : (
-        <Wrap className="w-full justify-evenly min-h-full items-evenly pt-2vh">
-          {Projects.map((project, index) => (
-            <PortfolioIndexCard
-              key={project.slug}
-              portfolioItem={project}
-              index={index}
-            />
-          ))}
-        </Wrap>
+        <VStackFull className="pt-4vh">
+          <DivinationIos />
+          <Wrap className="w-full justify-evenly min-h-full items-evenly">
+            {Projects.map((project, index) => (
+              <PortfolioIndexCard
+                key={project.slug}
+                portfolioItem={project}
+                index={index}
+              />
+            ))}
+          </Wrap>
+        </VStackFull>
       )}
     </>
   );

@@ -1911,7 +1911,7 @@ export default {
           },
         },
         h3: {
-          color: theme("colors.col.400"),
+          color: "#d9c9ff",
           textShadow: theme("textShadow.textShadow"),
           marginTop: "1.5vh",
           marginBottom: "1.5vh",

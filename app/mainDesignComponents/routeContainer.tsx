@@ -123,16 +123,16 @@ export default function RouteContainer({
       )}
 
       {/* ***************** INSET SHADOWS TOP & BOTTOM ***************** */}
-      <InsetShadowOverlay position="top" size="xl" />
+      <InsetShadowOverlay position="top" size="lg" />
       <InsetShadowOverlay
         position="bottom"
-        size="md"
+        size="sm"
         bottom="bottom-[5.5svh] md:bottom-[4.5svh]"
       />
 
       {/* ***************** DARK VIOLET NAME LOGO ***************** */}
       {!isRoot && (
-        <Box className="fixed top-1vh left-0.5vh z-45 pl-1vh">
+        <Box className="fixed top-1.5vh left-0.5vh z-45 pl-1vh">
           <NavLink to="/home">
             <VStack gap="gap-0" align="items-start">
               <AnimatedText

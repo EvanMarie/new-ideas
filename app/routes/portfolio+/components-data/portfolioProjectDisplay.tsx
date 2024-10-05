@@ -24,11 +24,11 @@ export default function PortfolioProjectDisplay({
         <VStackFull align="items-end text-right px-1vh" gap="gap-0">
           <HStack className="items-center" gap="gap-2vh">
             <ProjectIconButtons project={portfolioItem} />
-            <h2 className="text-fuchsia-300 font-semibold kufam-font textFogXs">
+            <h2 className="text-fuchsia-300 font-semibold kufam-font textFogXxs">
               {portfolioItem.title}
             </h2>
           </HStack>
-          <Text className="text-col-500 textShadow">
+          <Text className="text-col-500 textFogXxs">
             {portfolioItem.description}
           </Text>
         </VStackFull>
@@ -37,8 +37,10 @@ export default function PortfolioProjectDisplay({
           {portfolioItem.projectInfo.map((info, index) => (
             <VStackFull gap="gap-1.5vh" key={index}>
               <DarkFlexFull>
-                <VStackFull className="p-1vh" align="items-start">
-                  <h3 className="text-fuchsia-300">{info.heading}</h3>
+                <VStackFull className="p-1vh" align="items-start" gap="gap-2vh">
+                  <h3 className="text-fuchsia-300" style={{ lineHeight: 0 }}>
+                    {info.heading}
+                  </h3>
                   <Text>{info.description}</Text>
                 </VStackFull>
               </DarkFlexFull>
@@ -57,7 +59,9 @@ export default function PortfolioProjectDisplay({
         {/* ********************** PROJECT IMAGES ********************** */}
         <FlexFull className="px-1vh rounded-0.7vh pt-3vh">
           <VStackFull>
-            <span className="text-3vh text-fuchsia-300">Project Images</span>
+            <span className="text-3vh text-col-500 textFogXxs">
+              Project Images
+            </span>
             <VStackFull className="h-fit py-1vh" gap="gap-3vh">
               {portfolioItem.projectImages.map((image, index) => (
                 <VStack key={index} className="py-0.5vh">
