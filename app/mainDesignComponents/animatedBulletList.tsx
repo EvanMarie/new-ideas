@@ -1,3 +1,4 @@
+import DividerHeading from "~/buildingBlockComponents/dividerHeading";
 import {
   HStackFull,
   Transition,
@@ -8,14 +9,33 @@ export default function AnimatedBulletList({
   heading,
   items,
   overallDelay = 5,
+  headingShadow = "textFogXxs",
+  headingColor = "text-col-500",
+  headingDivider = "none",
 }: {
   heading: string;
   items: string[];
   overallDelay?: number;
+  headingShadow?: string;
+  headingColor?: string;
+  headingDivider?: "both" | "left" | "right" | "none";
 }) {
+  const headingBothSides = headingDivider === "both";
+  const headingLeftSide = headingDivider === "left";
+  const headingRightSide = headingDivider === "right";
+  const headingNoDividers = headingDivider === "none";
+
   return (
     <VStackFull align="items-start">
-      <h5 className="text-col-500 textFogXxs">{heading}</h5>
+      <DividerHeading
+        heading={heading}
+        textColor={headingColor}
+        textShadow={headingShadow}
+        bothSides={headingBothSides}
+        rightSide={headingRightSide}
+        leftSide={headingLeftSide}
+        noDividers={headingNoDividers}
+      />
       <ul className="w-full list-disc pl-5">
         {" "}
         {/* Added list-disc and pl-5 classes */}

@@ -10,6 +10,7 @@ import Text from "~/buildingBlockComponents/text";
 import OrientationImage from "~/mainDesignComponents/orientationImage";
 import DarkFlexFull from "~/mainDesignComponents/darkFlexFull";
 import ProjectIconButtons from "./projectButtons";
+import DividerHeading from "~/buildingBlockComponents/dividerHeading";
 
 export default function PortfolioProjectDisplay({
   portfolioItem,
@@ -23,7 +24,7 @@ export default function PortfolioProjectDisplay({
         <VStackFull align="items-end text-right px-1vh" gap="gap-0">
           <HStack className="items-center" gap="gap-2vh">
             <ProjectIconButtons project={portfolioItem} />
-            <h2 className="text-lg md:text-xl text-fuchsia-300 font-semibold kufam-font textFogXxs">
+            <h2 className="text-lg md:text-xl text-fuchsia-400 font-semibold kufam-font textFogXxs">
               {portfolioItem.title}
             </h2>
           </HStack>
@@ -40,9 +41,19 @@ export default function PortfolioProjectDisplay({
             <VStackFull gap="gap-1.5vh" key={index}>
               <DarkFlexFull>
                 <VStackFull className="p-1vh" align="items-start" gap="gap-2vh">
-                  <h3 className="text-fuchsia-300" style={{ lineHeight: 0 }}>
+                  <h3
+                    className="text-fuchsia-300 md:hidden"
+                    style={{ lineHeight: 0 }}
+                  >
                     {info.heading}
                   </h3>
+                  <FlexFull className="hidden md:flex">
+                    <DividerHeading
+                      heading={info.heading}
+                      textColor="text-fuchsia-300"
+                      dividerBg="bg-fuchsia-300"
+                    />
+                  </FlexFull>
                   <Text>{info.description}</Text>
                 </VStackFull>
               </DarkFlexFull>
