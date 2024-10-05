@@ -1,2 +1,5 @@
 node_modules
 .env
+.env-fly
+.env-fly-dev
+build
