@@ -68,19 +68,20 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
 
   return (
     <>
-      <FlexFull className="h-95svh md:h-96svh lg:max-w-70vw xl:max-w-100vh bg-500-radial3op75 rounded-none lg:rounded-1vh lg:border-550-md p-1vh">
+      <FlexFull className="h-95svh md:h-96svh md:max-w-90vw lg:max-w-70vw xl:max-w-100vh bg-500-radial3op75 rounded-none lg:rounded-1vh lg:border-550-md p-1vh">
         <VStackFull
           className={`h-full justify-between relative overflow-hidden`}
           gap="gap-[0px]"
         >
           <FlexFull
             ref={chatContainerRef}
-            className={`h-67svh flex-shrink-0 overflow-x-hidden overflow-y-auto insetShadowXxl bg-col-950 border-900-md hide-scrollbar`}
+            className={`h-70svh flex-shrink-0 overflow-x-hidden overflow-y-auto insetShadowXxl bg-col-950 border-900-md hide-scrollbar`}
           >
             <ScrollProgressBar
               containerRef={chatContainerRef}
               position="absolute inset-0"
               height="h-0.5vh"
+              color="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-purple-300"
             />
             <VStackFull className={`h-fit p-1.5vh`} gap="gap-1.5vh">
               {messages.map((entry, index) => {
@@ -103,8 +104,11 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
             </VStackFull>
           </FlexFull>
           <VStackFull className="h-25svh flex-shrink-0">
-            <HStackFull className="justify-between items-center h-4svh px-1vh">
-              <HStack className="textShadow justify-center text-sm-tight items-center h-3vh p-0.5vh bg-col-950 text-slate-100">
+            <HStackFull className="justify-between items-center h-5svh px-1vh">
+              <HStack
+                className="textShadow justify-center text-sm-tight items-center h-3vh p-0.5vh bg-slate-800/70 text-slate-100"
+                gap="gap-0.5vh"
+              >
                 <IconButton
                   type="smallUnstyled"
                   icon={boxChecked ? BoxCheckedIcon : BoxUncheckedIcon}

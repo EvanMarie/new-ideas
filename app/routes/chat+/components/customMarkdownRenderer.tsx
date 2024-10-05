@@ -138,6 +138,8 @@ const CustomMarkdownRenderer: React.FC<CustomMarkdownRendererProps> = ({
   }
   .custom-paragraph {
     margin: 0.7vh 0;
+    font-size: 1.8vh;
+    line-height: 1.3;
   }
   .custom-heading1 {
     font-size: 3vh;

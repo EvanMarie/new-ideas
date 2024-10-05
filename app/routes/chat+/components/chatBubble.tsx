@@ -37,10 +37,10 @@ export default function ChatBubble({
       }`}
     >
       <FlexFull
-        className={`h-fit bg-col-100 rounded-[2.7vh] text-col-900 text-sm md:text-md shadowNarrowTight ${
+        className={`h-fit bg-col-100 rounded-[2.7vh] text-col-900 text-sm md:text-md shadowNarrowLoose ${
           isAi
-            ? "rounded-tl-none border-360-md"
-            : "rounded-br-none border-800-md "
+            ? "rounded-tl-none border-900-sm"
+            : "rounded-br-none border-900-sm "
         }`}
       >
         <FlexFull
@@ -55,7 +55,7 @@ export default function ChatBubble({
           <VStackFull align="items-start" className="px-1.5vh" gap="gap-[0px]">
             {isAi && (
               <HStackFull className="justify-between">
-                <HStack className="items-center">
+                <HStack className="items-center" gap="gap-1vh">
                   <Image
                     src="/images/darkviolet.png"
                     className="h-2.5vh"
