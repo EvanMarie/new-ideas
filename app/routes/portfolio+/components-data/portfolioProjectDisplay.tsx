@@ -31,6 +31,8 @@ export default function PortfolioProjectDisplay({
             {portfolioItem.description}
           </Text>
         </VStackFull>
+        {portfolioItem.additionalComponents &&
+          portfolioItem.additionalComponents}
         {/* ********************** PROJECT INFORMATION ********************** */}
         <VStackFull className="gap-2vh px-2vh">
           {portfolioItem.projectInfo.map((info, index) => (

@@ -16,7 +16,6 @@ export default function PortfolioIndex() {
         <Outlet />
       ) : (
         <VStackFull className="pt-4vh">
-          <DivinationIos />
           <Wrap className="w-full justify-evenly min-h-full items-evenly">
             {Projects.map((project, index) => (
               <PortfolioIndexCard
