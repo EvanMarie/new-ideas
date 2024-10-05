@@ -1,4 +1,9 @@
-import { useNavigation, useSearchParams, useSubmit } from "@remix-run/react";
+import {
+  useNavigate,
+  useNavigation,
+  useSearchParams,
+  useSubmit,
+} from "@remix-run/react";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import ChatTermsOfServiceContent from "./chatTermsOfService";
@@ -14,9 +19,15 @@ import ScrollProgressBar from "~/mainDesignComponents/visual-elements/scrollProg
 import IconButton from "~/buildingBlockComponents/iconButton";
 import Modal from "~/buildingBlockComponents/modal";
 import ChatBubble from "./chatBubble";
-import { BoxCheckedIcon, BoxUncheckedIcon, RefreshIcon } from "styles";
+import {
+  BoxCheckedIcon,
+  BoxUncheckedIcon,
+  CloseIcon,
+  RefreshIcon,
+} from "styles";
 import CometTextSubmit from "./cometTextSubmit";
 import InsetShadowOverlay from "~/mainDesignComponents/visual-elements/insetShadowOverlay";
+import CloseToFrom from "~/mainDesignComponents/closeToFromButton";
 
 export type ChatData = {
   messages: { text: string; timestamp: string; type: "ai" | "human" }[];
@@ -76,7 +87,7 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
             className={`h-full justify-between overflow-hidden`}
             gap="gap-[0px]"
           >
-            <Box className="relative">
+            <Box className="relative overflow-hidden">
               <FlexFull
                 ref={chatContainerRef}
                 className={`h-70svh flex-shrink-0 overflow-x-hidden overflow-y-auto insetShadow6xl bg-col-950 border-800-md hide-scrollbar`}
@@ -112,7 +123,7 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
               </FlexFull>
             </Box>
             <VStackFull className="h-25svh flex-shrink-0">
-              <HStackFull className="justify-between items-center h-4svh px-1vh">
+              <HStackFull className="justify-between items-center h-5svh px-1vh">
                 <HStack
                   className="textShadow justify-center text-sm-tight items-center h-3vh p-0.5vh bg-slate-800/70 text-slate-100"
                   gap="gap-0.5vh"
@@ -141,7 +152,7 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
                 />
               </HStackFull>
               <CometTextSubmit
-                textAreaHeight="h-18svh"
+                textAreaHeight="h-20svh"
                 isLoading={isSubmitting}
                 isDisabled={!boxChecked}
                 onChange={() => {}}

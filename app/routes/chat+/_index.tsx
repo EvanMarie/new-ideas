@@ -3,6 +3,7 @@ import ChatComponent from "./components/chatComponent";
 import { MainLoaderData } from "~/loaders/chatLoader";
 import { Box, FlexFull } from "~/buildingBlockComponents/mainContainers";
 import Image from "~/buildingBlockComponents/image";
+import CloseToFrom from "~/mainDesignComponents/closeToFromButton";
 
 export type ChatData = {
   messages: { text: string; timestamp: string; type: "ai" | "human" }[];
@@ -74,6 +75,7 @@ export default function DarkVioletChat() {
 
   return (
     <FlexFull className="absolute inset-0 h-95svh md:h-96svh justify-center border-b-550-sm rounded-none">
+      <CloseToFrom position="absolute top-0 right-0 md:top-0.5vh md:right-1vh" />
       <Box className="hidden lg:inline absolute -bottom-0.5vh left-1vh xxl:left-10vh z-65">
         <Image
           src="/images/darkviolet.png"
