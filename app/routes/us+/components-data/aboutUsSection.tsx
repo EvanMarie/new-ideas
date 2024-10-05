@@ -25,7 +25,7 @@ export default function AboutUsSection({
   const educationInfo = [teamMember.edu1, teamMember.edu2, teamMember.edu3];
   return (
     <DarkFlexFull>
-      <VStackFull className={`flex-col ${darkFlexInnerPadding}`}>
+      <VStackFull className={`flex-col ${darkFlexInnerPadding}`} gap="gap-2vh">
         <FlexFull className="flex-col md:flex-row">
           <Flex className="hidden md:flex p-1vh lg:p-2vh">
             <img
@@ -34,7 +34,10 @@ export default function AboutUsSection({
               className="border-900-md shadowNarrowLooser"
             />
           </Flex>
-          <VStackFull className="md:w-50%" gap="md:gap-2vh lg:p-1vh xl:py-3vh">
+          <VStackFull
+            className="md:w-50%"
+            gap="gap-1vh md:gap-2vh lg:p-1vh xl:py-3vh"
+          >
             <VStackFull
               align="text-center xl:items-end"
               gap="gap-0"
@@ -45,6 +48,7 @@ export default function AboutUsSection({
               </span>
               <span className="textFogXxs">{teamMember.role}</span>
             </VStackFull>
+            {/* *********************************** SOCIAL LINKS *********************************** */}
             <Wrap className={`justify-evenly`}>
               <SocialLink
                 text="linked"
@@ -64,6 +68,7 @@ export default function AboutUsSection({
                 icon={GrDocumentPdf}
               />
             </Wrap>
+            {/* *********************************** EDUCATION ***********************************  */}
             <VStackFull
               className="py-1vh textShadow"
               align="text-center md:items-end"
@@ -86,6 +91,7 @@ export default function AboutUsSection({
                 </Wrap>
               ))}
             </VStackFull>
+            {/* *********************************** TEAM MEMBER IMAGE ***********************************  */}
             <Flex className="md:hidden p-1vh">
               <img
                 src={teamMember.image}
@@ -95,6 +101,8 @@ export default function AboutUsSection({
             </Flex>
           </VStackFull>
         </FlexFull>
+        <Divider />
+        {/* *********************************** TEAM MEMBER PARAGRAPHS ***********************************  */}
         <VStackFull gap="gap-2vh">
           {teamMember.paragraphs.map((paragraph) => (
             <RenderParagraphs

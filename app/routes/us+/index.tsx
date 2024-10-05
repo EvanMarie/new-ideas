@@ -6,7 +6,7 @@ import Divider from "~/buildingBlockComponents/divider";
 export default function AboutUsIndex() {
   return (
     <VStackFull
-      className="p-1.5vh pt-2vh pb-5vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]"
+      className="p-1.5vh pt-4vh pb-5vh sm:px-2vh md:px-3vh lg:px-7vh max-w-[140svh]"
       gap="gap-2vh md:gap-3vh"
     >
       {TeamMembers.map((teamMember, index) => (
