@@ -1,5 +1,11 @@
-import { BsCalendar3 } from "react-icons/bs";
-import { IoCloseCircleOutline, IoHomeOutline } from "react-icons/io5";
+import { BsCalendar3, BsChatDots } from "react-icons/bs";
+import { HiRefresh } from "react-icons/hi";
+import { ImCheckboxUnchecked } from "react-icons/im";
+import {
+  IoCheckboxOutline,
+  IoCloseCircleOutline,
+  IoHomeOutline,
+} from "react-icons/io5";
 import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 
 export const imageFallback = "";
@@ -115,3 +121,8 @@ export const themeColors = {
   980: "rgba(2, 22, 51, 0.8)",
   990: "rgba(2, 22, 51, 0.9)",
 };
+
+export const BoxCheckedIcon = IoCheckboxOutline;
+export const BoxUncheckedIcon = ImCheckboxUnchecked;
+export const RefreshIcon = HiRefresh;
+export const ChatIcon = BsChatDots;

@@ -1,12 +1,13 @@
-import CenterHorizontalFull from "~/components/buildingBlocks/centerHorizontalFull";
-import Text from "~/components/buildingBlocks/text";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
-import HL from "./hl";
-import Button from "~/components/buildingBlocks/button";
 import { CloseIcon } from "styles";
-import Box from "~/components/buildingBlocks/box";
-import IconButton from "~/components/buildingBlocks/iconButton";
-import CenterFull from "~/components/buildingBlocks/centerFull";
+import Button from "~/buildingBlockComponents/button";
+import HL from "~/buildingBlockComponents/hl";
+import IconButton from "~/buildingBlockComponents/iconButton";
+import {
+  Box,
+  CenterFull,
+  VStackFull,
+} from "~/buildingBlockComponents/mainContainers";
+import Text from "~/buildingBlockComponents/text";
 
 export default function ChatTermsOfServiceContent({
   onClick,
@@ -17,7 +18,7 @@ export default function ChatTermsOfServiceContent({
 
   return (
     <CenterFull>
-      <Box className="p-[1vh]">
+      <Box className="p-1vh">
         <Box className="metallicEdgesMd">
           <VStackFull
             className={`p-[1vh] md:p-[2vh] bg-slate-900 bg-gradient-to-br from-indigo-700/40 via-fuchsia-700/40 to-violet-700/40 text-slate-100 text-[1.7vh] md:text-[1.9vh] border-970-md shadowBroadLooser h-full justify-between py-[1.5vh] relative`}
@@ -33,9 +34,9 @@ export default function ChatTermsOfServiceContent({
               />
             </Box>
             <VStackFull>
-              <CenterHorizontalFull>
-                <Text className={headingStyles}>Terms of Use</Text>
-              </CenterHorizontalFull>
+              <CenterFull>
+                <span className={headingStyles}>Terms of Use</span>
+              </CenterFull>
               <Text>
                 1. <HL>Ownership of Data </HL>- The user retains ownership of
                 the data they input into the chatbot (User Input) and the data
@@ -69,13 +70,13 @@ export default function ChatTermsOfServiceContent({
                 disabling cookies may affect the functionality of the chatbot.
               </Text>
             </VStackFull>
-            <CenterHorizontalFull>
+            <CenterFull>
               <Button
                 buttonText="close"
                 iconLeft={CloseIcon}
                 onClick={onClick}
               />
-            </CenterHorizontalFull>
+            </CenterFull>
           </VStackFull>
         </Box>
       </Box>

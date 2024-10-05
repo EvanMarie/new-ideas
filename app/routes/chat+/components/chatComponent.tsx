@@ -1,18 +1,20 @@
-import { BoxCheckedIcon, BoxUncheckedIcon, RefreshIcon } from "styles";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import HStackFull from "~/components/buildingBlocks/hStackFull";
-import IconButton from "~/components/buildingBlocks/iconButton";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
-import Flex from "~/components/buildingBlocks/flex";
-import ChatBubble, { AIChatBubble, UserChatBubble } from "./chatBubbles";
 import { useNavigation, useSearchParams, useSubmit } from "@remix-run/react";
 import { useEffect, useRef } from "react";
-import Modal from "~/components/buildingBlocks/modal";
 import { useState } from "react";
-import HStack from "~/components/buildingBlocks/hStack";
 import ChatTermsOfServiceContent from "./chatTermsOfService";
+import {
+  Flex,
+  FlexFull,
+  HStack,
+  HStackFull,
+  VStackFull,
+} from "~/buildingBlockComponents/mainContainers";
+import ScrollProgressBar from "~/mainDesignComponents/visual-elements/scrollProgressBar";
+import IconButton from "~/buildingBlockComponents/iconButton";
+import Modal from "~/buildingBlockComponents/modal";
+import ChatBubble from "./chatBubble";
+import { BoxCheckedIcon, BoxUncheckedIcon, RefreshIcon } from "styles";
 import CometTextSubmit from "./cometTextSubmit";
-import ScrollProgressBar from "./scrollProgressBar";
 
 export type ChatData = {
   messages: { text: string; timestamp: string; type: "ai" | "human" }[];
@@ -66,21 +68,21 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
 
   return (
     <>
-      <FlexFull className="h-[94svh] bg-500-radial3op75 border-550-md px-[1vh] pt-[1vh] xl:rounded-b-[0.7vh]">
+      <FlexFull className="h-95svh md:h-96svh lg:max-w-70vw xl:max-w-100vh bg-500-radial3op75 rounded-none lg:rounded-1vh lg:border-550-md p-1vh">
         <VStackFull
           className={`h-full justify-between relative overflow-hidden`}
           gap="gap-[0px]"
         >
           <FlexFull
             ref={chatContainerRef}
-            className={`h-[67svh] flex-shrink-0 overflow-x-hidden overflow-y-auto insetShadowXxl bg-col-950 border-900-md hide-scrollbar`}
+            className={`h-67svh flex-shrink-0 overflow-x-hidden overflow-y-auto insetShadowXxl bg-col-950 border-900-md hide-scrollbar`}
           >
             <ScrollProgressBar
               containerRef={chatContainerRef}
               position="absolute inset-0"
               height="h-0.5vh"
             />
-            <VStackFull className={`h-fit p-[1.5vh]`} gap="gap-[1.5vh]">
+            <VStackFull className={`h-fit p-1.5vh`} gap="gap-1.5vh">
               {messages.map((entry, index) => {
                 return entry.type === "ai" ? (
                   <ChatBubble
@@ -100,9 +102,9 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
               })}
             </VStackFull>
           </FlexFull>
-          <VStackFull className="h-[25svh] flex-shrink-0">
-            <HStackFull className="justify-between items-center h-[4svh] px-[1vh]">
-              <HStack className="textShadow justify-center text-sm-tight items-center h-[3vh] p-[0.5vh] bg-col-950 text-slate-100">
+          <VStackFull className="h-25svh flex-shrink-0">
+            <HStackFull className="justify-between items-center h-4svh px-1vh">
+              <HStack className="textShadow justify-center text-sm-tight items-center h-3vh p-0.5vh bg-col-950 text-slate-100">
                 <IconButton
                   type="smallUnstyled"
                   icon={boxChecked ? BoxCheckedIcon : BoxUncheckedIcon}
@@ -127,7 +129,7 @@ export default function ChatComponent({ messages, acceptedTerms }: ChatData) {
               />
             </HStackFull>
             <CometTextSubmit
-              textAreaHeight="h-[18svh]"
+              textAreaHeight="h-18svh"
               isLoading={isSubmitting}
               isDisabled={!boxChecked}
               onChange={() => {}}

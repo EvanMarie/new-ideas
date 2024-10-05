@@ -57,12 +57,13 @@ export default function RouteContainer({
   transition?: string;
   noPadding?: boolean;
 }) {
+  const pathname = useLocation().pathname;
   const scrollRef = useRef<HTMLDivElement>(null);
   const projectSlug = useParams().projectSlug;
   const blogSlug = useParams().blogSlug;
   const location = useLocation();
-  const isHome = location.pathname === "/home";
-  const isRoot = location.pathname === "/";
+  const isHome = pathname === "/home";
+  const isRoot = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   useScrollToHash();
   useArrowKeyScroll(scrollRef);
@@ -99,9 +100,8 @@ export default function RouteContainer({
   return (
     <>
       {/* ***************** DARK VIOLET IMAGE CHAT ***************** */}
-      {/* {isHome && ( */}
       <NavLink
-        to="/us#dark-violet-chat"
+        to={`/chat?from=${pathname}`}
         className="absolute bottom-[5svh] md:bottom-[3.5svh] left-1vh hover:cursor-pointer z-50"
       >
         <Tooltip label="Dark Violet chat" placement="topRight">
@@ -120,7 +120,6 @@ export default function RouteContainer({
           </Box>
         </Tooltip>
       </NavLink>
-      {/* )} */}
 
       {/* ***************** INSET SHADOWS TOP & BOTTOM ***************** */}
       <InsetShadowOverlay position="top" size="lg" />
@@ -168,6 +167,7 @@ export default function RouteContainer({
 
       {/* ***************** SCROLL TO TOP BUTTON ***************** */}
       <ScrollToTopButton scrollContainerRef={scrollRef} />
+
       {/* ***************** CONTENT OF PAGE ***************** */}
       <FlexFull
         className={`w-full h-100svh overflow-hidden ${bg} ${

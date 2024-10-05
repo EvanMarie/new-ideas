@@ -1,15 +1,16 @@
 import { Form, useSubmit } from "@remix-run/react";
 import { useEffect, useRef } from "react";
 import { BsSend } from "react-icons/bs";
-import { verticalAlign } from "styles";
-import Box from "~/components/buildingBlocks/box";
-import Center from "~/components/buildingBlocks/center";
-import Flex from "~/components/buildingBlocks/flex";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import IconButton from "~/components/buildingBlocks/iconButton";
-import TextArea from "~/components/buildingBlocks/textArea";
-import BouncingDots from "~/components/specialty/bouncingDots";
-import CometBorder from "~/components/specialty/cometBorder";
+import BouncingDots from "~/buildingBlockComponents/bouncingDots";
+import CometBorder from "~/buildingBlockComponents/cometBorder";
+import IconButton from "~/buildingBlockComponents/iconButton";
+import {
+  Box,
+  Center,
+  Flex,
+  FlexFull,
+} from "~/buildingBlockComponents/mainContainers";
+import TextArea from "~/buildingBlockComponents/textArea";
 
 export default function CometTextSubmit({
   isLoading,
@@ -71,8 +72,8 @@ export default function CometTextSubmit({
             {isLoading ? (
               <CometBorder
                 h="h-full"
-                p="p-[0.1vh]"
-                cometSize="p-[0.3vh]"
+                p="p-0.1vh"
+                cometSize="p-0.3vh"
                 cometSpeed="4s"
                 cometLength="80%"
               >
@@ -112,7 +113,6 @@ export default function CometTextSubmit({
               </FlexFull>
             )}
           </Box>
-          <Flex className={`${verticalAlign}`}></Flex>
         </Form>
       </FlexFull>
     </>
