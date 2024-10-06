@@ -63,14 +63,14 @@ export default function QuizGame() {
     <FlexFull className="bg-white rounded-none">
       <TransitionFull className="bg-[url('https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/coolCatQuizzesBg.png?resize=contain&quality=80')] bg-cover bg-no-repeat bg-sticky bg-center rounded-none">
         <FlexFull
-          className={`h-[100svh] p-[1vh] pb-[3svh] sm:p-[2vh] justify-center md:pb-[5svh] bg-green-300/60 backdrop-blur-sm rounded-none ${
+          className={`h-100svh py-2svh justify-center md:pb-5svh bg-green-300/60 backdrop-blur-sm rounded-none ${
             isSelectScreen && "items-center"
           }`}
         >
           <VStackFull
             className={`bg-white/70 bg-gradient-to-b from-sky-200/70 via-emerald-400/70 to-purple-300/70 ${
               isSelectScreen && "h-[70vh]"
-            } max-h-[95svh] sm:max-h-[94svh] md:h-full md:max-h-[93svh] md:w-[85vw] lg:w-[75vw] xl:w-[70vw] xxl:w-[65vw] rounded-[1.7vh] border-970-md shadowBroadLoose p-[1vh] md:p-[2vh] relative`}
+            } max-h-95svh sm:max-h-95svh md:h-full md:w-85vw lg:w-75vw xl:max-w-[100vh] rounded-1.7vh border-970-md shadowBroadLoose p-1vh md:p-2vh relative`}
           >
             {/* RETURN BUTTON  */}
             <ReturnPortalsMockups />

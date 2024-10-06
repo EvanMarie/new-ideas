@@ -72,12 +72,10 @@ export default function CoolCatQuizzesImage({
     return (
       <FlexFull
         className={`${
-          isModal
-            ? "h-fit relative max-h-[90vh] max-w-[90vw]"
-            : "h-full relative"
+          isModal ? "h-fit relative max-h-90vh max-w-90vw" : "h-full relative"
         }`}
       >
-        <VStack className="absolute z-10 top-[2vh] right-[2vh]">
+        <VStack className="absolute z-10 top-1vh right-1vh" gap="gap-1vh">
           {isModal ? (
             <Box
               className=" bg-slate-100/80 p-[0.7vh] hover:cursor-pointer"
