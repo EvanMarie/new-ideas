@@ -106,14 +106,14 @@ export default function AirbnbSearchSmallScreens({
     <>
       {/* ****************** HEADER MAIN SEARCH ****************** */}
       <CenterFull className="px-[2vh] py-[1vh] h-fit">
-        <HStackFull className="items-center">
+        <HStackFull className="items-center" gap="gap-1vh">
           <motion.div
-            className="bg-zinc-100 shadowNarrowTight w-full h-[5.3vh] rounded-[3vh] flex items-center p-[1vh]"
+            className="bg-zinc-100 shadowNarrowTight w-full h-5.3vh rounded-3vh flex items-center p-1vh hover:cursor-pointer text-slate-900"
             onClick={() => setSearchOpen(true)}
           >
             <HStackFull
               gap="gap-2vh"
-              className="h-full items-center"
+              className="h-full items-center hover:cursor-pointer"
               hoverCursor="hover:cursor-pointer"
             >
               <Icon
@@ -126,7 +126,7 @@ export default function AirbnbSearchSmallScreens({
                   {where ? where : "Where to?"}
                 </Text>
                 <HStackFull
-                  className="text-xs leading-tight text-zinc-500 gap-1vh"
+                  className="text-xs leading-tight text-zinc-500 gap-1vh hover:cursor-pointer"
                   hoverCursor="hover:cursor-pointer"
                 >
                   <Text>{!where ? "Anywhere" : ""}</Text>
@@ -139,7 +139,7 @@ export default function AirbnbSearchSmallScreens({
           <Center
             className={`p-[1vh] h-fit rounded-full bg-zinc-100 flex-shrink-0 ${hoverBorder}`}
           >
-            <Icon icon={FaSliders} iconClassName="text-[2vh]" />
+            <Icon icon={FaSliders} iconClassName="text-1.8vh" />
           </Center>
         </HStackFull>
       </CenterFull>
@@ -165,12 +165,15 @@ export default function AirbnbSearchSmallScreens({
             <FlexFull>
               <VStackFull>
                 {/* ************* HEADER ************* */}
-                <HStackFull className="p-[1vh] justify-between">
+                <HStackFull className="p-1vh justify-center">
                   <Center
-                    className="bg-white rounded-full p-[0.2vh] border-960-md hover:border-transparent transition-400"
+                    className="bg-white rounded-full p-0.2vh border-960-md hover:border-transparent transition-400 absolute top-[1vh] right-[1vh]"
                     onClick={() => setSearchOpen(false)}
                   >
-                    <Icon icon={MdClose} iconClassName="text-[2.3vh]" />{" "}
+                    <Icon
+                      icon={MdClose}
+                      iconClassName="text-2.3vh text-slate-900"
+                    />{" "}
                   </Center>
                   {/* ************* STAYS EXPERIENCES ************* */}
                   <StaysExperiences />
@@ -283,7 +286,7 @@ export function AirbnbSearchLargeScreens({
   setSelectedDateTwo: (date: Date | null) => void;
 }) {
   return (
-    <HStackFull className="justify-between items-center px-[1.5vh] xl:px-[2.5vh] xxl:px-[3.5vh] text-slate-900">
+    <HStackFull className="justify-between items-center px-1.5vh xl:px-2.5vh xxl:px-3.5vh text-slate-900 hover:cursor-pointer">
       <Logo />
       <AirbnbSearchLargeConvertible
         selectedDateOne={selectedDateOne}
@@ -359,7 +362,7 @@ export function AirbnbSearchLargeConvertible({
   return (
     <>
       <motion.div
-        className="bg-zinc-100 shadowNarrowTight w-fit h-[5.3vh] rounded-[3vh] flex items-center p-[1vh] hover:cursor-pointer text-slate-900"
+        className="bg-zinc-100 shadowNarrowTight w-fit h-[5.3vh] rounded-[3vh] flex items-center p-[1vh] hover:cursor-pointer text-slate-900 "
         variants={fadeInOut as Variants}
         initial="initial"
         animate="animate"
@@ -367,12 +370,12 @@ export function AirbnbSearchLargeConvertible({
         onClick={() => setModalOpen(true)}
       >
         <HStackFull
-          className="text-sm leading-tight text-zinc-500 items-center justify-between"
+          className="text-sm leading-tight text-zinc-500 items-center justify-between hover:cursor-pointer"
           gap="gap-[2vh]"
           hoverCursor="hover:cursor-pointer"
         >
           <HStack
-            className="items-center px-[2vh] text-xs lg:text-sm leading-tight text-nowrap text-slate-900  "
+            className="hover:cursor-pointer items-center px-[2vh] text-xs lg:text-sm leading-tight text-nowrap text-slate-900  "
             gap="gap-[1vh] lg:gap-[2vh]"
             hoverCursor="hover:cursor-pointer"
           >

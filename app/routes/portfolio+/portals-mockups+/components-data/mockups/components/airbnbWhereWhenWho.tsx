@@ -174,7 +174,7 @@ const Category = ({ label, description, count, setCount }: CategoryProps) => {
     >
       <div>
         <div className="text-lg font-semibold">{label}</div>
-        <div className="text-gray-500">{description}</div>
+        <div className="text-gray-500 text-md">{description}</div>
       </div>
       <div className="flex items-center">
         <button
@@ -246,10 +246,10 @@ export function WhoTopContent({
         animate="animate"
         exit="exit"
       >
-        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh] text-slate-900">
-          <VStackFull className="p-[3vh] " gap="gap-[2vh]">
+        <VStackFull className="rounded-2vh shadowNarrowTight bg-white text-slate-900 p-0.5vh">
+          <VStackFull gap="gap-2vh" className="rounded-2vh">
             <FlexFull className="text-lg mPlus-font font-semibold">
-              <div className="w-full mx-auto bg-white shadow-md rounded-lg">
+              <div className="w-full mx-auto bg-white rounded-lg">
                 <Category
                   label="Adults"
                   description="Ages 13 or above"
