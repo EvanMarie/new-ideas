@@ -42,12 +42,12 @@ export default function PortfolioProjectDisplay({
               <DarkFlexFull>
                 <VStackFull className="p-1vh" align="items-start" gap="gap-2vh">
                   <h3
-                    className="text-fuchsia-300 md:hidden"
-                    style={{ lineHeight: 0 }}
+                    className="text-fuchsia-300 xl:hidden"
+                    style={{ lineHeight: 1.2 }}
                   >
                     {info.heading}
                   </h3>
-                  <FlexFull className="hidden md:flex">
+                  <FlexFull className="hidden xl:flex">
                     <DividerHeading
                       heading={info.heading}
                       textColor="text-fuchsia-300"
@@ -72,9 +72,11 @@ export default function PortfolioProjectDisplay({
         {/* ********************** PROJECT IMAGES ********************** */}
         <FlexFull className="px-1vh rounded-0.7vh pt-3vh">
           <VStackFull>
-            <span className="text-3vh text-col-500 textFogXxs">
-              Project Images
-            </span>
+            <DividerHeading
+              heading="Project Images"
+              textShadow="textFogXxs"
+              dividerShadow="shadowNarrowTight"
+            />
             <VStackFull className="h-fit py-1vh" gap="gap-3vh">
               {portfolioItem.projectImages.map((image, index) => (
                 <VStack key={index} className="py-0.5vh">
@@ -86,7 +88,7 @@ export default function PortfolioProjectDisplay({
                       alt={portfolioItem.title}
                     />
                   </Flex>{" "}
-                  <span className="text-md pt-0.5vh">
+                  <span className="text-md pt-0.5vh textFogXxs">
                     Image {index + 1} - {image.title}
                   </span>
                 </VStack>

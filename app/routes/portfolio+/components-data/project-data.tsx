@@ -111,7 +111,7 @@ export const Projects = [
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/todays-assignments.webp?quality=50",
       },
       {
-        title: "Interactive Learning",
+        title: "Interactive Learning and Engaging Student Experience",
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/interactive-chat-assignment.webp?quality=50",
       },
       {
@@ -135,10 +135,6 @@ export const Projects = [
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/versatile-grading.webp?quality=50",
       },
       {
-        title: "Engaging Student Experience",
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/interactive-chat-assignment.webp?quality=50",
-      },
-      {
         title: "Comprehensive Administrative Tools",
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/comprehensive-administration.webp?quality=50",
       },
@@ -153,10 +149,6 @@ export const Projects = [
       {
         title: "Continuous Communication",
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/assignment-notes.webp?quality=50",
-      },
-      {
-        title: "User-Friendly Design",
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/lifePath/clean-interface.webp?quality=50",
       },
     ],
     thumbnail:
@@ -361,7 +353,7 @@ export const Projects = [
         dimension: "w-30%",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/chatter-create-character.png",
+        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/chatter-scenario.png",
         dimension: "w-40%",
       },
     ],
@@ -415,16 +407,8 @@ export const Projects = [
         title: "Voice Chat",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/chatter-scenario.png",
-        title: "Create a Scenario",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/chatter-info.png",
         title: "Chatter Info",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/chatter-scenario.png",
-        title: "View a Scenario",
       },
     ],
     thumbnail:
@@ -477,10 +461,6 @@ export const Projects = [
         title: "Register",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dvart-login.png",
-        title: "Login",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dvart-mainfeed.png",
         title: "Main Feed",
       },
@@ -491,10 +471,6 @@ export const Projects = [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dvart-imagecomment.png",
         title: "Comment",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dvart-boostimage.png",
-        title: "Boost",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dvart-viewthought.png",
@@ -543,10 +519,6 @@ export const Projects = [
         title: "Welcome Banner",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/moth-ramen-images.png",
-        title: "Parallax Images",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/moth-ramen-menu.png",
         title: "Menu",
       },
@@ -554,10 +526,6 @@ export const Projects = [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/moth-ramen-merch-banner.png",
         title: "Merch Banner",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/moth-ramen-merch-item-1.png",
-        title: "Merch Page",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/moth-ramen-merch-item-2.png",
@@ -623,10 +591,6 @@ export const Projects = [
         title: "Register",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-login.png",
-        title: "Login",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-thinglist.png",
         title: "Thing List",
       },
@@ -635,16 +599,8 @@ export const Projects = [
         title: "View Thing",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-editthing.png",
-        title: "Edit Thing",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-newthing.png",
         title: "New Thing Chat",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-userprofile.png",
-        title: "User Profile",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-friends.png",
@@ -659,20 +615,12 @@ export const Projects = [
         title: "User Badges",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-viewbadge.png",
-        title: "View Badge",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-chooseavatar.png",
         title: "Choose Avatar",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-chooselocation.png",
         title: "Choose Location",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-choosestatus.png",
-        title: "Choose Status",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dat-leaderboards.png",
@@ -725,10 +673,6 @@ export const Projects = [
     github: "https://github.com/EvanMarie/remix-vite-tailwind",
     projectImages: [
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-1-index.png",
-        title: "Welcome",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-2-colorscheme.png",
         title: "Colors",
       },
@@ -769,10 +713,6 @@ export const Projects = [
         title: "Dark Text Stroke",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-12-components.png",
-        title: "Components",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-13-compnents2.png",
         title: "Components",
       },
@@ -785,10 +725,6 @@ export const Projects = [
         title: "Alert",
       },
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-16-durationanimationdemo.png",
-        title: "Duration Animations",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-17-springanimationdemo.png",
         title: "Spring Animations",
       },
@@ -799,10 +735,6 @@ export const Projects = [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-19-masonrygriddemo.png",
         title: "Masonry Grid Demo",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/launchpad-20-modal.png",
-        title: "Modal",
       },
     ],
 
@@ -847,10 +779,6 @@ export const Projects = [
     github: "https://github.com/dwcarr/ihclanding",
     projectImages: [
       {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/ihc-index.png",
-        title: "Welcome",
-      },
-      {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/ihc-mainmenu.png",
         title: "Main Menu",
       },
@@ -865,10 +793,6 @@ export const Projects = [
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/ihc-components.png",
         title: "Components",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/ihc-uiux.png",
-        title: "Projects",
       },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/ihc-aiconcierge.png",
@@ -941,14 +865,6 @@ export const Projects = [
     link: "https://dreams.iheartcomponents.com/",
     github: "https://github.com/dwcarr/dreams",
     projectImages: [
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dreams-index.png",
-        title: "Dreams AI - Welcome",
-      },
-      {
-        src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dreams-share.png",
-        title: "Dreams AI - Share Dream",
-      },
       {
         src: "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/dreams-input.png",
         title: "Dreams AI - Input Dream",
