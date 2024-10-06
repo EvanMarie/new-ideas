@@ -40,7 +40,7 @@ export default function TeslaSmallScreenMenu({
       modalSize="w-full h-full"
     >
       <VStackFull
-        className="w-full h-screen overflow-y-auto bg-slate-100 rounded-none pb-[2vh] relative"
+        className="w-full h-screen overflow-y-auto bg-slate-100 rounded-none pb-[2vh] relative text-slate-900"
         gap="gap-[2vh]"
       >
         <HStackFull className="justify-between items-center px-[2vh] py-[1vh] fixed top-0 right-0 left-0 bg-slate-100">
@@ -71,7 +71,7 @@ export default function TeslaSmallScreenMenu({
         </HStackFull>
         {!menuType ? (
           <FlexFull className="h-full">
-            <VStackFull align="items-start px-[3vh] pt-[8vh]" gap="gap-[5vh]">
+            <VStackFull align="items-start px-3vh pt-9vh" gap="gap-3vh">
               <MenuItems setMenuType={setMenuType} isSmallMenu />
               <TeslaIconMenu />
             </VStackFull>

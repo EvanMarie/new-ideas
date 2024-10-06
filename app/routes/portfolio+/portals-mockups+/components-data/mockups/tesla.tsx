@@ -45,7 +45,7 @@ function MenuItem({
 }) {
   return (
     <motion.div
-      className="px-[0.5vh] h-fit hover:cursor-pointer hover:bg-slate-300/80 transition-400 w-full lg:w-fit"
+      className="p-0.5vh h-fit hover:cursor-pointer hover:bg-slate-300/80 transition-400 w-full lg:w-fit"
       onMouseOver={
         !isSmallMenu
           ? () => {
@@ -62,8 +62,13 @@ function MenuItem({
           : () => {}
       }
     >
-      <HStack className="w-full lg:w-fit items-center justify-between">
-        <Text className="text-[2.3vh] lg:text-[2vh] mPlus-font">{text}</Text>
+      <HStack className="w-full lg:w-fit items-center justify-between px-1vh">
+        <Text
+          className="text-2.3vh lg:text-2vh mPlus-font"
+          style={{ lineHeight: 1.4 }}
+        >
+          {text}
+        </Text>
         <Box className="lg:hidden pr-[1vh]">
           <Icon icon={FaChevronRight} />
         </Box>

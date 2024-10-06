@@ -12,6 +12,8 @@ export interface PortalMockupProps {
   description: string;
   thubmnail: string;
   projectComponent?: React.ReactNode;
+  githubLink?: string;
+  originalLink?: string;
 }
 
 export const portalsAndMockupsData: PortalMockupProps[] = [
@@ -26,6 +28,9 @@ export const portalsAndMockupsData: PortalMockupProps[] = [
     thubmnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/airbnb-mockup.webp",
     projectComponent: <AirBnBMockup />,
+    originalLink: "https://www.anthropic.com/",
+    githubLink:
+      "https://gist.github.com/EvanMarie/0a675ea41247ba3708eeccf8d89de3e4",
   },
   {
     id: "2",
@@ -37,6 +42,9 @@ export const portalsAndMockupsData: PortalMockupProps[] = [
       "This mockup presents a sleek and futuristic redesign of Anthropic’s web presence, showcasing AI innovations and emphasizing safety. Built with modern UI/UX principles, it highlights how advanced AI systems can be communicated effectively to a broad audience through clean design and intuitive navigation.",
     thubmnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/anthropic-mockup.webp",
+    originalLink: "https://www.airbnb.com/",
+    githubLink:
+      "https://gist.github.com/EvanMarie/242c224364817f449113a049fadf3a98",
     projectComponent: <AnthropicDemo />,
   },
   {
@@ -50,6 +58,9 @@ export const portalsAndMockupsData: PortalMockupProps[] = [
     thubmnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/tesla-mockup.webp",
     projectComponent: <TeslaMockup />,
+    originalLink: "https://www.tesla.com/",
+    githubLink:
+      "https://gist.github.com/EvanMarie/310e3f418d385554b9b5628d86e55fad",
   },
   {
     id: "4",

@@ -1773,6 +1773,18 @@ export default {
           "-webkit-mask-image":
             "radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%)",
         },
+        ".mPlus-font": {
+          fontFamily: '"M PLUS 1", sans-serif',
+        },
+        ".tesla-font": {
+          fontFamily: '"TESLA", sans-serif',
+        },
+        ".graffiti-font": {
+          fontFamily: '"KillCrazy BB", sans-serif',
+        },
+        ".mono-font": {
+          fontFamily: '"Roboto", monospace',
+        },
       });
     }),
     // INPUT AND TEXTAREA PLUGIN

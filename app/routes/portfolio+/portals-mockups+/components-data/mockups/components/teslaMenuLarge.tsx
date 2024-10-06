@@ -93,7 +93,7 @@ export default function TeslaLargeScreenMenu({
             />
             {/* Modal */}
             <motion.div
-              className={`fixed inset-0 top-0 left-0 right-0 h-fit w-full mPlus-font`}
+              className={`fixed inset-0 top-0 left-0 right-0 h-fit w-full mPlus-font text-slate-900`}
               style={{ ...style, zIndex: 17 }}
               variants={variants}
               initial="closed"

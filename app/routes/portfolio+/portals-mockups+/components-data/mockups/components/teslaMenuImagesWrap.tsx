@@ -17,7 +17,7 @@ export default function TeslaMenuImagesWrap({
   return (
     <Wrap className="w-full pt-[6vh] pb-[3vh] gap-[2.5vh] justify-evenly">
       {images.map((image, i) => (
-        <VStack className="hover:cursor-pointer" gap="gap-[0px]" key={i}>
+        <VStack className="hover:cursor-pointer" gap="gap-1vh" key={i}>
           <Box
             className="h-[11vh] p-[1.5vh]"
             hoverCursor="hover:cursor-pointer"
@@ -29,9 +29,9 @@ export default function TeslaMenuImagesWrap({
             />
           </Box>
           <Text className="font-semibold leading-[1.8vh]">{image.name}</Text>
-          <HStack className="underline leading-[1.8vh]">
-            <Text>Learn</Text>
-            <Text>Order</Text>
+          <HStack className="underline leading-[1.8vh] text-md gap-2vh">
+            <span>Learn</span>
+            <span>Order</span>
           </HStack>
         </VStack>
       ))}
