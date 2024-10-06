@@ -30,13 +30,15 @@ export default function ProjectIconButtons({
   return (
     <>
       <Flex className={`${direction} ${gap} ${className} ${justify} ${align}`}>
-        <ProjectButton
-          icon={IoIosLink}
-          label="link"
-          tooltipPlacement={tooltipPlacement as TooltipPlacement}
-          to={project.link}
-          target="_blank"
-        />
+        {project.link !== "" && (
+          <ProjectButton
+            icon={IoIosLink}
+            label="link"
+            tooltipPlacement={tooltipPlacement as TooltipPlacement}
+            to={project.link}
+            target="_blank"
+          />
+        )}
         <ProjectButton
           icon={FaGithub}
           label="github"

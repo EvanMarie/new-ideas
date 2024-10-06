@@ -26,7 +26,7 @@ export default function DivinationIos() {
   return (
     <DarkFlexFull>
       <VStackFull gap="gap-2vh">
-        <FlexFull className="sm:text-lg md:text-xl text-col-500 textFogXxs justify-center lg:hidden">
+        <FlexFull className="sm:text-lg md:text-xl text-fuchsia-300 textFogXxs justify-center lg:hidden">
           <span>Dreams & Divinations with Dark Violet</span>
         </FlexFull>
         <FlexFull
@@ -47,7 +47,7 @@ export default function DivinationIos() {
             </Box>
           </FlexFull>
           <VStackFull gap="gap-2vh" className="lg:w-2/3">
-            <FlexFull className="sm:text-lg md:text-xl text-col-500 textFogXxs justify-center hidden lg:flex">
+            <FlexFull className="sm:text-lg md:text-xl text-fuchsia-300 textFogXxs justify-center hidden lg:flex">
               <span>Dreams & Divinations with Dark Violet</span>
             </FlexFull>
             <HStackFull className="justify-evenly items-center">

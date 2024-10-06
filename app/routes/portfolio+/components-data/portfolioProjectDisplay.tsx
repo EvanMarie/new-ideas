@@ -24,7 +24,7 @@ export default function PortfolioProjectDisplay({
         <VStackFull align="items-end text-right px-1vh" gap="gap-0">
           <HStack className="items-center" gap="gap-2vh">
             <ProjectIconButtons project={portfolioItem} />
-            <h2 className="text-lg md:text-xl text-fuchsia-400 font-semibold kufam-font textFogXxs">
+            <h2 className="text-lg sm:text-2.6vh md:text-3.5vh lg:text-4vh text-fuchsia-400 font-semibold kufam-font textFogXxs">
               {portfolioItem.title}
             </h2>
           </HStack>
@@ -88,7 +88,7 @@ export default function PortfolioProjectDisplay({
                       alt={portfolioItem.title}
                     />
                   </Flex>{" "}
-                  <span className="text-md pt-0.5vh textFogXxs">
+                  <span className="text-md pt-0.5vh textFogXxs text-fuchsia-300">
                     Image {index + 1} - {image.title}
                   </span>
                 </VStack>

@@ -420,7 +420,7 @@ export const Projects = [
     title: "Dark Violet Art",
     slug: "dark-violet-art",
     description: "Social media art platform for art generated with AI tools.",
-    link: "/coming-soon/dark-violet-art-coming-soon",
+    link: "",
     github: "https://github.com/DarkViolet-ai/dark-violet-ai",
     projectInfoImages: [
       {
@@ -579,7 +579,7 @@ export const Projects = [
     slug: "do-a-thing",
     description:
       "Productivity social media to track, share, and celebrate accomplishments.",
-    link: "/coming-soon/do-a-thing-coming-soon",
+    link: "",
     github: "https://github.com/DarkViolet-ai/do-a-thing",
     projectImages: [
       {
