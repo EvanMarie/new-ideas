@@ -18,7 +18,7 @@ import { CloseIcon } from "styles";
 import { IoClose } from "react-icons/io5";
 import AnimteInContainer from "./components/animateInContainer";
 import AnimatedComponent from "~/components/specialty/animateOnScroll";
-import ReturnToMockupsButton from "./components/returnToMockupsButton";
+import ReturnPortalsMockups from "../returnPortalsMockups";
 
 export default function AnthropicDemo() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -100,7 +100,7 @@ export default function AnthropicDemo() {
       className="h-[100svh] bg-white overflow-y-auto "
       ref={layoutContainerRef}
     >
-      <ReturnToMockupsButton />
+      <ReturnPortalsMockups />
       <FlexFull
         className="bg-[#cc785c]/20 h-fit pt-[6vh] rounded-none"
         style={{ fontFamily: "Roboto, sans-serif" }}

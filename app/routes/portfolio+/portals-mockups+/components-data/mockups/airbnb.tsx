@@ -28,7 +28,7 @@ import {
 } from "./components/airbnbData";
 import AirBnBPropertyCard from "./components/airbnbPropertyCard";
 import AirbnbFooter from "./components/airbnbFooter";
-import ReturnToMockupsButton from "./components/returnToMockupsButton";
+import ReturnPortalsMockups from "../returnPortalsMockups";
 import {
   FlexFull,
   HStackFull,
@@ -79,7 +79,7 @@ export default function AirBnBMockup() {
       className="w-screen h-[100svh] bg-white text-slate-900 fixed inset-0 pb-[3vh] rounded-none"
       gap="gap-[0px]"
     >
-      <ReturnToMockupsButton />
+      <ReturnPortalsMockups />
       <HStackFull className="fixed top-0 left-0 right-0 h-[16vh] justify-center border-b-[0.2vh] border-b-slate-900/30 rounded-b-none">
         <VStackFull
           className=" h-full justify-between pt-[1.5vh]"

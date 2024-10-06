@@ -1,5 +1,5 @@
 import FlexFull from "~/components/buildingBlocks/flexFull";
-import ReturnToMockupsButton from "./returnToMockupsButton";
+import ReturnPortalsMockups from "../../returnPortalsMockups";
 import { useRef } from "react";
 import TransitionFull from "~/components/buildingBlocks/TransitionFull";
 
@@ -13,7 +13,7 @@ export default function MockupTemplate() {
           ref={layoutContainerRef}
         >
           {" "}
-          <ReturnToMockupsButton />
+          <ReturnPortalsMockups />
         </FlexFull>
       </TransitionFull>
     </FlexFull>

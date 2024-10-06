@@ -15,7 +15,7 @@ import { FaChevronRight } from "react-icons/fa";
 import Box from "~/components/buildingBlocks/box";
 import Center from "~/components/buildingBlocks/center";
 import CenterFull from "~/components/buildingBlocks/centerFull";
-import ReturnToMockupsButton from "./components/returnToMockupsButton";
+import ReturnPortalsMockups from "../returnPortalsMockups";
 import IsSafari from "~/utils/isSafari";
 
 export type MenuType =
@@ -167,7 +167,7 @@ export default function TeslaMockup() {
             style={{ WebkitOverflowScrolling: "touch", overflowY: "scroll" }}
           >
             {" "}
-            <ReturnToMockupsButton />
+            <ReturnPortalsMockups />
             <VStackFull className="h-fit" gap="gap-[0px]">
               {/* *************** HEADER *************** */}
               <TeslaNavMenu
