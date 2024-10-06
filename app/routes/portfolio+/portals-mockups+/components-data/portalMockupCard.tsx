@@ -3,11 +3,18 @@ import { PortalMockupProps } from "./mockups-portals-data";
 import {
   Flex,
   FlexFull,
+  HStack,
+  HStackFull,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
 import Image from "~/buildingBlockComponents/image";
 import Text from "~/buildingBlockComponents/text";
 import { ScrollTransition } from "~/mainDesignComponents/scrollTransition";
+import IconButton from "~/buildingBlockComponents/iconButton";
+import { FaGithub, FaLink } from "react-icons/fa";
+import { IoIosLink } from "react-icons/io";
+import ProjectButton from "~/mainDesignComponents/projectButton";
+import { PiGithubLogoFill } from "react-icons/pi";
 
 export default function PortalMockupCard({
   project,
@@ -30,9 +37,36 @@ export default function PortalMockupCard({
             </Flex>
             <FlexFull className="p-1vh sm:px-2vh md:px-3vh ">
               <VStackFull align="items-end text-right" gap="gap-1vh">
-                <Text className="text-xl text-col-500 textShadow">
-                  {project.title}
-                </Text>
+                <HStackFull className="justify-between">
+                  <HStack
+                    gap="gap-1vh"
+                    onClick={(
+                      e: React.MouseEvent<HTMLDivElement, MouseEvent>
+                    ) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    {project.githubLink && (
+                      <ProjectButton
+                        label="github"
+                        icon={PiGithubLogoFill}
+                        to={project.githubLink}
+                        target="_blank"
+                      />
+                    )}
+                    {project.originalLink && (
+                      <ProjectButton
+                        label="original"
+                        icon={IoIosLink}
+                        to={project.originalLink}
+                        target="_blank"
+                      />
+                    )}
+                  </HStack>
+                  <Text className="text-xl text-col-500 textShadow">
+                    {project.title}
+                  </Text>
+                </HStackFull>
                 <Text className="text-fuchsia-300 textShadow">
                   {project.tagline}
                 </Text>

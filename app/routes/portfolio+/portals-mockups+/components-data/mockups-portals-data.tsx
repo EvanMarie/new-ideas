@@ -2,6 +2,7 @@ import React from "react";
 import AirBnBMockup from "./mockups/airbnb";
 import AnthropicDemo from "./mockups/anthropic";
 import TeslaMockup from "./mockups/tesla";
+import QuizGame from "./portals/cool-cat-quizzes";
 
 export interface PortalMockupProps {
   id: string;
@@ -72,7 +73,7 @@ export const portalsAndMockupsData: PortalMockupProps[] = [
       "This portal is a fun, interactive experience where users can take a variety of quirky personality quizzes. Each quiz provides a unique, personalized analysis along with custom-generated images based on responses.",
     thubmnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/cool-cats-portal.webp",
-    projectComponent: <></>,
+    projectComponent: <QuizGame />,
   },
   {
     id: "5",

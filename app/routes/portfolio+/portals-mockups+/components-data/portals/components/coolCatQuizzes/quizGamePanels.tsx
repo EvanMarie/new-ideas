@@ -1,29 +1,31 @@
-import Box from "~/components/buildingBlocks/box";
-import DropDownMenu from "~/components/buildingBlocks/dropDownMenu";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
 import {
   QuizGameScreens,
   QuizQuestion,
   quizGameData,
   quizOptions,
 } from "./quizGameData";
-import Transition from "~/components/buildingBlocks/transition";
-import Flex from "~/components/buildingBlocks/flex";
-import Text from "~/components/buildingBlocks/text";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import Wrap from "~/components/buildingBlocks/wrap";
-import RenderParagraphs from "~/components/buildingBlocks/renderParagraphs";
-import TransitionFull from "~/components/buildingBlocks/TransitionFull";
-import HStackFull from "~/components/buildingBlocks/hStackFull";
 import { motion, useScroll } from "framer-motion";
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import Icon from "~/components/buildingBlocks/icon";
-import { BoxIcon, CheckIcon } from "styles";
-import Image from "~/components/buildingBlocks/image";
-import CenterFull from "~/components/buildingBlocks/centerFull";
-import BouncingDots from "~/components/specialty/bouncingDots";
 import { useNavigate } from "@remix-run/react";
 import CoolCatQuizzesImage from "./coolCatQuizzesImage";
+import {
+  Box,
+  CenterFull,
+  Flex,
+  FlexFull,
+  HStackFull,
+  TransitionFull,
+  VStackFull,
+  Wrap,
+} from "~/buildingBlockComponents/mainContainers";
+import DropDownMenu from "~/buildingBlockComponents/dropDownMenu";
+import Image from "~/buildingBlockComponents/image";
+import Icon from "~/buildingBlockComponents/icon";
+import Text from "~/buildingBlockComponents/text";
+import BouncingDots from "~/buildingBlockComponents/bouncingDots";
+import RenderParagraphs from "~/buildingBlockComponents/renderParagraphs";
+import { GoCheckbox } from "react-icons/go";
+import { RiCheckboxBlankLine } from "react-icons/ri";
 
 export function QuizGameSelectPanel({
   selectedQuiz,
@@ -57,7 +59,6 @@ export function QuizGameSelectPanel({
           <Image
             src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/coolCats.png?quality=70"
             alt="cool cats"
-            ariaLabel="Cool cats personality quizzes."
             className="w-full h-auto"
           />
         </Box>
@@ -85,13 +86,13 @@ export function QuizQuestionComponent({
     };
 
     return (
-      <Flex className="p-[0.7vh]">
+      <Flex className="p-0.7vh">
         <motion.div
           key={index}
           onClick={handleClick}
           whileHover={isSelected ? {} : { scale: 1.03 }}
           whileTap={{ scale: 0.9, transition: { duration: 0.4 } }}
-          className={`flex flex-row items-center hover:cursor-pointer px-[1vh] py-[0.2vh] text-[1.8vh] md:text-[2vh] border-970-md  gap-[0.3vh] ${
+          className={`flex flex-row items-center hover:cursor-pointer px-1vh pt-0.2vh pb-0.4vh  border-970-md  gap-0.5vh ${
             isSelected
               ? "bg-purple-800 text-white textShadow metallicEdgesSm"
               : "bg-orange-300 text-black shadowBroadTight hover:bg-orange-200 "
@@ -99,13 +100,16 @@ export function QuizQuestionComponent({
         >
           {isSelected ? (
             <Icon
-              icon={CheckIcon}
+              icon={GoCheckbox}
               iconClassName="text-[1.8vh] md:text-[2vh] "
             />
           ) : (
-            <Icon icon={BoxIcon} iconClassName="text-[1.8vh] md:text-[2vh] " />
+            <Icon
+              icon={RiCheckboxBlankLine}
+              iconClassName="text-[1.8vh] md:text-[2vh] "
+            />
           )}
-          <Text>{answer}</Text>
+          <span className="text-1.8vh font-semibold">{answer}</span>
         </motion.div>
       </Flex>
     );
@@ -113,12 +117,15 @@ export function QuizQuestionComponent({
 
   return (
     <VStackFull className="h-fit insetShadowXl bg-cyan-800/70 p-[1vh] border-970-md">
-      <HStackFull className=" px-[1vh] py-[0.5vh] flex-shrink-0 text-white textShadow text-[2vh] md:text-[2.3vh]">
-        <Text>
+      <HStackFull
+        className="text-md px-[1vh] py-[0.5vh] flex-shrink-0 text-white textShadow text-[2vh] md:text-[2.3vh]"
+        gap="gap-1vh"
+      >
+        <span>
           {String(index + 1)}
-          <span>.)</span>
-        </Text>
-        <Text>{questionData.question}</Text>
+          <span>.) </span>
+        </span>
+        <span> {questionData.question}</span>
       </HStackFull>
       <Wrap className="w-full justify-evenly">
         {questionData.answerOptions.map((answer, index) => (
@@ -197,10 +204,10 @@ export function QuizGameQuestionsPanel({
           />
         </FlexFull>
         <FlexFull
-          className="h-full max-h-full overflow-y-auto p-[1.5vh] insetShadowXl bg-slate-300/50 border-970-md "
+          className="h-full max-h-full overflow-y-auto hide-scrollbar p-1.5vh insetShadowXl bg-slate-300/50 border-970-md "
           ref={scrollYRef}
         >
-          <VStackFull className="h-fit p-[1vh] ">
+          <VStackFull className="h-fit p-1vh" gap="gap-1vh">
             {quizData?.quizQuestions.map((question, index) => (
               <QuizQuestionComponent
                 key={index}

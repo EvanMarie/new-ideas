@@ -1,8 +1,7 @@
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
 import { useRef } from "react";
+import { FlexFull, VStackFull } from "~/buildingBlockComponents/mainContainers";
+import Text from "~/buildingBlockComponents/text";
 import { usePortalChat } from "~/hooks/usePortalChat";
-import Text from "~/components/buildingBlocks/text";
 
 export type ChatData = {
   messages: { text: string; timestamp: string; type: "ai" | "human" }[];

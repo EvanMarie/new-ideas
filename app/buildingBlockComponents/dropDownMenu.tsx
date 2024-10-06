@@ -45,7 +45,7 @@ export default function DropDownMenu({
   }) {
     return (
       <HStackFull
-        className={`${alignment} ${bgSettings} ${elementTextSize} ${elementPadding} ${elementClassName} h-fit group file:rounded-none`}
+        className={`${alignment} ${bgSettings} ${elementTextSize} ${elementPadding} ${elementClassName} h-fit rounded-none group-hover:rounded-none`}
         onClick={() => {
           setSelectedOption(text);
           setIsDropDownOpen(false);
@@ -59,15 +59,11 @@ export default function DropDownMenu({
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
   return (
-    <VStackFull
-      className={` shadowNarrowNormal relative `}
-      gap="gap-[0.5vh]"
-      align="items-start"
-    >
+    <VStackFull className={`  relative `} gap="gap-[0.5vh]" align="items-start">
       {label && <DefaultLabel label={label} />}
       <HStackFull
         onClick={() => setIsDropDownOpen(!isDropDownOpen)}
-        className={`${bgSettings} ${menuTextColor} ${elementPadding} hover:cursor-pointer items-center justify-between ${
+        className={`${bgSettings} ${menuTextColor} ${elementPadding} hover:cursor-pointer items-center justify-between shadowNarrowNormal ${
           isDropDownOpen ? "rounded-b-none" : ""
         }  `}
         //   style={{ zIndex: 100 }}
@@ -101,7 +97,7 @@ export default function DropDownMenu({
             }}
           >
             <FlexFull
-              className={`${maxHeight} ${bgSettings} ${menuTextColor} overflow-y-auto rounded-t-none  transition-500`}
+              className={`${maxHeight} ${bgSettings} ${menuTextColor} overflow-y-auto rounded-t-none  transition-500 shadowNarrowNormal`}
             >
               <VStackFull
                 gap="gap-[0px]"

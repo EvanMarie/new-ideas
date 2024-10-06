@@ -1,28 +1,30 @@
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
 import {
   QuizGameScreens,
   quizGameData,
 } from "./components/coolCatQuizzes/quizGameData";
-import { useEffect, useState } from "react";
-import Text from "~/components/buildingBlocks/text";
-import CenterHorizontalFull from "~/components/buildingBlocks/centerHorizontalFull";
+import { useState } from "react";
 import {
   QuizGameQuestionsPanel,
   QuizGameResultsPanel,
   QuizGameSelectPanel,
 } from "./components/coolCatQuizzes/quizGamePanels";
-import Icon from "~/components/buildingBlocks/icon";
-import { ReturnPathIcon } from "styles";
 import { motion } from "framer-motion";
-import TransitionFull from "~/components/buildingBlocks/TransitionFull";
-import AnimateInPlaceText from "../components/animateInPlaceText";
-import VStack from "~/components/buildingBlocks/vStack";
 import { useSearchParams } from "@remix-run/react";
+import {
+  CenterFull,
+  Flex,
+  FlexFull,
+  Transition,
+  TransitionFull,
+  VStack,
+  VStackFull,
+} from "~/buildingBlockComponents/mainContainers";
+import AnimateInPlaceText from "~/buildingBlockComponents/animateInPlaceText";
+import Icon from "~/buildingBlockComponents/icon";
+import { IoArrowUndoOutline } from "react-icons/io5";
+import Text from "~/buildingBlockComponents/text";
 import { useSingleTextGen } from "~/hooks/useSingleTextGen";
-import ReturnToPortalsButton from "./components/returnToPortalsButton";
-import Flex from "~/components/buildingBlocks/flex";
-import Transition from "~/components/buildingBlocks/transition";
+import ReturnPortalsMockups from "../returnPortalsMockups";
 
 // Cool cat quizzes
 export default function QuizGame() {
@@ -70,12 +72,12 @@ export default function QuizGame() {
               isSelectScreen && "h-[70vh]"
             } max-h-[95svh] sm:max-h-[94svh] md:h-full md:max-h-[93svh] md:w-[85vw] lg:w-[75vw] xl:w-[70vw] xxl:w-[65vw] rounded-[1.7vh] border-970-md shadowBroadLoose p-[1vh] md:p-[2vh] relative`}
           >
-            {" "}
-            <ReturnToPortalsButton />
             {/* RETURN BUTTON  */}
+            <ReturnPortalsMockups />
+
             {screen !== "select" && (
               <motion.div
-                className="absolute top-[0.5vh] right-[0.5vh] md:top-[1vh] md:right-[1vh] p-[0.3vh] md:p-[0.5vh] bg-cyan-300 rounded-[1vh] border-970-md shadowBroadNormal hover:cursor-pointer group"
+                className="absolute top-0.5vh right-0.5vh md:top-1vh md:right-1vh p-0.3vh md:p-0.5vh bg-violet-800 rounded-3vh border-970-md shadowBroadNormal hover:cursor-pointer group"
                 onClick={() => {
                   setScreen("select");
                   setSelectedQuiz("Choose a Quiz");
@@ -87,14 +89,14 @@ export default function QuizGame() {
                 whileTap={{ scale: 0.9, transition: { duration: 0.4 } }}
               >
                 <Icon
-                  icon={ReturnPathIcon}
+                  icon={IoArrowUndoOutline}
                   iconClassName="text-[3vh] group-hover:-translate-y-[0.3vh] transition-400 "
                 />
               </motion.div>
             )}
             {/* HEADER INFO  */}
-            <CenterHorizontalFull className="h-fit flex-shrink-0">
-              <VStack gap="gap-[0px]">
+            <CenterFull className="h-fit flex-shrink-0">
+              <VStack gap="gap-1vh">
                 <AnimateInPlaceText
                   text="Cool Cat Quizzes"
                   isWave
@@ -104,18 +106,18 @@ export default function QuizGame() {
                   textShadow="textShadow"
                 />{" "}
                 {isSelectScreen ? (
-                  <Text className="text-[2.3vh] md:text-[3vh] mPlus-font">
+                  <Text className="text-[2.3vh] md:text-[3vh] mPlus-font text-purple-800 font-semibold">
                     What ARE you?
                   </Text>
                 ) : (
                   <Transition>
-                    <Flex className="text-[2.3vh] text-center md:text-[3vh] font-semibold">
+                    <Flex className="text-[2.3vh] text-center md:text-[3vh] font-semibold text-purple-800 textGlowXs">
                       {quizData?.quizName}
                     </Flex>
                   </Transition>
                 )}
               </VStack>
-            </CenterHorizontalFull>
+            </CenterFull>
             {/* PANELS  */}
             {isSelectScreen && (
               <QuizGameSelectPanel

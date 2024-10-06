@@ -324,7 +324,7 @@ const buttonStyles = plugin(function ({ addUtilities, theme }) {
     ".normalButtonStyles": generateButtonStyles(
       "2.1vh", // fontSize
       "3.5vh", // height
-      "indigo.800", // bgColor
+      "violet.800", // bgColor
       "col.100", // color
       "col.100", // borderColor
       "purple.800", // hoverBgColor
@@ -334,7 +334,7 @@ const buttonStyles = plugin(function ({ addUtilities, theme }) {
     ".smallButtonStyles": generateButtonStyles(
       "1.6vh", // fontSize
       "2.9vh", // height
-      "indigo.800", // bgColor
+      "violet.800", // bgColor
       "col.100", // color
       "col.100", // borderColor
       "purple.800", // hoverBgColor

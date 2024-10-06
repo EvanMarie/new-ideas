@@ -1,25 +1,22 @@
-import { useImageGenerator } from "~/hooks/useImageGenerator";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import { motion } from "framer-motion";
-import Flex from "~/components/buildingBlocks/flex";
-import Image from "~/components/buildingBlocks/image";
-import { Form } from "@remix-run/react";
-import TextAreaVStack from "~/components/buildingBlocks/textAreaVStack";
-import Button from "~/components/buildingBlocks/button";
-import { useEffect, useRef, useState } from "react";
-import CenterFull from "~/components/buildingBlocks/centerFull";
-import Modal from "~/components/buildingBlocks/modal";
-import Icon from "~/components/buildingBlocks/icon";
-import { CloseIcon, ExpandIcon } from "styles";
-import Box from "~/components/buildingBlocks/box";
+import { useEffect, useState } from "react";
+
+import { CloseIcon } from "styles";
 import { FaExpand } from "react-icons/fa";
-import VStack from "~/components/buildingBlocks/vStack";
-import Text from "~/components/buildingBlocks/text";
-import CenterHorizontalFull from "~/components/buildingBlocks/centerHorizontalFull";
+
 import { IoMdDownload } from "react-icons/io";
 import { useSingleTextGen } from "~/hooks/useSingleTextGen";
-import Center from "~/components/buildingBlocks/center";
+import { useImageGenerator } from "~/hooks/useImageGenerator";
+import {
+  Box,
+  Center,
+  CenterFull,
+  FlexFull,
+  VStack,
+} from "~/buildingBlockComponents/mainContainers";
+import Icon from "~/buildingBlockComponents/icon";
+import Image from "~/buildingBlockComponents/image";
+import Text from "~/buildingBlockComponents/text";
+import Modal from "~/buildingBlockComponents/modal";
 
 export default function CoolCatQuizzesImage({
   itemDescription,
@@ -109,7 +106,6 @@ export default function CoolCatQuizzesImage({
 
         <Image
           src={imageURL}
-          ariaLabel="Cool Cat Quizzes Image"
           alt="Cool Cat Quizzes Image"
           className="w-full h-full rounded-[0.5vh]"
         />
