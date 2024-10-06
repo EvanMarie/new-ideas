@@ -57,15 +57,15 @@ export function WhereTop({
         exit="exit"
         onClick={(e) => e.stopPropagation()}
       >
-        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh]">
-          <VStackFull className="p-[3vh] " gap="gap-[2vh]">
-            <FlexFull className="text-lg mPlus-font font-semibold">
+        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white text-slate-900 py-[1vh]">
+          <VStackFull className="p-[3vh]  text-slate-900" gap="gap-[2vh]">
+            <FlexFull className="text-lg mPlus-font font-semibold  text-slate-900">
               Where to?
             </FlexFull>
             <FlexFull className="relative">
               <Icon
                 icon={IoSearchCircleOutline}
-                iconClassName="text-[2vh]"
+                iconClassName="text-[2vh]  text-slate-900"
                 containerClassName="absolute top-[1.3vh] left-[1vh]"
               />
               <input

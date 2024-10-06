@@ -58,7 +58,7 @@ export default function FlexibleOptions({
   const unselectedStyles = "border-transparent bg-gray-200";
 
   return (
-    <VStackFull className="gap-y-[1vh] h-full">
+    <VStackFull className="gap-y-[1vh] h-full text-slate-900">
       <Text className="text-md">Stay for a</Text>
       <HStackFull className="gap-x-[1vh] justify-between px-[1vh]">
         <button

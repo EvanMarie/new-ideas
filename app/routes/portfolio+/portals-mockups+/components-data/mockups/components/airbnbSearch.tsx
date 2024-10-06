@@ -280,7 +280,7 @@ export function AirbnbSearchLargeScreens({
   setSelectedDateTwo: (date: Date | null) => void;
 }) {
   return (
-    <HStackFull className="justify-between items-center px-[1.5vh] xl:px-[2.5vh] xxl:px-[3.5vh]">
+    <HStackFull className="justify-between items-center px-[1.5vh] xl:px-[2.5vh] xxl:px-[3.5vh] text-slate-900">
       <Logo />
       <AirbnbSearchLargeConvertible
         selectedDateOne={selectedDateOne}
@@ -356,7 +356,7 @@ export function AirbnbSearchLargeConvertible({
   return (
     <>
       <motion.div
-        className="bg-zinc-100 shadowNarrowTight w-fit h-[5.3vh] rounded-[3vh] flex items-center p-[1vh] hover:cursor-pointer "
+        className="bg-zinc-100 shadowNarrowTight w-fit h-[5.3vh] rounded-[3vh] flex items-center p-[1vh] hover:cursor-pointer text-slate-900"
         variants={fadeInOut as Variants}
         initial="initial"
         animate="animate"
@@ -369,7 +369,7 @@ export function AirbnbSearchLargeConvertible({
           hoverCursor="hover:cursor-pointer"
         >
           <HStack
-            className="items-center px-[2vh] text-xs lg:text-sm leading-tight text-nowrap"
+            className="items-center px-[2vh] text-xs lg:text-sm leading-tight text-nowrap text-slate-900  "
             gap="gap-[1vh] lg:gap-[2vh]"
             hoverCursor="hover:cursor-pointer"
           >
@@ -403,7 +403,7 @@ export function AirbnbSearchLargeConvertible({
           className="flex w-full h-full flex-col"
           onClick={() => setMenuState(null)}
         >
-          <VStackFull className="h-[16vh] justify-between ">
+          <VStackFull className="h-[16vh] justify-between text-slate-900">
             <VStackFull className="h-full justify-between bg-zinc-100 p-[1.5vh]">
               <CenterFull>
                 <HStackFull className="justify-between px-[1vh] xxl:px-[2vh] items-center">
@@ -828,7 +828,7 @@ function StaysExperiences() {
 function ExpandableSearchRightIcons() {
   return (
     <HStack className="flex-shrink-0 items-center" gap="gap-[2vh]">
-      <Flex className="rounded-[3vh] hover:bg-slate-800/10 transition-400 px-[1vh] py-[0.5vh] hover:cursor-pointer">
+      <Flex className="rounded-[3vh] hover:bg-slate-800/10 transition-400 px-[1vh] py-[0.5vh] hover:cursor-pointer text-md">
         List yours
       </Flex>
       <Flex className="rounded-[3vh] hover:bg-slate-800/10 transition-400  px-[1vh] py-[0.5vh]">
