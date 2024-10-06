@@ -14,7 +14,7 @@ import PortalMockupCard from "./components-data/portalMockupCard";
 export default function PortalMockupIndex() {
   return (
     <>
-      <Wrap className="pt-4vh justify-evenly">
+      <Wrap className="pt-4vh justify-evenly items-stretch">
         {portalsAndMockupsData.map((project, index) => (
           <PortalMockupCard project={project} index={index} />
         ))}

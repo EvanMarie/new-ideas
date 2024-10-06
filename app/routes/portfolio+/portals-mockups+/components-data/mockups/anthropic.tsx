@@ -1,24 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { TbMenu } from "react-icons/tb";
-import Flex from "~/components/buildingBlocks/flex";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import HStack from "~/components/buildingBlocks/hStack";
-import Icon from "~/components/buildingBlocks/icon";
-import Text from "~/components/buildingBlocks/text";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
 import { motion } from "framer-motion";
-import HStackFull from "~/components/buildingBlocks/hStackFull";
-import CenterHorizontalFull from "~/components/buildingBlocks/centerHorizontalFull";
-import Image from "~/components/buildingBlocks/image";
-import Box from "~/components/buildingBlocks/box";
-import VStack from "~/components/buildingBlocks/vStack";
-import Divider from "~/components/buildingBlocks/divider";
-import Modal from "~/components/buildingBlocks/modal";
-import { CloseIcon } from "styles";
 import { IoClose } from "react-icons/io5";
 import AnimteInContainer from "./components/animateInContainer";
-import AnimatedComponent from "~/components/specialty/animateOnScroll";
 import ReturnPortalsMockups from "../returnPortalsMockups";
+import {
+  Box,
+  CenterFull,
+  Flex,
+  FlexFull,
+  HStack,
+  HStackFull,
+  VStack,
+  VStackFull,
+} from "~/buildingBlockComponents/mainContainers";
+import Text from "~/buildingBlockComponents/text";
+import Icon from "~/buildingBlockComponents/icon";
+import Image from "~/buildingBlockComponents/image";
+import AnimatedComponentSpring from "~/mainDesignComponents/visual-elements/animatedComponentSpring";
+import Divider from "~/buildingBlockComponents/divider";
+import Modal from "~/buildingBlockComponents/modal";
 
 export default function AnthropicDemo() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -97,7 +98,7 @@ export default function AnthropicDemo() {
 
   return (
     <FlexFull
-      className="h-[100svh] bg-white overflow-y-auto "
+      className="h-[100svh] bg-white overflow-y-auto text-neutral-900"
       ref={layoutContainerRef}
     >
       <ReturnPortalsMockups />
@@ -129,7 +130,7 @@ export default function AnthropicDemo() {
               NTHROP\C -ESQUE
             </motion.span>
           </motion.div>
-          <HStack gap="gap-[1vh] lg:gap-[2vh] xl:gap-[4vh] xxl:gap-[5vh] h-full items-center hidden md:flex">
+          <HStack gap="gap-[1vh] lg:gap-[2vh] xl:gap-[4vh] xxl:gap-[5vh] h-full items-center hidden text-md lg:text-lg md:flex">
             <Text>ClaudETTE</Text> <Text>API</Text> <Text>Research</Text>
             <Text>Company</Text> <Text>News</Text> <Text>Careers</Text>
           </HStack>
@@ -147,7 +148,6 @@ export default function AnthropicDemo() {
               <Image
                 src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/anthropic_demo_image_2.png?width=600&resize=contain&quality=75"
                 alt="main Anthropic mockup image"
-                ariaLabel="main Anthropic mockup image"
                 className="w-full h-full"
               />
             </Flex>
@@ -156,7 +156,7 @@ export default function AnthropicDemo() {
               gap="gap-[2vh] lg:gap-[3vh] xl:gap-[4vh]  "
               className="xl:w-[60vw] xxl:w-[50vw] "
             >
-              <CenterHorizontalFull>
+              <CenterFull>
                 <Flex className="w-[85vw] md:w-[75vw] leading-tight">
                   <Text>
                     <AnimteInContainer
@@ -196,10 +196,10 @@ export default function AnthropicDemo() {
                     </AnimteInContainer>
                   </Text>
                 </Flex>
-              </CenterHorizontalFull>
-              <CenterHorizontalFull>
+              </CenterFull>
+              <CenterFull>
                 <FlexFull className="flex-col gap-[2vh] items-center md:flex-row md:justify-center md:w-85% md:h-full xl:gap-[4vh] xxl:gap-[6vh]">
-                  <CenterHorizontalFull className="md:h-full">
+                  <CenterFull className="md:h-full">
                     <AnimteInContainer delay={0.3}>
                       <Flex className="w-[85vw] md:w-full h-fit p-[2.5vh] bg-rose-100 rounded-[3vh] lg:w-[40vh] xl:w-[45vh]">
                         <VStackFull align="items-start" gap="gap-[0.5vh]">
@@ -215,16 +215,16 @@ export default function AnthropicDemo() {
                             Some description about this new AI model, that is
                             super fast and conversational.{" "}
                           </Text>
-                          <CenterHorizontalFull>
+                          <CenterFull>
                             <Flex className="px-[5vh] py-[2vh] w-85% justify-center rounded-[2vh] bg-[#120c09] text-[#fca688] text-[1.8vh] hover:bg-[#120c09]/60 transition-400 hover:cursor-pointer">
                               Talk to Claudette
                             </Flex>
-                          </CenterHorizontalFull>
+                          </CenterFull>
                         </VStackFull>
                       </Flex>
                     </AnimteInContainer>
-                  </CenterHorizontalFull>
-                  <CenterHorizontalFull className="md:h-full">
+                  </CenterFull>
+                  <CenterFull className="md:h-full">
                     <AnimteInContainer delay={0.6}>
                       <Flex className="w-[85vw] md:w-90% h-fit md:h-full p-[2.5vh] bg-rose-100 rounded-[3vh] lg:w-[40vh] xl:w-[45vh]">
                         <VStackFull
@@ -242,17 +242,17 @@ export default function AnthropicDemo() {
                             Start using Claudette, and make your business
                             amazing!
                           </Text>
-                          <CenterHorizontalFull>
+                          <CenterFull>
                             <Flex className="px-[5vh] py-[2vh]  w-85% justify-center  rounded-[2vh] text-[1.8vh] border-[0.3vh] border-[#deac9b] hover:cursor-pointer hover:bg-[#f57d53]/20 transition-400">
                               Start chatting
                             </Flex>
-                          </CenterHorizontalFull>
+                          </CenterFull>
                         </VStackFull>
                       </Flex>
                     </AnimteInContainer>
-                  </CenterHorizontalFull>
+                  </CenterFull>
                 </FlexFull>
-              </CenterHorizontalFull>
+              </CenterFull>
             </VStackFull>
           </FlexFull>
           {/* ************************************ TWO ************************************ */}
@@ -262,21 +262,27 @@ export default function AnthropicDemo() {
                 <Text className="text-[2.5vh] font-semibold">Our Work</Text>
               </FlexFull>
               <FlexFull className="flex-col items-center md:justify-evenly md:flex-row gap-[3vh]">
-                <AnimatedComponent runOnce className={workContainerDimensions}>
+                <AnimatedComponentSpring
+                  runOnce
+                  className={workContainerDimensions}
+                >
                   <WorkContainer
                     heading="Announcments"
                     text="Introducing Claudette, the next generation of AI."
                     date="March 1, 2024"
                   />
-                </AnimatedComponent>
-                <AnimatedComponent runOnce className={workContainerDimensions}>
+                </AnimatedComponentSpring>
+                <AnimatedComponentSpring
+                  runOnce
+                  className={workContainerDimensions}
+                >
                   <WorkContainer
                     heading="Research | AI"
                     text="Introducing ground-breaking, ethical, and innovative AI research."
                     date="February 20, 2024"
                   />
-                </AnimatedComponent>
-                <AnimatedComponent
+                </AnimatedComponentSpring>
+                <AnimatedComponentSpring
                   runOnce
                   className={`${workContainerDimensions}flex md:hidden xl:flex`}
                 >
@@ -285,23 +291,22 @@ export default function AnthropicDemo() {
                     text="AI with values, safety, and security that you can depend on."
                     date="February 12, 2024"
                   />
-                </AnimatedComponent>
+                </AnimatedComponentSpring>
               </FlexFull>
             </VStack>
           </FlexFull>
           {/* ************************************ THREE ************************************ */}
           <FlexFull className="h-fit py-[5vh]  md:justify-center bg-[#ebccc3] rounded-none">
             <FlexFull className="gap-[5vh] flex-col md:flex-row md:w-[85vw] h-full items-center">
-              <CenterHorizontalFull className="h-fit py-[5vh] md:w-[40vw]">
+              <CenterFull className="h-fit py-[5vh] md:w-[40vw]">
                 <Box className="w-[65vw] h-[25vh] lg:w-[40vw] lg:h-[35vh] xl:w-[30vw] rounded-[3vh]">
                   <Image
                     src="https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/anthropic-demo-image.png?width=500&resize=contain&quality=50"
                     alt="work at Anthropic-esque"
-                    ariaLabel="work at Anthropic-esque"
                     className="w-full h-full rounded-[3vh]"
                   />
                 </Box>
-              </CenterHorizontalFull>
+              </CenterFull>
               <FlexFull className="h-fit justify-center md:w-[40vw] items-center lg:h-ful">
                 <VStack align="items-start" className="w-[85vw] h-full ">
                   <Text className="font-semibold text-[2.5vh]">
@@ -320,7 +325,7 @@ export default function AnthropicDemo() {
           </FlexFull>
           {/* ************************************ FOUR ************************************ */}
           <FlexFull className="h-fit bg-[#120c09] rounded-none ">
-            <CenterHorizontalFull>
+            <CenterFull>
               <VStackFull className="pb-[1vh]">
                 <Flex className="w-[85vw]">
                   <FlexFull className="py-[5vh] flex-col items-start lg:flex-row">
@@ -382,7 +387,7 @@ export default function AnthropicDemo() {
                   </Text>
                 </Flex>
               </VStackFull>
-            </CenterHorizontalFull>
+            </CenterFull>
           </FlexFull>
         </VStackFull>
       </FlexFull>

@@ -1,5 +1,6 @@
 import React from "react";
 import AirBnBMockup from "./mockups/airbnb";
+import AnthropicDemo from "./mockups/anthropic";
 
 export interface PortalMockupProps {
   id: string;
@@ -35,7 +36,7 @@ export const portalsAndMockupsData: PortalMockupProps[] = [
       "This mockup presents a sleek and futuristic redesign of Anthropic’s web presence, showcasing AI innovations and emphasizing safety. Built with modern UI/UX principles, it highlights how advanced AI systems can be communicated effectively to a broad audience through clean design and intuitive navigation.",
     thubmnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/anthropic-mockup.webp",
-    projectComponent: <></>,
+    projectComponent: <AnthropicDemo />,
   },
   {
     id: "3",
