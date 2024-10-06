@@ -14,7 +14,7 @@ export default function PortfolioIndex() {
       {slug ? (
         <Outlet />
       ) : (
-        <VStackFull className="pt-4vh">
+        <VStackFull className="pt-3vh">
           <Wrap className="w-full justify-evenly min-h-full items-evenly">
             <PortfolioIndexCard
               link="portals-mockups"
