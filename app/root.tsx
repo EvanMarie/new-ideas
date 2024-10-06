@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useParams,
 } from "@remix-run/react";
 import "tailwind.css";
 import { FlexFull } from "./buildingBlockComponents/mainContainers";
@@ -28,6 +29,7 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const portalMockupSlug = useParams().portalMockupSlug;
   return (
     <html lang="en">
       <head>
@@ -40,7 +42,7 @@ export default function App() {
         <FlexFull className="bg-indigo-800/70 bg-gradient-to-r from-slate-800/40 via-slate-900/30 to-slate-800/50 h-100svh max-h-100svh first-line:overflow-hidden rounded-none relative">
           <Outlet />
           {/* ***************** WHEN TO SHOW NAV ***************** */}
-          <MainNavBar />
+          {!portalMockupSlug && <MainNavBar />}
           <ScrollRestoration />
           <Scripts />
         </FlexFull>
