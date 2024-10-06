@@ -85,7 +85,7 @@ export default function AirBnBPropertyCard({
               {imageNumbers.map((image, index) => (
                 <Flex
                   key={index}
-                  className={`flex-shrink-0 rounded-[2vh] snap-start snap-always w-full`}
+                  className={`flex-shrink-0 rounded-2.2vh snap-start snap-always w-full`}
                 >
                   <Image
                     src={`https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/mockups/airbnb_properties${String(
@@ -93,7 +93,7 @@ export default function AirBnBPropertyCard({
                     )}.png?width=900&resize=contain&quality=50`}
                     key={image}
                     alt={`airbnb ${index}`}
-                    className="rounded-[2vh]"
+                    className="rounded-2vh "
                   />
                 </Flex>
               ))}
@@ -109,11 +109,11 @@ export default function AirBnBPropertyCard({
               {property.location}
             </Text>
             <HStack
-              gap="gap-[0px]"
+              gap="gap-0.5vh"
               className="items-center"
               hoverCursor="hover:cursor-pointer"
             >
-              <FaStar className="text-black" />
+              <FaStar className="text-black text-md" />
               <Text className="text-md leading-tight">
                 {Number(property.rating).toFixed(1)}
               </Text>

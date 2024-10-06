@@ -60,7 +60,7 @@ export default function FlexibleOptions({
   return (
     <VStackFull className="gap-y-[1vh] h-full text-slate-900">
       <Text className="text-md">Stay for a</Text>
-      <HStackFull className="gap-x-[1vh] justify-between px-[1vh]">
+      <HStackFull className="gap-x-[1vh] justify-between px-[1vh] text-slate-900">
         <button
           onClick={() => setSelectedDuration("weekend")}
           className={`${baseStyles} ${

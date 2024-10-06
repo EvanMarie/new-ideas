@@ -12,7 +12,7 @@ import {
   VStack,
   VStackFull,
 } from "~/buildingBlockComponents/mainContainers";
-import { IoSearchCircleOutline } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 import Icon from "~/buildingBlockComponents/icon";
 import Image from "~/buildingBlockComponents/image";
 import Text from "~/buildingBlockComponents/text";
@@ -59,12 +59,12 @@ export function WhereTop({
       >
         <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white text-slate-900 py-[1vh]">
           <VStackFull className="p-[3vh]  text-slate-900" gap="gap-[2vh]">
-            <FlexFull className="text-lg mPlus-font font-semibold  text-slate-900">
+            <FlexFull className="text-lg mPlus-font font-semibold text-slate-900">
               Where to?
             </FlexFull>
             <FlexFull className="relative">
               <Icon
-                icon={IoSearchCircleOutline}
+                icon={FaSearch}
                 iconClassName="text-[2vh]  text-slate-900"
                 containerClassName="absolute top-[1.3vh] left-[1vh]"
               />
@@ -92,7 +92,9 @@ export function WhereTop({
                         className=" rounded-[0.8vh] w-full h-full"
                       />
                     </Box>
-                    <Text>{location.label}</Text>
+                    <Text className=" text-slate-900 text-md">
+                      {location.label}
+                    </Text>
                   </VStack>
                 </Flex>
               ))}
@@ -134,7 +136,7 @@ export function WhenTop({
       >
         <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh]">
           <VStackFull className="p-[3vh] " gap="gap-[2vh]">
-            <FlexFull className="text-lg mPlus-font font-semibold">
+            <FlexFull className="text-lg mPlus-font font-semibold text-slate-900">
               When is your trip?
             </FlexFull>
             <DateSelector
@@ -167,7 +169,7 @@ const Category = ({ label, description, count, setCount }: CategoryProps) => {
 
   return (
     <div
-      className="flex justify-between items-center p-[2vh] border-b border-gray-300 mPlus-font"
+      className="flex justify-between items-center p-2vh mPlus-font"
       onClick={(e) => e.stopPropagation()}
     >
       <div>
@@ -244,7 +246,7 @@ export function WhoTopContent({
         animate="animate"
         exit="exit"
       >
-        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh]">
+        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh] text-slate-900">
           <VStackFull className="p-[3vh] " gap="gap-[2vh]">
             <FlexFull className="text-lg mPlus-font font-semibold">
               <div className="w-full mx-auto bg-white shadow-md rounded-lg">

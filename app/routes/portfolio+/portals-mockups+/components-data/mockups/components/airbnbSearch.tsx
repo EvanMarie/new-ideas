@@ -4,7 +4,8 @@ import { MdClose } from "react-icons/md";
 import { FaSliders } from "react-icons/fa6";
 import DateSelector from "./airbnbDateSelector";
 import { CiGlobe } from "react-icons/ci";
-import { IoMenu, IoSearchCircleOutline } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { TbBrandAirbnb } from "react-icons/tb";
 import FormatDate from "~/utils/formatDate";
@@ -111,11 +112,12 @@ export default function AirbnbSearchSmallScreens({
             onClick={() => setSearchOpen(true)}
           >
             <HStackFull
+              gap="gap-2vh"
               className="h-full items-center"
               hoverCursor="hover:cursor-pointer"
             >
               <Icon
-                icon={IoSearchCircleOutline}
+                icon={FaSearch}
                 iconClassName="text-[2.3vh]"
                 containerClassName="flex flex-shrink-0"
               />
@@ -124,7 +126,7 @@ export default function AirbnbSearchSmallScreens({
                   {where ? where : "Where to?"}
                 </Text>
                 <HStackFull
-                  className="text-xs leading-tight text-zinc-500 "
+                  className="text-xs leading-tight text-zinc-500 gap-1vh"
                   hoverCursor="hover:cursor-pointer"
                 >
                   <Text>{!where ? "Anywhere" : ""}</Text>
@@ -251,8 +253,9 @@ export default function AirbnbSearchSmallScreens({
                 <HStack
                   className="w-full items-center"
                   hoverCursor="hover:cursor-pointer"
+                  gap="gap-1vh"
                 >
-                  <Icon icon={IoSearchCircleOutline} />
+                  <Icon icon={FaSearch} />
                   <Text>Search</Text>
                 </HStack>
               </button>
@@ -381,10 +384,7 @@ export function AirbnbSearchLargeConvertible({
           <Center
             className={`p-[0.5vh] h-fit rounded-full bg-pink-500 flex-shrink-0 ${hoverBorder}`}
           >
-            <Icon
-              icon={IoSearchCircleOutline}
-              iconClassName="text-[2vh] text-white"
-            />
+            <Icon icon={FaSearch} iconClassName="text-[2vh] text-white" />
           </Center>
         </HStackFull>
       </motion.div>
@@ -487,16 +487,16 @@ export function AirbnbSearchLargeConvertible({
                       className={`p-[0.8vh] h-fit rounded-full bg-pink-500 flex-shrink-0 ${hoverBorder} flex-shrink-0 md:flex xl:hidden`}
                     >
                       <Icon
-                        icon={IoSearchCircleOutline}
+                        icon={FaSearch}
                         iconClassName="text-[2.3vh] text-white"
                       />
                     </Center>
                     <Center
                       className={`p-[0.8vh] h-fit rounded-[3vh] bg-pink-500 flex-shrink-0 ${hoverBorder} flex-shrink-0 md:hidden xl:flex`}
                     >
-                      <HStack className="h-full items-center">
+                      <HStack className="h-full items-center" gap="gap-1vh">
                         <Icon
-                          icon={IoSearchCircleOutline}
+                          icon={FaSearch}
                           iconClassName="text-[2.3vh] text-white"
                         />
                         <Text className="text-md text-white ">Search</Text>
@@ -586,14 +586,14 @@ function SectionCollapsed({
   return (
     <Transition className="w-full p-[0.5vh]">
       <div
-        className={`p-[1vh] hover:cursor-pointer flex w-full justify-between ${hoverBorder} bg-white`}
+        className={`p-[1vh] hover:cursor-pointer flex w-full justify-between ${hoverBorder} bg-white text-slate-900`}
         onClick={() => {
           console.log(`Changing menu state to: ${label}`);
           onClick();
         }}
       >
         <Text className="font-semibold">{label}</Text>
-        <Text>{status}</Text>
+        <Text className="text-md">{status}</Text>
       </div>
     </Transition>
   );
@@ -611,7 +611,7 @@ function WhereTop({
   setMenuState: (menuState: MenuStateType) => void;
 }) {
   const locations = [
-    { label: "flexible", fileName: "flexible" },
+    { label: "Flexible", fileName: "flexible" },
     { label: "Europe", fileName: "europe" },
     { label: "Mexico", fileName: "mexico" },
     { label: "Caribben", fileName: "caribbean" },
@@ -633,19 +633,19 @@ function WhereTop({
         exit="exit"
         onClick={(e) => e.stopPropagation()}
       >
-        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh]">
-          <VStackFull className="p-[3vh] " gap="gap-[2vh]">
-            <FlexFull className="text-lg mPlus-font font-semibold">
+        <VStackFull className="rounded-2vh shadowNarrowTight bg-white py-[1vh]">
+          <VStackFull className="p-3vh " gap="gap-2vh">
+            <FlexFull className="text-lg mPlus-font font-semibold text-slate-900">
               Where to?
             </FlexFull>
             <FlexFull className="relative">
               <Icon
-                icon={IoSearchCircleOutline}
-                iconClassName="text-[2vh]"
+                icon={FaSearch}
+                iconClassName="text-2vh text-slate-900"
                 containerClassName="absolute top-[1.3vh] left-[1vh]"
               />
               <input
-                className="w-full h-[4.5vh] pl-[4vh] border-860-md text-md"
+                className="w-full h-4.5vh pl-4vh border-860-md text-md"
                 placeholder={where}
               />
             </FlexFull>
@@ -668,7 +668,9 @@ function WhereTop({
                         className=" rounded-[0.8vh] w-full h-full"
                       />
                     </Box>
-                    <Text>{location.label}</Text>
+                    <Text className="text-slate-900 text-md">
+                      {location.label}
+                    </Text>
                   </VStack>
                 </Flex>
               ))}
@@ -710,7 +712,7 @@ function WhenTop({
       >
         <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh]">
           <VStackFull className="p-[3vh] " gap="gap-[2vh]">
-            <FlexFull className="text-lg mPlus-font font-semibold">
+            <FlexFull className="text-lg mPlus-font font-semibold  text-slate-900">
               When is your trip?
             </FlexFull>
             <DateSelector
@@ -763,8 +765,8 @@ function WhoTop({
         animate="animate"
         exit="exit"
       >
-        <VStackFull className="rounded-[2vh] shadowNarrowTight bg-white py-[1vh]">
-          <VStackFull className="p-[3vh] " gap="gap-[2vh]">
+        <VStackFull className="rounded-2vh bg-white py-1vh">
+          <VStackFull className="p-3vh " gap="gap-2vh">
             <FlexFull className="text-lg mPlus-font font-semibold">
               <WhoTopContent
                 menuState={menuState}
@@ -790,7 +792,10 @@ function WhoTop({
 function StaysExperiences() {
   const [stays, setStays] = useState("stays");
   return (
-    <motion.div className="flex gap-[3vh] mPlus-font" layoutId="border-bottom">
+    <motion.div
+      className="flex gap-3vh mPlus-font text-slate-900"
+      layoutId="border-bottom"
+    >
       <motion.div
         onClick={() => setStays("stays")}
         className={`text-md hover:cursor-pointer ${

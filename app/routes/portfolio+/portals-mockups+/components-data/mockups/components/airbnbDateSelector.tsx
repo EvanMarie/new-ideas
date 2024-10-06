@@ -70,7 +70,7 @@ export default function DateSelector({
     const paddingDays = Array.from({ length: dayOffset }, (_, i) => (
       <div
         key={`padding-${i}`}
-        className="w-[10vw] h-[10vw] md:w-[5.5vh] md:h-[5.5vh] p-[1vh]"
+        className="w-10vw h-10vw md:w-5.5vh md:h-5.5vh p-1vh text-slate-800"
       ></div> // Render empty divs for padding
     ));
 
@@ -83,7 +83,7 @@ export default function DateSelector({
       return (
         <button
           key={index}
-          className={`w-[10vw] h-[10vw] md:w-[5.5vh] md:h-[5.5vh] p-[1vh] text-md sm:text-lg md:text-md leading-tight border-[0.2vh] border-transparent rounded-full hover:border-slate-500 transition-400 ${
+          className={`w-[10vw] h-[10vw] md:w-[5.5vh] md:h-[5.5vh] p-[1vh] text-md sm:text-lg md:text-md leading-tight border-[0.2vh] border-transparent rounded-full hover:border-slate-500 transition-400 text-slate-800 ${
             isSelectedStartOrEnd ? "bg-pink-700 text-white textShadow" : ""
           } ${
             isInRange
@@ -140,13 +140,19 @@ export default function DateSelector({
       {mode === "dates" && (
         <>
           <HStack className="justify-between items-center py-[1vh]">
-            <button onClick={handlePrevMonth} className="text-xl">
+            <button
+              onClick={handlePrevMonth}
+              className="text-xl text-slate-600"
+            >
               &#9664;
             </button>
-            <Text className="flex-1 text-center">
+            <Text className="flex-1 text-center text-col-800">
               {format(currentMonth, "MMMM yyyy")}
             </Text>
-            <button onClick={handleNextMonth} className="text-xl">
+            <button
+              onClick={handleNextMonth}
+              className="text-xl text-slate-600"
+            >
               &#9654;
             </button>
           </HStack>

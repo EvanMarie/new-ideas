@@ -86,7 +86,7 @@ export default function IconBar({
                 gap="gap-[0px]"
               >
                 <Icon className="text-3xl " />
-                <Text className="text-nowrap text-xs">{label}</Text>
+                <Text className="text-nowrap text-1.1vh">{label}</Text>
               </VStack>
             </Center>
           ))}
