@@ -1,21 +1,23 @@
 import { useState } from "react";
-import TransitionFull from "~/components/buildingBlocks/TransitionFull";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import Text from "~/components/buildingBlocks/text";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
 import TeslaSmallScreenMenu from "./components/teslaSmallMenu";
-import Flex from "~/components/buildingBlocks/flex";
-import VStack from "~/components/buildingBlocks/vStack";
 import { motion } from "framer-motion";
 import TeslaLargeScreenMenu from "./components/teslaMenuLarge";
 import TeslaNavMenu from "./components/teslaNavBar";
-import HStack from "~/components/buildingBlocks/hStack";
-import Icon from "~/components/buildingBlocks/icon";
 import { FaChevronRight } from "react-icons/fa";
-import Box from "~/components/buildingBlocks/box";
-import Center from "~/components/buildingBlocks/center";
-import CenterFull from "~/components/buildingBlocks/centerFull";
 import ReturnPortalsMockups from "../returnPortalsMockups";
+import {
+  Box,
+  Center,
+  CenterFull,
+  Flex,
+  FlexFull,
+  HStack,
+  TransitionFull,
+  VStack,
+  VStackFull,
+} from "~/buildingBlockComponents/mainContainers";
+import Text from "~/buildingBlockComponents/text";
+import Icon from "~/buildingBlockComponents/icon";
 import IsSafari from "~/utils/isSafari";
 
 export type MenuType =

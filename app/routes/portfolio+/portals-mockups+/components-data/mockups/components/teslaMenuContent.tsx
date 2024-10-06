@@ -1,10 +1,12 @@
-import Flex from "~/components/buildingBlocks/flex";
-import Text from "~/components/buildingBlocks/text";
+import {
+  Flex,
+  HStackFull,
+  Transition,
+  VStack,
+} from "~/buildingBlockComponents/mainContainers";
 import { MenuType } from "../tesla";
 import TeslaMenuImagesWrap from "./teslaMenuImagesWrap";
-import HStackFull from "~/components/buildingBlocks/hStackFull";
-import VStack from "~/components/buildingBlocks/vStack";
-import Transition from "~/components/buildingBlocks/transition";
+import Text from "~/buildingBlockComponents/text";
 
 export default function TeslaMenuContent({ menuType }: { menuType: MenuType }) {
   const contentLinkStyles =

@@ -1,9 +1,11 @@
-import Box from "~/components/buildingBlocks/box";
-import HStack from "~/components/buildingBlocks/hStack";
-import Image from "~/components/buildingBlocks/image";
-import Text from "~/components/buildingBlocks/text";
-import VStack from "~/components/buildingBlocks/vStack";
-import Wrap from "~/components/buildingBlocks/wrap";
+import Image from "~/buildingBlockComponents/image";
+import {
+  Box,
+  HStack,
+  VStack,
+  Wrap,
+} from "~/buildingBlockComponents/mainContainers";
+import Text from "~/buildingBlockComponents/text";
 
 export default function TeslaMenuImagesWrap({
   images,
@@ -24,7 +26,6 @@ export default function TeslaMenuImagesWrap({
               src={`https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/${image.image}.png?width=300&resize=contain&quality=70`}
               className="h-full w-auto"
               alt="product"
-              ariaLabel="product"
             />
           </Box>
           <Text className="font-semibold leading-[1.8vh]">{image.name}</Text>

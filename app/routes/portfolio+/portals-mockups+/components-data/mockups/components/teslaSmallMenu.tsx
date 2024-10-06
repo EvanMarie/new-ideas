@@ -1,18 +1,19 @@
 import { IoMdClose } from "react-icons/io";
 import { CloseIcon } from "styles";
-import Box from "~/components/buildingBlocks/box";
-import FlexFull from "~/components/buildingBlocks/flexFull";
-import Icon from "~/components/buildingBlocks/icon";
-import Modal from "~/components/buildingBlocks/modal";
-import VStackFull from "~/components/buildingBlocks/vStackFull";
 import { MenuItems, MenuType } from "../tesla";
-import VStack from "~/components/buildingBlocks/vStack";
 import { TeslaIconMenu } from "./teslaNavBar";
 import { useState } from "react";
 import TeslaMenuContent from "./teslaMenuContent";
-import HStackFull from "~/components/buildingBlocks/hStackFull";
-import Text from "~/components/buildingBlocks/text";
 import { FaChevronLeft } from "react-icons/fa";
+import Modal from "~/buildingBlockComponents/modal";
+import {
+  Box,
+  FlexFull,
+  HStackFull,
+  VStackFull,
+} from "~/buildingBlockComponents/mainContainers";
+import Icon from "~/buildingBlockComponents/icon";
+import Text from "~/buildingBlockComponents/text";
 
 export default function TeslaSmallScreenMenu({
   isOpen,

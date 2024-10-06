@@ -1,6 +1,7 @@
 import React from "react";
 import AirBnBMockup from "./mockups/airbnb";
 import AnthropicDemo from "./mockups/anthropic";
+import TeslaMockup from "./mockups/tesla";
 
 export interface PortalMockupProps {
   id: string;
@@ -48,7 +49,7 @@ export const portalsAndMockupsData: PortalMockupProps[] = [
       "This Tesla-inspired mockup is designed with smooth transitions and dynamic content to reflect the high-tech aesthetic and innovation Tesla is known for, capturing their forward-thinking vision for sustainable energy.",
     thubmnail:
       "https://mhejreuxaxxodkdlfcoq.supabase.co/storage/v1/render/image/public/darkVioletPublic/landing/tesla-mockup.webp",
-    projectComponent: <></>,
+    projectComponent: <TeslaMockup />,
   },
   {
     id: "4",
