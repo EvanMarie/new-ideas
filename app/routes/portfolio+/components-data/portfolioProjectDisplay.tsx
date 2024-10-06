@@ -88,7 +88,7 @@ export default function PortfolioProjectDisplay({
                       alt={portfolioItem.title}
                     />
                   </Flex>{" "}
-                  <span className="text-md pt-0.5vh textFogXxs text-fuchsia-300">
+                  <span className="text-md pt-0.5vh textShadow">
                     Image {index + 1} - {image.title}
                   </span>
                 </VStack>

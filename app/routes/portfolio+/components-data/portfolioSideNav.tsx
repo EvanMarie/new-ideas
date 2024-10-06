@@ -10,7 +10,44 @@ export default function PortfolioSideNav({
 }: {
   projectSlug: string;
 }) {
-  const lenProjects = Projects.length;
+  function PortfolioItem({
+    project,
+  }: {
+    project: {
+      slug: string;
+      thumbnail: string;
+      title: string;
+    };
+  }) {
+    return (
+      <NavLink
+        key={project.slug}
+        className={` w-5vh h-5vh lg:w-7vh lg:h-7vh rounded-full border-900-md relative
+                ${projectSlug === project.slug ? "" : "shadowNarrowNormal"}
+                hover:rotate-15 transition-300 hover:scale-102 hover:cursor-pointer`}
+        to={`/portfolio/${project.slug}`}
+      >
+        {projectSlug === project.slug && (
+          <motion.div
+            layoutId="active-project-background"
+            className="absolute inset-0 rounded-full boxGlowSm"
+            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+          />
+        )}
+        <Tooltip
+          label={project.title}
+          className="w-full h-full"
+          placement="left"
+        >
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            className="w-full h-full rounded-full relative z-10"
+          />
+        </Tooltip>
+      </NavLink>
+    );
+  }
 
   return (
     <Transition
@@ -21,32 +58,7 @@ export default function PortfolioSideNav({
       <VStack className="w-full justify-around relative z-45">
         <AnimatePresence>
           {Projects.map((project) => (
-            <NavLink
-              key={project.slug}
-              className={` w-5vh h-5vh lg:w-7vh lg:h-7vh rounded-full border-900-md relative
-                ${projectSlug === project.slug ? "" : "shadowNarrowNormal"}
-                hover:rotate-15 transition-300 hover:scale-102 hover:cursor-pointer`}
-              to={`/portfolio/${project.slug}`}
-            >
-              {projectSlug === project.slug && (
-                <motion.div
-                  layoutId="active-project-background"
-                  className="absolute inset-0 rounded-full boxGlowSm"
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                />
-              )}
-              <Tooltip
-                label={project.title}
-                className="w-full h-full"
-                placement="left"
-              >
-                <img
-                  src={project.thumbnail}
-                  alt={project.title}
-                  className="w-full h-full rounded-full relative z-10"
-                />
-              </Tooltip>
-            </NavLink>
+            <PortfolioItem project={project} />
           ))}
         </AnimatePresence>
       </VStack>

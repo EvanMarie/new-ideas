@@ -108,7 +108,7 @@ export default function RouteContainer({
           <Box className="relative group">
             <Box>
               <Icon
-                iconClassName="absolute top-0 -right-3vh text-3vh md:text-4.2vh text-col-500 rotate-10   group-hover:rotate-30 transition-300"
+                iconClassName="absolute top-0 -right-3vh text-3vh md:text-4.2vh text-col-500 rotate-10   group-hover:rotate-30 transition-300 "
                 icon={BsChatDotsFill}
               />
             </Box>

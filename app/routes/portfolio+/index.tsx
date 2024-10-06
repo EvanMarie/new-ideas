@@ -16,12 +16,15 @@ export default function PortfolioIndex() {
         <Outlet />
       ) : (
         <VStackFull className="pt-4vh">
+          <FlexFull className="justify-center">
+            <PortfolioIndexCard />
+          </FlexFull>
           <Wrap className="w-full justify-evenly min-h-full items-evenly">
             {Projects.map((project, index) => (
               <PortfolioIndexCard
                 key={project.slug}
                 portfolioItem={project}
-                index={index}
+                index={index + 1}
               />
             ))}
           </Wrap>
