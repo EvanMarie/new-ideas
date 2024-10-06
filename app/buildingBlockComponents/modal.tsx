@@ -1,5 +1,5 @@
 // FramerMotionModal.tsx
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import React from "react";
 import Portal from "./portal";
 import useEscapeKey from "~/utils/useEscapeKey";
@@ -18,6 +18,7 @@ interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   footerClassName?: string;
   overlayZIndex?: number;
   modalZIndex?: number;
+  passVariants?: Variants;
 }
 
 export default function Modal({
@@ -34,21 +35,24 @@ export default function Modal({
   footerClassName,
   overlayZIndex = 60,
   modalZIndex = 100,
+  passVariants,
   ...props
 }: ModalProps) {
   // Animation variants for scaling in and out
-  const variants = {
-    open: {
-      scale: 1,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 300, damping: 30 },
-    },
-    closed: {
-      scale: 0,
-      opacity: 0,
-      transition: { type: "spring", stiffness: 300, damping: 30 },
-    },
-  };
+  const variants = passVariants
+    ? passVariants
+    : {
+        open: {
+          scale: 1,
+          opacity: 1,
+          transition: { type: "spring", stiffness: 300, damping: 30 },
+        },
+        closed: {
+          scale: 0,
+          opacity: 0,
+          transition: { type: "spring", stiffness: 300, damping: 30 },
+        },
+      };
 
   useEscapeKey(() => onClose());
 

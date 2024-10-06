@@ -2,10 +2,16 @@ import { Outlet, useParams } from "@remix-run/react";
 import RouteContainer from "~/mainDesignComponents/routeContainer";
 
 export default function PortfolioLayout() {
-  const projectSlug = useParams().projectSlug;
+  const portalMockupSlug = useParams().portalMockupSlug;
   return (
-    <RouteContainer>
-      <Outlet />
-    </RouteContainer>
+    <>
+      {portalMockupSlug ? (
+        <Outlet />
+      ) : (
+        <RouteContainer>
+          <Outlet />
+        </RouteContainer>
+      )}
+    </>
   );
 }

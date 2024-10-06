@@ -25,7 +25,7 @@ export default function PortfolioIndexCard({
       className={`p-1vh ${
         even ? "sm:pr-18vw md:pt-10vh" : "sm:pl-18vw"
       } md:px-1vh lg:px-2vh`}
-      type={even ? "fadeSlideInRightQuarter" : "fadeSlideInLeftQuarter"}
+      type={even ? "fadeSlideInLeftQuarter" : "fadeSlideInRightQuarter"}
     >
       <NavLink
         className="flex relative rounded-full border-900-md shadowNarrowLooser w-fit h-fit hover:boxGlowXs transition-300 hover:scale-102"

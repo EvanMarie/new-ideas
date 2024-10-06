@@ -1,5 +1,5 @@
 import { Outlet } from "@remix-run/react";
-import RouteContainer from "~/mainDesignComponents/routeContainer";
+import { Transition } from "~/buildingBlockComponents/mainContainers";
 
 export default function MockupsLayout() {
   return <Outlet />;
